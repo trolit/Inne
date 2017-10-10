@@ -1,0 +1,314 @@
+MATLAB
+
+1)jak obliczaæ stopnie?
+
+np. cos60*
+
+cos(60*pi/180)
+
+2)jak dzia³aæ na ln(logarytm
+naturalny lub e)
+
+np. e^x
+
+poleceniem: exp(1)^x
+
+3) tworzenie tablicy z liczbami podzielnymi przez np.11, do 1000
+
+11:11:1000
+druga 11 to co ile liczba rosnie
+
+4) tworzenie tablicy od 1 do 2 sk³adaj¹ce siê z 70 liczb dziel¹cych ten odcinek na równe czêœci:
+
+linspace(1,2,70)
+
+5) Transpozycje tablicy np.
+a = [1 2 3]
+robimy piszac a'
+(a apostrof)
+
+otrzymuj¹c taki efekt:
+ans = 
+	1
+	2	
+	3
+
+6) pierwiastek kwadratowy
+sqrt(czegoœ)
+
+np. sqrt(2)
+TYLKO DO KWADRATOWEGO!
+
+7) pierwiastek np. 
+trzeciego stopnia
+
+3_____
+V  3
+
+to robimy 3^1/3
+(pierwiastek jako u³amek)
+
+8) dzielenie,potêgowanie,mno¿enie
+tablic wymaga dopisania kropki przed znakiem np.
+ZAWSZE DOPISUJEMY KROPKÊ
+PRZED ZNAKIEM OPERACJI np.
+
+1./(n.^2)
+lub
+(1+1./n).^n
+
+gdzie n to tablica liczb od 1 do 100 co 1.
+
+9) Jak obliczaæ sumê?
+sum(czegoœ)
+
+jak obliczaæ silniê?
+factorial(czegoœ)
+
+np. mamy sumê od i=1 do 20
+dla wzorku: 1/i! 
+(! to silnia) dlatego u¿ywamy
+factorial
+
+e1=1:1:20;
+sum(1./factorial(e1)
+
+10) macierz z dowolnymi elementami tworzymi pisz¹c w nawiasach kwadratowych a przejœcie do nowego wiersza oznaczamy œrednikiem
+
+macierz = [1 2 ; 3 4 ; 5 6]
+
+co da nastêpuj¹cy efekt:
+
+[1	2]
+[3	4]
+[5	6]
+
+11) aby znaleŸæ element z macierzy znaj¹c wiersz i kolumnê to musimy skorzystaæ ze wzorku: nazwamacierzy(wiersz,kolumna)
+
+czyli dla np. macierz(2,2)
+
+da w efekcie 4
+
+12)aby podmieniæ element w macierzy znaj¹c wiersz i kolumnê to korzystamy np.
+
+macierz(2,2) = 10
+
+// zamieniam element cztery na 10
+który znajduje siê w pozycji 
+2 wiersz 2 kolumna
+
+co daje w efekcie:
+
+
+[1	2]
+[3	10]
+[5	6]
+
+13) aby wybraæ fragment z macierzy nale¿y skorzystaæ z:
+
+maj¹c macierz boczek
+
+boczek(6:7,4:7)
+
+6:7 to ile wierszy wyci¹æ
+(od 6 do 7)
+
+4:7 to ile kolumn wyci¹æ
+(od 4 do 7)
+
+PS: mo¿na im naraz podmieniæ wartoœci np.
+
+boczek(6:7,4:7) = 10
+
+podmieni w tym fragmencie wszystkie elementy na 10.
+
+14) Aby wyci¹gn¹æ konkretne
+wiersze lub kolumny to podajemy w nawiasach kwadratowych np.
+
+boczek([1 3 5], [2 4])
+
+[1 3 5] - wybranie wiersz
+[2 4] - wybranie kolumn
+
+15) Aby wyci¹gn¹æ konkretne wiersze i wszystkie kolumny
+to np. 
+
+boczek([1 2 1 4 1 5], :)
+
+[1 2 1 4 1 5] - bierze 1,2,1,4,1,5 wiersze
+
+: - bierze wszystkie kolumny
+
+16)logical(boczek) spowoduje
+utworzenie macierzy który sk³ada siê z samych 1 (tego rozmiaru co macierz boczek)
+
+logical(boczek)
+
+17) aby zapisaæ w wektor macierz korzystamy z np.
+(maj¹c macierz boczek)
+
+V=boczek(:)
+
+18) aby wyodrêbniæ z macierzy kolumny i wiersze i przypisaæ do innej macierzy (nowej) to np. 
+
+G= boczek(1:7, 1:6);
+
+1:7 - wiersze od 1 do 7 
+1:6 - kolumny od 1 do 6
+
+19) polecenie reshape s³u¿y do 
+zmiany rozmiaru macierzy
+
+maj¹c macierz G 7x7
+
+np. reshape(G, 4, 9)
+
+przekstrza³ca macierz o nazwie G do macierzy o 4 wierszach i 9 kolumnach.
+
+20) aby transponowaæ macierz, nale¿y skorzystaæ z apostrofu czyli ' po nawiasie!
+
+np.
+reshape(G, 4, 9)'
+
+21) Eye(m,n) - macierz jednostkowa
+
+na pierwszej przek¹tnej same 1 , reszta 0.
+
+m - wiersze
+n - kolumny
+
+m ró¿ne od n! 
+
+22) zeros(m,n) - macierz zerowa
+
+23) ones(m,n) - macierz jedynkowa
+
+24) rand(m,n) - macierz losowa
+
+25) randn(m,n) - macierz losowa o rozk³adzie normalnym
+
+26) diag(A) - wyodrêbnia przek¹tn¹ z macierzy
+
+27) diag(A,k) - wyodrêbnia przek¹tn¹ z macierzy od k miejsc
+
+np. diag(boczek, 5)
+5 oznacza od 5 cyfry
+
+
+28) figure(numer) - otwieramy okienko do wykresów np.
+figure(1), to bêdzie pierwsze okienko.
+
+29) plot(x, y, 'KSL')
+tworzy wykres 2D, 'KSL' jest
+opcjonalne mo¿emy za nie daæ:
+
+K-kolor (np. r od red)
+S-symbol (np. x)
+L-rodzaj linii (np. - ci¹g³a)
+
+30) subplot(m, n, active)
+mo¿na tworzyæ wiele wykresów na jednym figure, tylko trzeba pamiêtaæ o kilku rzeczach:
+
+zatrzymaæ figurê czyli:
+
+np.
+
+figure(1)
+hold on
+
+a nastêpnie 
+subplot(wiersz, kolumna, aktywna)
+
+jeœli chcemy mieæ w jednym oknie 4 wykresy oddzielnie to weŸmiemy 2 wiersze 2 kolumny
+czyli:
+
+wykres1		wykres2
+
+
+wykres3		wykres4
+
+aby dostaæ siê do ka¿dego z nich za pomoc¹ subplot piszemy:
+
+subplot(2,2,1) - wykres1
+subplot(2,2,2) - wykres2
+subplot(2,2,3) - wykres3
+subplot(2,2,4) - wykres4
+
+31) dodanie legendy:
+legend('nazwa')
+
+32) dodanie tytu³u:
+title('tytu³')
+
+33) hold on/hold off
+wstrzymuje (hold on) , odwo³uje(hold off) rysowanie w danym oknie
+
+34) clf - czyœci okno graficzne
+
+35) ezplot('tu wzór')
+
+ezplot('x^2+y-4')
+
+36) hist(x, n) 
+histogram dla n-przedzia³ów,
+x-zawiera dane które bêd¹
+umieszczone w n przegródkach
+
+37) stairs(x) 
+wykres schodkowy
+
+38) bar(x) 
+wykres s³upkowy
+
+39) stem(x) 
+wykres dla linii pionowych
+
+40) Do wykresów 3D
+[X,Y] = meshgrid(-3:0.1:3);
+
+powy¿sza instrukcja generuje
+siatkê [-3,3] co 0.1 dla x i y
+
+potem obliczamy sobie jakimœ wzorem z i ¿eby wykres 3D pokaza³ siê ³adnie na ekranie to u¿ywamy polecenia:
+
+mesh(x,y,z)
+
+np.
+kolejno wykonane:
+
+[x,y]=meshgrid(-3:.1:3);
+z=x.^2+y.^2;
+mesh(x,y,z);
+
+41) meshc(x,y,z)
+podobny wykres do mesh ale dodane s¹ tutaj poziomice!
+
+42) contour3(x,y,z) - wykres konturowy
+
+43) surf(x,y,z) - wykres 3D powierzchniowy
+
+44) surfc(x,y,z) - dzia³a tak jak surf lecz dodatkowo s¹ poziomice
+
+45) surfrl - surf+cieniowanie
+
+46) - ezsurf('wyrazenie')
+- rysuje powierzchnie przy uzyciu podanego wyrazenia matematycznego
+
+np. ezsurf('x^2+y^2)
+
+47) - ezsurfc('wyrazenie')
+- dziala jak ezsurf +kontury dodatkowo s¹
+
+
+48) plot3 - linia w trzech wymiarach
+
+49) repmat (od replicatematrix) - tworzy now¹ macierz replikuj¹c istniej¹c¹
+
+np. repmat(A,m,n)
+A - skalar??
+m - liczba wierszy
+n - liczba kolumn
+
+
+
+

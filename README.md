@@ -1,2 +1,7 @@
 # Moje.dokumenty
-utworzone dokumenty na potrzeby sesji, zapamietania, utrwalenia wiedzy
+
+Utworzone dokumenty na potrzeby 
+- sesji
+- zapamietania
+- utrwalenia wiedzy
+

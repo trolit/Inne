@@ -1,0 +1,165 @@
+1) \documentclass {book}
+
+mo¿emy tu te¿ ustaliæ wielkoœæ czcionki np. 10pt, lub format papieru np. a4paper
+
+Inne typy dokumentów:
+
+article - artyku³y
+report - d³u¿sze prace
+book - ksi¹¿ki
+slides - przezrocza
+letter - listy
+
+2) \title	{Wszystko o tygrysach} 				podaje tytu³	(przed begin document!)
+3) \author{\Huge Kowalski Damian}			podaje autora (przed begin document!)
+4) \date{09.03.2017} 								podaje date (przed begin document!)
+
+Podzia³ dokumentu w formacie:
+a) czêœæ (part)   									    !!! TYLKO DO BOOK!!!!!
+b) rozdzia³ (chapter)									!!!! TYLKO DO BOOK!!!!!
+c) sekcja (section)
+d) paragraf (paragraph)
+e) podsekcja (subsection)
+f) podparagraf (subparagraph)
+kazde piszemy za pomoca backslasha czyli np. \part
+
+5) \maketitle - tworzy strone tytu³ow¹
+6) \tableofcontents - tworzy spis treœci , UWAGA! ¿eby siê pojawi³, skompilowaæ dwa razy dokument!
+
+7) \cite{a} Tu jest zawarty cytat ! 
+
+\cite do wpisywania cytatu, {a} to jego ID- identyfikator!
+
+wzor mozemy zapisac w:
+8) \begin {equation}
+ zapisanie wzoru w equation daje MU przypis numerku oraz centruje go!
+ 
+9) Tryb matematyczny: zapisanie wzoru miedzy $$ wzor $$ centruje go i nadaje kursywe
+10) Tryb matematyczny: zapisanie wzoru miedzy $ wzor $ tylko nadaje kursywe
+ 
+11) do umieszczania obrazów u¿ywamy \begin{figure}
+
+12) \includegraphics[width=0.5\textwidth]{tygrys.jpg} za³¹cza obrazek tygrys.jpg
+
+13) \centering  wycentruje obraz
+
+14) \caption {Zdjêcie tygrysa w lew¹ strone.}  wypisze tekst do obrazka, w zaleznosci gdzie go podamy - na dole lub na gorze..!
+
+15) \reflectbox{%							do odbicia lustrzanego obrazu
+
+16) \label{figura}				
+
+aby stworzyc miejsce do odwolania uzywamy \label{nazwaetykiety}
+
+aby stworzyc miejsce do odwolania do wzoru piszemy \label{eq: nazwaetykiety}
+
+17) \eqref{etykieta}		odwolanie do wzoru			~od equation reference
+
+18) \ref{figura}		odwolanie do do etykiety label
+
+19) \begin{thebibliography}{4}  , tworzenie bibliografii 4 oznacza ile przypisów damy
+
+np. 
+\bibitem {a}Tygrys 303, 179-205 (1999)	    ka¿dy przypis zaczynamy \bibitem, {a} jest do referencji, potem reszta tekstu
+
+\end{thebibliography}	- konczy bibliografie
+
+20) \\ - w tabeli/macierzy znak nowej linii
+
+21) Tworzenie tabeli:
+
+\begin{table} [table]
+\begin{tabular}{|c|c|c|c|}				 |c|c te kreski pionowe mowia gdzie dac kreski pionowe
+\hline
+Nazwa \ tygrysa: & Wiek \ tygrysa: & $Kolor \ tygrysa:$ & Pochodzenie: \\
+\hline
+Kulisty & 5 & bialy & Afryka \\
+\hline
+Kromek & 7 & zielony & Polska \\ 		 \\ oznacza - przejdz do nowego wiersza
+\hline															 Uwaga: \hline tworzy pozioma kreske!!!!
+Andrzejek & 10 & czerwony & Wlochy \\
+\hline
+Dawidek & 15 & bialy & Argentyna \\
+\hline
+\end{tabular}
+\end{table}
+
+c = center, l = left, r = right
+przyklady:
+
+\begin{tabular}{|c|c|c|c|}		 - wycentrowane rekordy
+\begin{tabular}{|r|r|}		     - do prawej rekordy
+\begin{tabular}{|l|l|l|}			 - do lewej rekordy
+
+22) Przejscie do nowej strony: \clearpage
+
+23) \begin{enumerate} - do tworzenia podpunktow, typ numerowania podajemy w nawiasach kwadratowych 
+np.
+\begin {enumerate} [A] - wedlug liter A B C 
+\begin {enumerate} [A.] - wedlug liter A. B. C. 
+\end {enumerate}
+
+24) \begin{itemize} - do np. wypunktowania za pomoca kropek
+
+25)	do wlasnego schematu punktowania:
+
+\begin{description}
+\item [XXX] punkt 1
+\item [YYY] punkt 20
+\end{description}
+
+26) rozmiar np. nawiasu zmieniamy: \Big, \big, \bigg, \Bigg,
+
+27) do pisania programow w ladny sposob korzystac z 
+\begin{algorithmic}
+\end{algorithmic}
+
+28) \multirow - laczenie wielu komorek
+
+29) \begin{tiny} - zmniejszanie rozmiaru tablicy
+tablica...
+\end{tiny}
+
+30) \cline{..-..} 
+
+Tabela, u¿ycie instrukcji cline Przy pomocy instrukcji cline mo¿emy narysowaæ liniê
+pod wybranym wierszem wskazuj¹c od której komórki tabeli ma siê ona zaczynaæ
+a na której koñczyæ.
+\cline{2-4} ozanacza,
+¿e linia pojawi siê pod komórk¹ 2 i bêdzie rysowana do koñca
+komórki 4, oczywiœcie pod warunkiem ¿e tabela ma tyle kolumn
+
+31) dla komoreK:
+p - wyrownanie do gory
+m - wysrodkowany
+b - wyrownanie do dolu
+
+wartosc podajemy w nawiasach klamrowych wraz z jednostka
+np. 
+m{5cm}
+
+\begin{tabular}{|l|l|l|p{5cm}|}
+
+32) kolorowanie wierszy:
+\rowcolors{1}{green}{pink}
+
+33) skalowanie obrazka + kilka obrazkow jednoczesnie:
+
+\begin{figure} [here]
+\vspace{0pt}      - vertical space
+\begin{center}
+\includegrapics[scale=0.1]{blabla.jpg}
+\includegrapics[scale=0.1]{blabla.jpg}
+\includegrapics[scale=0.1]{blabla.jpg}
+\includegrapics[scale=0.1]{blabla.jpg}
+\caption{Wyswietlenie kilka razy blabla}
+\end{center}
+\vspace{0pt}
+\end{figure}
+
+34) Pamietac o ustawieniu prawidlowej konwersji w LATEX
+
+LATEX -> DVI -> PDF
+
+uwaga, bo obrazek bedzie w formacie *.eps!!!!!
+
