@@ -1,0 +1,23 @@
+przypomnienie!!
+KOMENDY DO GIT-BASH
+mini-s³ownik...
+
+git clone https://... - sklonowanie repozytorium do miejsca w którym obecnie jesteœmy
+
+cd .. - cofniêcie do poprzedniego folderu
+
+cd [nazwa_katalogu] - przejœcie do kolejnego folderu
+
+git add -A - dodaje wszystkie pliki do 'monitorowanych przez gita'
+alternatywa np. git add tekst (dodaje do monitorowanych plik tekst)
+
+git commit -am "komentarz" - zakomitowanie(potwierdzenie) dokonanych zmian
+
+git status - podejrzenie statusu plików(które zakomitowane, które nie itd..)
+
+git push - wrzuczenie komitów do github
+
+git pull - te polecenie bierze najœwie¿sz¹ zawartoœæ repozytorium i wrzuca nam na kompa.
+
+
+
