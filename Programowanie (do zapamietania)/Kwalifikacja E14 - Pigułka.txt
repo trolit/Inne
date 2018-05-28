@@ -1,0 +1,149 @@
+SQL DCL (Data Query Language) - do formu³owania pytañ
+CMS (Content Management System) - Joomla,Mambo,WordPress,Drupal NALE¯¥
+cel => stworzenie tabel => relacje => normalizacja (kolejnoœæ tworzenia bazy)
+mysqlcheck -repair (naprawia bazê danych) 
+asort (klucze zachowuj¹ przypisanie do odpowiednichwartoœci "sortowanie asocjacyjne")
+C++ double x* to wskaŸnik w C++ 
+Saturacja koloru = nasycenie koloru (od ang. saturation) 
+Wysokoœæ dŸwiêku zale¿y od czêstotliwoœci drgania fali akustycznej
+ALTER do modyfikowania danych SQL 
+SELECT COUNT(*) FROM tabela do zliczania liczby * 
+W3C ustala HTML (World Wide Web Consortium) 
+integer - liczba ca³kowita <br>
+dziedziczenie - wspó³dzelenie pól i metod klas w  programowaniu obiektowym <br>
+DROP usuwa istniej¹cy obiekty w SQL <br>
+LIKE - do szukania po literce np. pierwsza litera M. LIKE  "M%"<br>
+% - znaczy modulo<br>
+& - amperant<br>
+ASC(ASCENDING) rosn¹co w sortowaniu<br>
+DESC(DESCENDING) malej¹co w sortowaniu<br>
+_construct PHP kontruktor<br>
+klucz zabezpiecza przed odtajnianiem np w bankowoœci danych<br>
+Input(Text) - ramka do wpisania tekstu<br>
+Select - wybór z listy <br>
+Input(Radio) - wybór jednego <br>
+<br /> - znacznik odpowiadaj¹cy za prawid³owe z³amanie linii<br>
+skaluj¹c witrynê w procentach mo¿na j¹ prawid³owo otworzyæ na urz¹dzeniach moblinych<br>
+REPAIR TABLE tblname - naprawia uszkodzon¹ tabelê w SQL<br>
+<a href="mailto:adres"> tekst </a> prawid³owy znacznik w href, który w³¹cza opcjê wys³ania poczty<br>
+<a href="http://adres.pl"> tekst </a><br>
+padding-top - wewnêtrzny górny margines do odstêpu<br>
+Obiekt array w JS przechowuje wiele wartoœci dowolnego typu<br>
+cookie - daje personalizowanie wygl¹du strony dla u¿ytkownika<br>
+Uprawnienia obiektowe, nadawane u¿ytkownikom serwera bazy danych, mog¹ pozwalaæ lub zabraniaæ wykonywaæ operacje na bazie<br>
+float - zmiennoprzecinkowe<br>
+bool - logiczne TAK/NIE<br>
+string - tekstowa zmienna<br>
+Administrator systemu mo¿e wykonaæ/odtworzyæ kopiê zapasow¹ SQL<br>
+var x=true - zmienna typu logicznego<br>
+folder sieciowy MS Access - udostêpnianie bazy dla innych u¿ytkowników<br>
+meta HTML w czêœci nag³ówkowej <br>
+PHP switch to konstrukcja switch(wyra¿enie)<br>
+filtracja sygna³u wejœciowego obejmuj¹cy zasadê superpozycji zwi¹zany jest z ! filtrem liniowym !<br>
+w CSS div {blabla} , div to "pseudoklasa"<br>
+parametr face znacznika to nazwa czcionki (<font face="Arial">Blabla</font>)<br>
+NORMALIZACJA do poprawy dŸwiêku<br>
+KANA£ ALFA = PRZEZROCZYSTOŒÆ<br>
+Kod Strony WWW jest wykonywany po stronie serwera W PHP !<br>
+CLR(Common Language Runtime) = Wspólne Œrodowisko uruchomieniowe (po klasach bazowych)<br>
+CONSTRAINT fk_osoba_uczen FOREIGN KEY (nazwisko, imie) REFERENCES osoby (nazwisko,imie) - na utworzenie klucza obcego<br>
+konkatencja - ³¹czenie ze sob¹ wyra¿eñ<br>
+polimorfizm - mechanizmy pozwalaj¹ce programiœcie <br>u¿ywaæ wartoœci, zmiennych i podprogramów na ró¿ne sposoby (tzw. wielopostaciowoœæ)<br>
+hermetyzacja - ukrywanie pewnych pól lub metod obiektów
+projekt logiczny witryny to rozmieszczenie elementów w konkretnych miejscach<br>
+Funkcja zdefiniowana mo¿e byæ wywo³ywana w zapytaniach modyfikuj¹cych relacyjnej bazy danych
+<link rel="stylesheet" type="text/css" href="kaka.css"> odwo³anie do css<br>
+SELEKCJA - wybraniu krotek spe³niaj¹cych okreœlone warunki (od SELECT)<br>
+KROTKA = WIERSZ(REKORD)<br>
+RELACJA = TABELA<br>
+KOLUMNA = ATRYBUT<br>
+row = WIERSZ<br>
+col = KOLUMNA<br>
+precision = precyzyjna<br>
+Walidacja stron nie sprawdza Ÿród³a pochodzenia narzêdzi edytorskich ()<br>
+PHP switch(wyra¿enie)<br>
+class Punkt { public $x; public $y;}<br>
+PHP pkt = new Punkt(); definiuje Punkt w formie pkt<br>
+gdy relacja WIELE:WIELE to potrzebne trzecia tabela³¹cznikowa<br>
+DQL,DMC,DDL,DCL<br>
+alias to dodatkowa nazwa ALIAS=AS np. SELECT <br>imie_z_bierzmowania FROM pracownicy AS  imie_cywilne<br>
+list = wyœwietla wartoœc bufora<br>
+TOP5 = Pierwsze piec wierszy w SQL<br>
+UNION = £¥CZENIE KILKU WYNIKÓW TABEL DO JEDNEJ<br>
+SUM,AVG,MAX,MIN,<br>
+GRANT = DAJ UPRAWNIENIA w SQL<br>
+REVOKE = ODBIERZ UPRAWNIENIA w SQL<br>
+// lub # w PHP to komentarz jednoliniowy<br>
+\n = do nastêpnej linii<br>
+ACCESS => @(dowolny znak), &(dowolny znak), !(wymusza wype³nianie od L do P zamiast P do L), <(wymusza tylko ma³e litery), >(wymusza tylko wielkie litery), *(znak po gwiazde to puste miejsce do wype³nienia), #(wyœwietlanie cyfry), 0(pozycja dla jednej liczby), ""(tekst dos³owny w cudzys³owiu), !(wymusza wyrównanie do lewej), <br>
+
+Kwerenda => zapytanie do bazy danych, pozwala zmieniaæ, ogl¹daæ, analizowaæ dane.<br>
+IDE = INTEGRATED DEVELOPMENT ENVIRONMENT (np. ECLIPSE)<br>
+MCV = MODEL VIEW CONTROLLER (wzorzec architektoniczny)<br>
+DOM = DOCUMENT OBJECT MODEL<br>
+
+operator konkatencji wygl¹da tak II (znaczy "lub")<br>
+operator koniunkcji wygl¹da tak && (iloczyn)(znaczy ampersant)<br>
+operator inkrementacji ++ <br>
+operator dekrementacji --<br>
+$wynik*=$a;  (* oznacza mno¿enie)<br>
+echo (w PHP)<br>
+document.write(w javascript)<br>
+<br>
+DO£¥CZANIE PLIKÓW => GET(dane zostaj¹ do³¹czone do adresu URL) Lub POST(poufne przekazanie danych np. szyfrowane), <form action="nazwastrony.php" method="get">
+</form><br>
+
+== równe<br>
+!= ró¿ne<br>
+
+
+C++ => cout << "ja";   liczy<br>
+
+ 
+AJAX = Javascript + XML np. google,gmail,facebook<br>
+
+
+w JQuery stosujemy $ <br>
+
+
+encja = czynnoœci podstawowe na bazie danych<br>
+SELECT * FROM zawodnicy WHERE wiek > 18;    (* oznacza pokazanie wyników ze wszystkich kolumn)<br>
+SELECT imie, cena FROM zawodnicy JOIN pokoje ON nr=id_goscia; (dodanie dodatkowej kolumny)<br>
+Klucz g³ówny(niezmienialne pole), Klucz prosty(z jednej kolumny), Klucz Z³o¿ony(z wielu kolumn), Obcy, Superklucz(jednoznaczne identyfikowanie ka¿dego wiersza), Kandyduj¹cy(minimalna liczba kolumn unikatowo identifkuj¹cych wiersze)<br>
+
+DISTINCT = ELMININOWANIE DUPLIKATÓW np. SELECT DISTINCT imie FROM pracownicy;<br>
+ORDER BY = PORZ¥DKOWANIE WYNIKÓW np. SELECT * FROM pracownicy ORDER BY wiek(ASC);<br>
+INSERT INTO TABLE VALUES = DODAJE DANE DO TABELI<br>
+GROUP BY = POGRUPOWANIE DANYCH ZE WZGLÊDU NA.. TE¯ DO NISZCZENIA DUPLIKATÓW<br>
+
+
+W ZNACZNIKU W CZESCI STRON NIE UMIESZCIE SIE TYPU DOKUMENTU<br>
+
+TYP ZMIENNEJ W JÊZYKU JS NASTÊPUJE POPRZEZ PRZYPISANIE WARTOŒCI<br>
+
+
+String	substring(int beginIndex, int endIndex)
+Zwraca pod³añcuch tego ³añcucha jako nowy obiekt klasy String. Pod³añcuch zaczynay siê na pozycji o indeksie beginIndex, a koñczy (uwaga!) - na pozycji o indeksie endIndex-1. D³ugoœæ podlañcucha równa jest endIndex - beginIndex.<br>
+
+
+SUBSTRING(2,3) to Pocz¹tek 0,1,2 a koniec odj¹æ 3-2 i reszta
+
+
+<br>
+!javascript kod wymaga interpretowania!<br>
+
+<br>
+typowy FRAMEWORK to zarz¹dzanie komunikacj¹ z baz¹ danych, mechanizm uruchamiania i przetwarzania akcji
+
+<br>
+zapytania wykonywane szybciej gdy s¹ INDEKSY
+
+<br>
+SSL = SECURE SOCKET LAYER<br>
+XML = EXTENSIBLE MARKUP LANGUAGE (RozszerzalnyJêzyk znaczników)<br>
+VBSCRIPT = MICROSOFT VISUAL BASIC SCRIPT<br>
+
+<br>
+PROGRAMOWANIE IMPERATYWNE = CI¥G POLECEÑ POSTRZEGANY JEST JAKO PROGRAM
+</BODY>
+</HTML>

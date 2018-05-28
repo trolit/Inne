@@ -1,0 +1,120 @@
+NAT = Network Adress Translation
+ICMP =Internet Control Message Protocol
+IIS = Internet Information Services
+NTP = Network Time Protocol
+NFS = Network File System
+DNS = Domain Name System
+SIP = Session Inication Protocol = VoIp
+dsadd = Directory service add
+SNAT (Source Network Address Translation) to technika polegaj¹ca na zmianie adresu Ÿród³owego pakietu IP na jakiœ inny. Wtedy router, przez który pod³¹czono sieæ, podmienia adres Ÿród³owy prywatny na adres publiczny (najczêœciej swój w³asny).
+ADRES FIZYCZNY = MAC
+ADRES LOGICZNY = IP
+IPV6 = 128bitów
+Adres MAC = 48bitów
+IBSS = Independent basic Service Set
+AD = Active Directory
+$ do stworzenia ukrytego,udostêpnionego katalogu
+domyœlny port dla serwera FTP to 21
+ISO/OSI 7 warstw
+net use = mapowanie zasobów sieciowych w Windows Server
+dcpromo = promowanie serwera do roli kontrolera domeny
+Klasa A od 1 do 127, Klasa B od 128 do 191, Klasa C od 192 do 223
+sniffer = przechwytuje i analizuje dane przep³ywaj¹ce w sieci
+Przewód Ekranowany gdy wystêpuj¹ silne pola zak³ócaj¹ce
+IEEE 802.11 opisuje WIRELESS LAN  (WLAN)
+tracert = sledzenie datagramu IP
+b = bity / B = bajty
+T586B |o|O|g|B|b|G|br|BR|
+T586A |g|G|o|B|b|O|br|BR|  (zamiana 1 z 3 i 2 z 6 zapamiêtaæ: 1326)
+Router przekazuje pakiety TCP/IP 
+1 punkt abonencki na 10m2
+router ³¹czy hostów z jednej sieci z hostami w innych sieciach
+pocz¹tkowe bity adresu: 0(A), 10(B), 110(C)
+maska podsieci w binarnym po 8 bitów
+ARP = Adress Resolution Protocol przekszta³ca logiczne adresy na fizyczne
+100BaseTX kat5 
+media transmisyjne kablowe: linia napowietrzna, kabel prosty, skrêtka, kabel konc., swiat³owód
+media transmisyjne bezprzewodowe: ³¹cze radiowe,podczerwone i satelitarne
+Kabel koncentryczny 10Base2(cienki konc) 0,25cal/50om/10Mbs/185m
+Kabel koncentryczny 10Base5(gruby konc) 0,50cal/75om/10Mbs/500m/30cm(promieñ zgiêcia)
+1b = 8B
+peer-to-peer- sieæ równorzêdna. Wszyscy maja jednakowe uprawnienia
+Klient-serwer z us³ug jednego serwera mo¿e korzystaæ wielu klientów, którzy s¹ podpiêci do niego
+UTP nieekranowana 
+FTP foliowana z przewodem uziemiaj¹cym
+STP ekranowana ekran(w postaci oplotu)
+FFTP (ka¿da para ma folie, i ca³y kabel ma folie)
+SFTP (osobno ka¿da para ekranowana i foliowana, oplot ca³y kabel)
+RJ11 = telefon
+Kable miedziane skrêtki do 100m!
+CAT 3 (4Mbs)
+CAT 4 (16Mbs)
+CAT 5 (do 1Gbs)
+CAT 6 (do 10Gbs - 250Mhz)
+CAT 7 (do 10Gbs - 600Mhz)
+koncentrator(HUB) - po³¹czenia miêdzy PC
+router - ³¹czenie sieci komputerowych np. internet == lan
+karta sieciowe - fizyczne po³¹czenie okablowania sieciowego/odbiór danych radiowych
+prze³¹cznik(Switch) - po³aczenia miêdzy PC w topologii gwiazdy
+punkt dostêpowy(AP) - bezprzewodowy dostêp do zasobów sieci z WiFi (po³¹czenie kablowe zmiana na sieæ bezprzewodowa)
+most(BRIDGE) - sieæ bezprzewodowa zmiana na po³¹czenie kablowe (odwrotnie do AP)
+wzmacniak(REPEATER) - wzmacnia sygna³ WiFi
+modem - sygna³ analogowy z sieci telefonicznej na cyfrowe i odwrotnie (A-Analog, D-Digital)
+brama sieciowa(GATEWAY) - ³¹czenia sieci lokalnej z innymi sieciami w TCP/IP
+brama VoIP - wykonywanie po³¹czeñ telefonicznych za pomoc¹ sieci komputerowej w protokole IP
+zapora sieciowa(FIREWALL) - odizolowuje sieæ wew. LAN od sieci zew. Internet
+Adres prywatny w A 10.0.0.0 - 10.255.255.255
+A=10,B=11,C=12, D=13, E=14, F=15 
+IPv6 128bitów! 8 segmentów 16bitowych 
+netstat - aktywne po³¹czenia serwerowe TCP/IP
+route - sieciowe tabele routingu
+Telnet - protokó³ do zdalnej obs³ugi PC
+FTP - dwukierunkowy transfer plików
+POP3 - odbiór poczty
+SMTP - wysy³anie poczty
+HTTP - przesy³anie tekstów hypertekstowych
+SSH - szyfruj¹cy dane
+DHCP - nadaj¹cy adresy IP z puli adresów
+NFS - zdalne udostêpnianie plików
+SNMP - zarzadzanie urz¹dzeniami np. router/PC
+Okablowania normy: ANSI, IEEE, ISO, ETSI, IETF, UE
+-----------------------------------------
+MEDIA BEZPRZEWODOWE:
+IR/Infrared - podczerwieñ
+radiowe(IEEE 802.11):
+802.11a 5Ghz/54Mbs 
+802.11b 2,4Ghz/11Mbs 
+802.11g 2,4Ghz/54Mbs 
+802.11n 2,4Ghz lub 5Ghz/300Mbs lub 600Mbs/ efekt=150Mbs
+802.15.1 (bluetooth - 2,4Ghz), 802.16 bluetooth
+-----------------------------------------
+Protoko³ymodelu OSI(7 warstw) od najni¿szej Fizyczna/£¹cza danych/Sieci/Transportu/Sesji/Prezentacji/Aplikacji
+Protoko³ymodelu TCP/IP(4 warstwy) od najni¿szej Dostêpu do sieci, Internetu, Transportu, Aplikacji
+kontenter - do organizacji struktury
+liœæ (Common Name) - nazwa bie¿¹cego obiektu
+na 1 stanowisko 6m2
+Topologia Pierœcienia - gdy uszkodzona, wszystko nie dzia³a
+Sieæ FDDI 100Mbs w technologii œwiat³owodowej
+Przy monta¿u sieci nie u¿ywaæ rêkawic ochronnych!
+Œwiat³owód zapewnia separacjê galweniczn¹
+W Decybelach wyra¿ony jest przes³uch zbli¿ny
+Switch(prze³¹cznik) dla topologii gwiazdy
+Domyœlny port przekazywania poleceñ serwera us³ugi FTP to 21
+Maksymalna odleg³oœæ pomiêdzy komputerem a routerem powinna wynosiæ 100m
+SSH2 do zdalnego/bezpiecznego administrowania systemem Linux
+Pulpit zdalny na porcie 3389
+Konfiguracja us³ug na serwerze odbywa siê poprzez ROLE i FUNKCJE
+Zapora ogniowa(FIREWALL) przeciw smurf
+UTP Cat 5c do pomieszczenie z zak³óceniami elektromagnetycznymi
+Fast Ethernet max transmisja to 100Mbps
+Konfiguracji sieci VLAN mo¿na dokonaæ na switchu
+Norma EN 50167 dot. okablowania POZIOMEGO
+EIA/TIA 568A norma okablowania strukturalnego
+MOLP = Microsoft Open License Program = instutucje
+OEM = 1
+DNS standardowo port 53
+FDDI(technologia œwiat³owodowa) w topologii podwójngo pierœcienia
+DoS = Denial Of Service attack
+UDP nie gwarantuje dostarczenia datagramów!
+
+

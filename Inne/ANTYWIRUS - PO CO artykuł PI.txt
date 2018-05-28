@@ -1,0 +1,12 @@
+1. Pierwsz¹ rzecz¹ jak¹ powinniœmy zrobiæ to poszuk¹æ tabeli rankingowej antywirusów z bie¿¹cego roku i wybraæ najlepszy darmowy/p³atny. Po zdecydowaniu siê na jakiœ z nich nale¿y poczytaæ opinie czy np. nie zmula systemu, nie aktualizuje bie¿¹co bazy danych itd. Nale¿y zwróciæ uwagê równie¿ na ich mo¿liwoœci jak np. wbudowane antyspam, ochrona poczty, ochrona rzeczywista
+
+2. Druga rzecz¹ jak¹ powinniœmy robiæ to kontrolowaæ antywirusa aby stale mia³ zaktualizowan¹ bazê wirusów, niestety nie zawsze udaje siê automatyczne je pobraæ dlatego nale¿y go codziennie sprawdzaæ, poniewa¿ ka¿dego dnia powstaje miliony odmian trojanów, robaków.
+
+3. Trzecia sprawa to niebezpieczne pliki,strony. Aby byæ pewnym, ¿e plik np. rar jest bezpieczny nale¿y go przeskanowaæ antywirusem przed otwarciem/wypakowaniem. Wiêkszoœæ antywirusów automatycznie skanuje pobrane pliki jednak, je¿eli nie bêdziemy dysponowaæ najnowsz¹ baz¹ danych o wirusach to z ³atwoœci¹ mog¹ siê przedrzeæ "niechciane szkodniki"
+
+4. Kolejna sprawa to czêstotliwoœæ skanowania. Podawane s¹ ró¿ne odstêpy czasu od szybkiego i pe³nego skanowania dla przeznaczenia komputera (np. na w³asny u¿ytek lub firma). Wiêkszoœæ szkodliwego oprogramowania ukrywa siê co utrudnia jego znalezienie za pomoc¹ szybkiego skanowania. Dlatego wa¿ne jest by wykonywaæ pe³ny skan raz na tydzieñ aby byæ pewnym, ¿e jesteœmy bezpieczni! 
+
+5. Inna sprawa to kwarantanna. Wiele osób pope³nia b³¹d usuwaj¹c wirusa w momencie wykrycia go, bowiem mo¿e siê podszywaæ on pod plik systemowy. Czasami jest to te¿ b³¹d antywirusa ale, je¿eli nie jesteœmy pewni co to za plik nale¿y go zostawiæ w kwarantannie, wtedy mamy pewnoœæ, ¿e gdy dzia³¹ antywirus to pliki w kwarantannie nie s¹ w stanie zaszkodziæ komputerowi. 
+
+6. Dodatkow¹ opcj¹ zabezpieczenia siê przed wirusami jest bootowalny pendrive z naszym antywirusem. Nale¿y jednak go stale aktualizowaæ by mia³ najnowsz¹ bazê wirusów. Pozwala na przeskanowanie komputera i ew. kwarantanne/usuwanie wirusów bez wchodzenia do systemu! Jak? Nale¿y zrobiæ bootowalnego pena z np. Avastem a nastêpnie w BIOSIE (przy uruchamianiu komputera) ustawiæ opcjê priorytetu #1 nie na dysku twardym tylko na pendrive i wystartowaæ z niego. 
+
