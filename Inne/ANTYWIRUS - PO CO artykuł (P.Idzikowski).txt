@@ -1,3 +1,4 @@
+
 1. Pierwsz¹ rzecz¹ jak¹ powinniœmy zrobiæ to poszuk¹æ tabeli rankingowej antywirusów z bie¿¹cego roku i wybraæ najlepszy darmowy/p³atny. Po zdecydowaniu siê na jakiœ z nich nale¿y poczytaæ opinie czy np. nie zmula systemu, nie aktualizuje bie¿¹co bazy danych itd. Nale¿y zwróciæ uwagê równie¿ na ich mo¿liwoœci jak np. wbudowane antyspam, ochrona poczty, ochrona rzeczywista
 
 2. Druga rzecz¹ jak¹ powinniœmy robiæ to kontrolowaæ antywirusa aby stale mia³ zaktualizowan¹ bazê wirusów, niestety nie zawsze udaje siê automatyczne je pobraæ dlatego nale¿y go codziennie sprawdzaæ, poniewa¿ ka¿dego dnia powstaje miliony odmian trojanów, robaków.

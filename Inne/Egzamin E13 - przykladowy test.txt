@@ -1,0 +1,33 @@
+1. Zarób Kabel RJ45 w T586A czyli    bzielony, ZIELONY,bpomarañcz, NIEBIESKI,bniebieski, POMARAÑCZ, bbr¹zowy, BR¥ZOWY
+2. Zg³oœ, ¿e gotowe.
+3. SprawdŸ testerem okablowania czy dzia³a. Lampki musz¹ jednoczeœnie siê zapalaæ po obu stronach i nie mog¹ przeskakiwaæ
+4. Pod³¹cz stacje robocz¹ do switcha(prze³¹cznik) oraz serwer do switcha za pomoc¹ kabli RJ45 (gotowce wisz¹ na parawanie)
+5. Ustaw prawid³owe IP dla serwera i stacji roboczej
+
+np.
+
+Serwer:
+IP: 172.16.1.1
+Maska: 255.255.255.0
+Brama: 172.16.1.1
+DNS: 172.16.1.1
+
+Stacja robocza:
+IP: 172.16.1.2
+Maska: 255.255.255.0
+Brama: 172.16.1.1
+DNS: 172.16.1.1
+
+ZAPISZ ADRES IP I MASKE W TABELI NA KARTCE! 
+
+6. Za pomoc¹ pinga sprawdŸ czy odbierajo pakiety tzn
+
+ping 172.16.1.1 na STACJI ROBOCZEJ i zrób screena
+ping 172.16.1.2 na SERWERZE i zrób screena
+
+7. Utwórz grupe zaloga, utwórz Administratora z uprawnieniami administratora oraz nowaka z uprawnieniami u¿ytkownika (nie pamietam)
+8. Dodaj Administratora do grupy Administratorzy a nowaka do zalogi
+9. Zainstaluj role DNS (patrz prezentacja! klikasz potem w dns strefa wyszukiwania, i twoja nazwa i tworzysz nowego hosta z IP: 172.16.1.1 o nazwie ftp)
+10. Promuj serwer do roli FTP (instalujesz IIS z FTP, potem wchodzisz do tej roli i klikasz dodaj witryne FTP, dajesz IP serwera i ¿e anonimowi mog¹ wchodziæ do plików
+* tworzysz folder i 2 pliki txt w C które masz udostêpnic ¿eby jak wpisze ftp.mojepliki.com na stacji roboczej ci sie to otworzy³o! 
+* zrób screena jak masz odpalony udostepniony folder z serwera i na pulpit w folderze PESEL
