@@ -1,0 +1,197 @@
+-------------------------------------------------
+ PROGRAMOWANIE OBIEKTOWE - TEORETYCZNA POWTÓRKA
+-------------------------------------------------
+
+<> Klasa - typ ogólny, abstrakcyjny, okreœla cechy a nie ich 
+wartoœci. Klasa posiada pola, w³aœciwoœci, eventy oraz/lub metody.
+Okreœla przepis na zbudowanie obiektu.
+
+<> Obiekt - instancja klasy, konkretny byt z rzeczywistoœci. Stworzony
+na podstawie klasy.
+
+<> <> <> <> <> <> <> <> <> <> <> <>
+Zalety programowania obiektowego:
+1) zmniejszenie luki reprezentacji(program zbli¿ony do sposobu postrzegania rzeczywistoœci)
+2) budowanie programów z obiektów pozwala ³atwiej zrozumieæ rozwi¹zanie. 
+3) klasy powinny wiedzieæ o sobie jak najmniej - pozwala to na skupienie siê nad jednym logicznym kawa³kiem kodu
+4) program budujemy z "klocków", zwiêksza mo¿liwoœæ wykorzystania raz napisanego kodu
+<> <> <> <> <> <> <> <> <> <> <> <>
+
+<> <> <> <> <> <> <> <> <> <> <> <>
+Modyfikatory dostêpu:
+1) public - pole lub metoda jest dostêpna wszêdzie i dla wszystkich
+2) private - pole/metoda dostêpna jest tylko w obrêbie danej klasy, s³u¿y do ukrywania implementacji
+3) protected - "rozszerzony private", pole/metoda dostêpna jest do klasy w której zdefiniowaliœmy pole/metode z modyfikatorem protected i w jej klasach potomnych
+4) internal - dostêp do pola/metody w obrêbie danego modu³u,przestrzeni nazw(namespace)
+<> <> <> <> <> <> <> <> <> <> <> <>
+
+<> Operator new ma za zadanie zainicjowaæ obiekt, rezerwuje pamiêæ na stercie na poszczególne dane obiektu.
+
+<> W klasie mo¿emy zdefiniowaæ kilka konstruktorów.
+
+<> Gdy nie zdefiniujemy ¿adnego konstruktora - zostanie zdefiniowany
+niejawnie konstruktor domyœlny
+
+<> Gdy zdefiniujemy samemu konstruktor - to konstruktor domyœlny nie jest automatycznie tworzony.
+
+<> Garbage Collector - odœmiecacz - zajmuje siê niszczeniem obiektów i zwalnianiem pamiêci po nich. Jest niezale¿ny, nie wiemy kiedy obiekty zostaj¹ zniszczone. GC jest autonomiczny. 
+
+<> Destruktor - ze znakiem ~
+
+<> Metody statyczne nie potrzebuj¹ instancji obiektu aby istnieæ.
+
+<> Pola statyczne s¹ zawsze widoczne!!
+
+<> <> <> <> <> <> <> <> <> <> <> <>
+Wyró¿niki obiektowoœci:
+1) Abstrakcja
+- uogólnianie, tworzenie i definiowanie klas na pewnym poziomie okreœlenia szczegó³ów
+- ograniczenie liczby powi¹zañ pomiêdzy klasami
+- pozwala na tworzenie systemów ³atwiej rozszerzalnych
+- odpowiednie nazewnictwo pól i metod w klasach aby ³¹czy³y poszczególne klasy domenowe w jeden byt
+- wyodrêbnienie istotnych cech rozpatrywanych obiektów domenowych
+2) Hermetyzacja(Enkapsulacja)
+- zapewnia utrzymanie w³aœciwego stanu klasy
+(pola klasy s¹ inicjowane, modyfikowane, odcztywane w sposób przewidziany przez autora klasy)
+- ukrycie wewnêtrznego stanu klasy a udostêpnienie tylko tego co jest niezbêdne do komunikacji z innymi klasami
+- u¿ycie odpowiednich modyfikatorów dostêpu do pól i metod
+- nie pozwól mieszaæ w stanie swojej klasy - utrudnia to odnajdywanie b³êdów
+3) Dziedziczenie
+- pozwala rozszerzaæ klasy o nowe cechy bez powielenia kodu
+- pozwala lepiej oddaæ charakter relacji pomiêdzy klasami rzeczywistymi
+- pozwala uwspóliæ pewne cechy i wyci¹gn¹c je do klasy bazowej
+- umo¿liwia korzystanie z w³asnej lub cudzej pracy (poprzez klasy,interfejsy)
+- elementy dziedziczone: pola, metdoy, w³aœciwoœci, klasy
+- klasa dziedziczona - klasa bazowa
+- klasa dziedzicz¹ca - klasa potomna
+- w C# dziedziczenie mo¿e byæ tylko po jednej klasie!!!
+- w C# klasa mo¿e implementowaæ wiele interfejsów!
+- modyfikatory dostêpu do metod zwi¹zane z dziedziczeniem:
+  => virtual - metoda mo¿e byæ przykryta w klasie potomnej
+     (nie mo¿e byæ static ani private)
+  => override - metoda przykrywa metodê z klasy bazowej.
+4) Polimorfizm
+- poli - wiele, morfizm - postaæ, wielepostaciowoœæ
+- obiekt mo¿e byæ ró¿nie traktowany w zale¿noœci od kontekstu
+  (np. raz jako pojazd a raz jako samochód)
+- pojêcie zwi¹zane z dziedziczeniem
+- interfejs polimoryficzny => klasa abstrakcyjna
+<> <> <> <> <> <> <> <> <> <> <> <>
+
+<> <> <> <> <> <> <> <> <> <> <> <>
+Diagram klas:
+Klasa reprezentowana jest przez prostok¹t z nazw¹ klasy, poni¿ej pola i 
+metody klasy oddzielone poziom¹lini¹
++ - public
+- - private
+# - protected
+~ - internal
+
+zwi¹zki:
+1) Zale¿noœæ - zaznaczamy przerywana lini¹ z strza³k¹, oznacza ¿e jedna klasa u¿ywa innej klasy w nied³ugim czasie.
+2) Asocjacja - zaznaczamy za pomoc¹ linii zakoñczonej strza³k¹, czêsto wystêpuje wraz z okreœleniem liczebnoœci. Reprezentuje czasowe powi¹zanie pomiêdzy obiektami dwóch klas. Obiekty s¹ niezale¿ne od siebie.
+3) Agregacja - zaznaczamy lini¹ zakoñczon¹ pustym rombem. Oznacza relacjê
+czêœæ-ca³oœæ, elementy czêœci nale¿¹ do wiêkszej ca³oœci. Np. obiekty Pracownik do obiektu Firma, obiekt czêœci mo¿e istnieæ samodzielnie.
+4) Kompozycja - zaznaczamy lini¹ zakoñczon¹ wype³nionym rombem. Oznacza relacjê czêœæ-ca³oœæ, czêœci nie mog¹ istnieæ bez nadzorcy.
+5) Generalizacja - na diagramie zaznaczamy lini¹ zakoñczon¹ trójk¹tn¹ niewype³nion¹ strza³k¹. Oznacza zwi¹zek dziedziczenia, kierunek od klasy pochodnej do bazowej.
+<> <> <> <> <> <> <> <> <> <> <> <>
+
+<> Klasa abstrakcyjna (modyfikator abstract)
+- klasa bazowa która nie bêdzie posiada³a ¿adnych obiektów
+- mo¿na umieœciæ w niej implementacje metod
+- cel tej klasy jest taki ¿e mo¿na z niej dziedziczyæ
+- klasa potomna musi implementowaæ wszystkie metody i w³aœciwoœci
+- mo¿e zawieraæ sta³e
+
+<> Klasa finalna (modyfikator sealed)
+- taka klasa uniemo¿liwia dziedziczeniu jej 
+(zapobiega przypadkowemu dziedziczeniu)
+
+<> Interfejs
+- na skojarzenie: "klasa z samymi metodami, bez ich implementacji"
+- metody w interfejsach nie maj¹ modyfikatorów
+- nie mo¿na utworzyæ obiektu bêd¹cego instancj¹ interfejsu
+- klasa mo¿e implementowaæ wiele interfejsów
+- interfejs mo¿e dziedziczyæ po innym interfejsie
+- mo¿emy rzutowaæ na interfejs
+
+<> Interfejsy w C#
+- IComparable - pozwala na prównywanie dwóch obiektów ze sob¹, przydatny przy sortowaniu
+- IEnumerable, Icollection, IList - interfejsy pozwalaj¹ce na dostêp do elementów zagregowanych w ramach klasy, pozwala na przechodzenie po elementach, dostêp do nich za pomoc¹ indeksatora itd...
+- IClonable - pozwala na zdefiniowanie w³asnego sposobu kopiowania obiektów
+- IDisposable - pozwala na implementacjê mechanizmu zwalniania zasobów
+
+<> Polimorfizm - metody abstrakcyjne:
+- metody abstrakcyjne definiujemy w klasie bazowej!!
+- klasê z metod¹ abstrakcyjn¹ nazywamy klas¹ abstrakcyjn¹
+- nie mo¿na utworzyæ egzemplarza klasy abstrakcyjnej! Podobnie jak egzemplarza interfejsu!
+- metody abstrakcyjne nie maj¹ implementacji, nie definiujemy cia³a metody.
+- deklaracja podobna jak przy metodach z interfejsu
+
+<> Polimorfizm - metody wirtualne:
+- metody, która nie zosta³a oznaczona jako wirtualna nie mo¿na przes³oniæ!
+- metoda wirtualna, mo¿e ale nie musi byæ przes³oniêta
+
+<> Wyj¹tek
+- mechanizm kontroli przep³ywu, zapobiega nieoczekiwanemu zakoñczeniu dzia³ania apliakcji. Pozwala na poznanie przyczyny nieprawid³owego funkcjonowania aplikacji (logi). 
+try - próbuje coœ zrobiæ
+catch - chwyta wyj¹tek
+finally - finalizacja (co ma zrobiæ po wychwyceniu wyj¹tku)
+np. zamkn¹æ po³¹czenie do bazy danych
+
+<> Wzorzec projektowy:
+(ang. design pattern) – uniwersalne, sprawdzone w praktyce rozwi¹zanie
+czêsto pojawiaj¹cych siê, powtarzalnych problemów projektowych . Pokazuje powi¹zania i zale¿noœci pomiêdzy klasami oraz obiektami i u³atwia tworzenie, modyfikacjê oraz pielêgnacjê kodu Ÿród³owego.
+
+Podzia³ wzorców:
+kreacyjne - opisuj¹ elastyczne sposoby tworzenia obiektów, uniezale¿niaj¹ system od sposobu tworzenia obiektu
+strukturalne - opisuj¹ sposób konstrukcji struktur obiektowych, korzystaj¹ z dziedziczenia i delegacji
+czynnoœciowe - opisuj¹ algorytmy i podzia³ odpowiedzialnoœci, charakteryzuj¹ sposób interakcji miêdzy obiektami
+
+Zalety wzorców projektowych:
+- nie trzeba rozwi¹zywaæ problemów na nowo, budujemy z klocków i wykorzystujemy
+doœwiadczenie innych.
+- wspólne s³ownictwo
+- ³atwiejsze utrzymanie kodu, wzorce projektowe tworzone s¹ z myœl¹ nie tylko eleganckiego rozwi¹zania problemu, ale tak¿e rozszerzalnoœci.
+- bazuj¹ na g³ównych za³o¿eniach prog. obiek. : abstrakcja, dziedziczenie, hermetyzacja,polimorfizm.
+
+przyk³adowe wzorce:
+- Wzorzec obserwator 
+- Wzorzec prototyp
+- Wzorzec Iterator
+itd...
+
+____________________________________________
+<> REGU£Y PROJEKTOWANIA OBIEKTOWEGO SOLID <> 
+S - Single Responsibility Principle (zasada jednej odpowiedzialnoœci)
+O - Open Closed Principle (zasada otwarte-zamkniête)
+L - Liskov Substitution Principle (zasada podstawiania Lisov)
+I - Interface Segregation Principle (zasada segregacji interfejsów)
+D - Dependency Inversion Principle (zasada odwrócenia zale¿noœci)
+
+<> S(Single Responsibility Principle)
+- klasa powinna mieæ tylko jedn¹ odpowiedzialnoœæ
+- zmiana zachowania klasy nie powinna wymuszaæ zmian w innych czêœciach systemu
+- mniejsze klasy a dziêki temu:
+  ³atwiejsze testowanie
+  ³atwiejsze utrzymanie kodu
+
+<> O(Open Closed Principle) 
+- klasy otwarte na rozbudowê, ale zamkniête na modyfikacjê
+- wydzielamy to co mo¿e byæ rozbudowane do oddzielnego interfejsu
+- staramy siê unikaæ rozbudowanych if,switch
+- przeciwdzia³a wprowadzaniu nowych b³êdów w istniej¹cym kodzie
+
+<> L(Liskov Substitution Principle)
+- korzystanie z funkcji klasy bazowej musi byæ mo¿liwe równie¿ w przypadku podstawienia instancji klas pochodnych
+- u¿ywaj dziedziczenia tylko gdy bêdziesz korzysta³ z polimorfizmu
+
+<> I(Interface Segregation Principle)
+- klienci nie powinni zale¿eæ od interfejsów których nie u¿ywaj¹
+- nie pakujmy za du¿o do pojedynczego interfejsu
+- obiekt nie powinien implementowaæ metod, które nie s¹ mu potrzebne
+- rozbijamy interfejsy na mniejsze(lepiej kilka mniejszych ni¿ jeden du¿y)
+
+<> D(Dependency Inversion Principle) 
+- wysokopoziomowe modu³y nie powinny zale¿eæ od modu³ów niskopoziomowych 
+(zale¿noœci miêdzy nimi powinny wynikaæ z abstrakcji) 
