@@ -1,7 +1,8 @@
-# Moje.dokumenty
+# Moje dokumenty
 
-Utworzone dokumenty na potrzeby 
+Repozytorium zawiera dokumenty utworzone na potrzeby:
 - sesji
-- zapamietania
-- utrwalenia wiedzy
+- przypomnienia informacji
+
+
 
