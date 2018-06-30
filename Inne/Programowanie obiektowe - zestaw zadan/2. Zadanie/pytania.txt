@@ -1,0 +1,18 @@
+1. Podaj ró¿nice(-) i podobieñstwa(+) miêdzy interfejsem polimorficznym a zwyk³ym interfejsem?
+2. Jaka jest ró¿nica miedzy new a override?
+3. Czym jest klasa a czym obiekt?
+4. Jakie sa 4 filary obiektowosci?
+5. Jesli konstruktory sa prywatne to jak stworzyc obiekt tej klasy?
+6. Co to jest static??
+7. Czym jest polimorfizm statyczny a czym polimorfizm dynamiczny?
+8. Do czego s³u¿y blok try, catch, finally?
+9. Wymieñ i opisz modyfikatory dostêpu.
+10. Czym jest interfejs polimorficzny?
+11. Co to jest interfejs?
+12. Jak przeci¹¿amy funkcje?
+13. Czy w klasie wirtualnej mo¿emy u¿yæ przes³aniania metody?
+14. Czy s³ówko override mo¿emy dopisaæ do metody bez virtual?
+15. Czy klasa abstrakcyjna ma konstruktor?
+16. Na czym polega rzutowanie interfejsu?
+17. Jak napisaæ klasê Pomidor która bêdzie wielodziedziczy³a po 
+Owocu i Warzywie? 
