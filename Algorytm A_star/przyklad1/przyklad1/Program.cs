@@ -73,14 +73,14 @@ namespace przyklad1
             // zdefiniujmy sobie wygląd naszej planszy:
             string[] map = new string[]
             {
-                "+-------+",
-                "|       |",
-                "|A X    |",
-                "|XXX    |",
-                "|   XX  |",
-                "| B     |",
-                "|       |",
-                "+-------+",
+                "+----------+",
+                "|          |",
+                "|A XXX  X  |",
+                "|XXX     X |",
+                "|   XXXX   |",
+                "| B        |",
+                "|          |",
+                "+----------+",
             };
             // umówmy się, że najkrótsza droga musi zostać znaleziona od punktu B do punktu A
             // tam gdzie postawiliśmy znak X oznacza, że jest przeszkoda i nie można przez 
@@ -88,12 +88,13 @@ namespace przyklad1
 
             // narysujmy na ekranie naszą planszę:
             // żeby widzieć jak się porusza algorytm
-            for(int i = 0; i < map.Length; i++)
+
+            for (int i = 0; i < map.Length; i++)
             {
                 Console.WriteLine(map[i]);
             }
 
-            // odczekajmy chwile
+            // 
             Thread.Sleep(2000);
 
             // rdzeń algorytmu - to tutaj odbywa się większość operacji
@@ -112,9 +113,10 @@ namespace przyklad1
                 openList.Remove(current);
 
                 // mamy dwa warunki które pozwalają algorytmowi A* na zakończenie działania
+
                 // 1. nie ma więcej bloków/kratek w openList do przetworzenia, które mogłyby
                 // wskazywać na to, że nie ma ścieżki pomiędzy punktami A i B(ale tego tutaj 
-                // nie zaimplementowano)
+                // nie zaimplementowano..)
 
                 // 2. poniższy warunek czyli, gdy ścieżka została znaleźiona i jest przez
                 // algorytm "obsłużona"
