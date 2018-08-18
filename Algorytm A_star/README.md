@@ -1,14 +1,18 @@
 # o Algorytmie A*
 
-Algorytm A* jest jednym z najbardziej popularnych sposobów przeliczania/obliczania najkrótszej trasy
-pomiędzy dwoma zadanymi punktami. Bardzo często wykorzystuje się go w - grach aby np. AI obliczało najkrótszą 
-trasę do podejścia do bohatera przez co inteligencja wroga wydaje nam się bardziej naturalna. 
+<p align="left">
+Algorytm A* jest jednym z najbardziej popularnych sposobów przeliczania/obliczania najkrótszej trasy pomiędzy </br>
+dwoma zadanymi punktami. Bardzo często wykorzystuje się go w - grach aby np. AI obliczało najkrótszą trasę do </br>
+podejścia do bohatera przez co inteligencja wroga wydaje nam się bardziej naturalna. </br>
+</p>
+
+<img align="left" src="https://github.com/trolit/Moje.dokumenty/blob/master/images/example1.png" width="490">
 
 Źródła:
-> [Idea algorytmu](https://www.raywenderlich.com/3016-introduction-to-a-pathfinding)
+> [Idea algorytmu(dobry artykuł)](https://www.raywenderlich.com/3016-introduction-to-a-pathfinding)
 
-> [Przyklad1](https://gigi.nullneuron.net/gigilabs/a-pathfinding-example-in-c/)
+> [Przyklad A* w C#](https://gigi.nullneuron.net/gigilabs/a-pathfinding-example-in-c/)
 
 > [A* w Unity](https://www.youtube.com/watch?v=mZfyt03LDH4)
 
-> [A* w Unity 2](https://www.youtube.com/watch?v=Uwn_QFjbl1k)
+> [A* w Unity(2)](https://www.youtube.com/watch?v=Uwn_QFjbl1k)

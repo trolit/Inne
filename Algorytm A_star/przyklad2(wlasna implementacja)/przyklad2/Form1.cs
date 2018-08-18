@@ -224,6 +224,11 @@ namespace przyklad2
                 int resultUp = upScore + G;
                 int resultDown = downScore + G;
 
+                // Console.WriteLine("right score: " + rightScore);
+                // Console.WriteLine("left score: " + leftScore);
+                // Console.WriteLine("up score: " + upScore);
+                // Console.WriteLine("down score: " + downScore);
+
                 if (y < 9)
                 {
                     if ((string)matrix[x, y + 1].Tag == "moveAble")
