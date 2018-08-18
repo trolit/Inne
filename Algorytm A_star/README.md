@@ -6,6 +6,9 @@ trasę do podejścia do bohatera przez co inteligencja wroga wydaje nam się bar
 
 Źródła:
 > [Idea algorytmu](https://www.raywenderlich.com/3016-introduction-to-a-pathfinding)
+
 > [Przyklad1](https://gigi.nullneuron.net/gigilabs/a-pathfinding-example-in-c/)
+
 > [A* w Unity](https://www.youtube.com/watch?v=mZfyt03LDH4)
+
 > [A* w Unity 2](https://www.youtube.com/watch?v=Uwn_QFjbl1k)
