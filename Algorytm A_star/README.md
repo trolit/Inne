@@ -6,7 +6,19 @@ dwoma zadanymi punktami. Bardzo często wykorzystuje się go w - grach aby np. A
 podejścia do bohatera przez co inteligencja wroga wydaje nam się bardziej naturalna. </br>
 </p>
 
-<img align="left" src="https://github.com/trolit/Moje.dokumenty/blob/master/images/example1.png" width="490">
+<img align="left" src="https://github.com/trolit/Moje.dokumenty/blob/master/images/example1.PNG" width="490">
+
+
+
+
+<p align="left">
+</br>
+</br>
+</br>
+</p>
+
+
+
 
 Źródła:
 > [Idea algorytmu(dobry artykuł)](https://www.raywenderlich.com/3016-introduction-to-a-pathfinding)
