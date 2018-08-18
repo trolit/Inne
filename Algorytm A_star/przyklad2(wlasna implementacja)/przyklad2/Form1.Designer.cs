@@ -376,9 +376,9 @@
             // 
             this.pictureBox21.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.pictureBox21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox21.Location = new System.Drawing.Point(504, 124);
+            this.pictureBox21.Location = new System.Drawing.Point(507, 124);
             this.pictureBox21.Name = "pictureBox21";
-            this.pictureBox21.Size = new System.Drawing.Size(52, 50);
+            this.pictureBox21.Size = new System.Drawing.Size(49, 50);
             this.pictureBox21.TabIndex = 29;
             this.pictureBox21.TabStop = false;
             this.pictureBox21.Tag = "moveAble";

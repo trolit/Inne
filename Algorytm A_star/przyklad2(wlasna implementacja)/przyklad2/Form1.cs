@@ -275,7 +275,7 @@ namespace przyklad2
                    break;
                 }
 
-                System.Threading.Thread.Sleep(50);
+                System.Threading.Thread.Sleep(1);
                 closedListVar++;
                 openList.Clear();
             }
@@ -283,10 +283,8 @@ namespace przyklad2
             for(int temp = 1; temp < closedListVar; temp++)
             {
                 closedList[temp].Item1.BackColor = Color.DarkSeaGreen;
+                System.Threading.Thread.Sleep(1000);
             }
-
-            matrix[targetX, targetY].BackColor = Color.BlueViolet;
-
         }
 
         private int CalculateH(int x, int y, int targetX, int targetY)
