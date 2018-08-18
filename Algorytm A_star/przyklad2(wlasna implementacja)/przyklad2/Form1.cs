@@ -9,7 +9,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-// DO UKONCZENIA
+// DO UKONCZENIA!!!
 
 namespace przyklad2
 {
@@ -59,6 +59,7 @@ namespace przyklad2
                 }
             }
 
+            label1.BackColor = Color.ForestGreen;
         }
 
         private void StartEventHandler(object sender, EventArgs e)
@@ -82,13 +83,14 @@ namespace przyklad2
                         matrix[x, y].Click += TargetEventHandler;
                     }
                 }
-
                 return;
             }
 
-
             pickedStart = true;
             PictureBox clickedPicture = (PictureBox)sender;
+
+            label1.BackColor = Color.Transparent;
+            label2.BackColor = Color.ForestGreen;
 
             // get name of clicked picture
             startingPoint = (PictureBox)sender;
@@ -135,6 +137,8 @@ namespace przyklad2
             pickedTarget = true;
             PictureBox clickedPicture = (PictureBox)sender;
 
+            label2.BackColor = Color.Transparent;
+
             // get name of clicked picture
             targetPoint = (PictureBox)sender;
 
@@ -169,9 +173,30 @@ namespace przyklad2
 
             int x = startX;
             int y = startY;
+            int closedListVar = 0;
+
+            List<Tuple<PictureBox, int>> openList = new List<Tuple<PictureBox, int>>();
+            List<Tuple<PictureBox, int>> closedList = new List<Tuple<PictureBox, int>>();
+
+            // add start point to closedList
+            closedList.Add(new Tuple<PictureBox, int>(matrix[x, y], 1));
 
             while (!pathFound)
             {
+                // get current x and y 
+                for (int i = 0; i < 6; i++)
+                {
+                    for (int j = 0; j < 10; j++)
+                    {
+                        if (matrix[i, j] == closedList[closedListVar].Item1)
+                        {
+                            x = i;
+                            y = j;
+                            break;
+                        }
+                    }
+                }
+
                 int rightScore = 0;
                 int leftScore = 0;
                 int upScore = 0;
@@ -199,13 +224,11 @@ namespace przyklad2
                 int resultUp = upScore + G;
                 int resultDown = downScore + G;
 
-                List<int> possibleWays = new List<int>();
-
                 if (y < 9)
                 {
                     if ((string)matrix[x, y + 1].Tag == "moveAble")
                     {
-                        possibleWays.Add(resultRight);
+                        openList.Add(new Tuple<PictureBox,int>(matrix[x, y + 1], resultRight));
                     }
                 }
 
@@ -213,7 +236,7 @@ namespace przyklad2
                 {
                     if ((string)matrix[x, y - 1].Tag == "moveAble")
                     {
-                        possibleWays.Add(resultLeft);
+                        openList.Add(new Tuple<PictureBox, int>(matrix[x, y - 1], resultLeft));
                     }
                 }
 
@@ -221,7 +244,7 @@ namespace przyklad2
                 {
                     if ((string)matrix[x - 1, y].Tag == "moveAble")
                     {
-                        possibleWays.Add(resultUp);
+                        openList.Add(new Tuple<PictureBox, int>(matrix[x - 1, y], resultUp));
                     }
                 }
 
@@ -229,51 +252,42 @@ namespace przyklad2
                 {
                     if ((string)matrix[x + 1, y].Tag == "moveAble")
                     {
-                        possibleWays.Add(resultDown);
+                        openList.Add(new Tuple<PictureBox, int>(matrix[x + 1, y], resultDown));
                     }
                 }
 
-                // get smallest value from the list
-                int theSmallest = possibleWays.Min();
+                int least = resultRight;
+                Tuple<PictureBox, int> item = openList[0];
 
-                if (theSmallest == resultRight && possibleWays.Contains(resultRight))
+                // dodaj do zamknietej listy pole z najmniejszym wynikiem
+                for (int i = 0; i < openList.Count; i++)
                 {
-                    if (y < 9)
-                        y = y + 1;
-                    matrix[x, y].BackColor = Color.Green;
+                    if(least > openList[i].Item2)
+                    {
+                        item = openList[i];
+                    }
                 }
-                else if (theSmallest == resultLeft && possibleWays.Contains(resultLeft))
-                {
-                    if (y > 0)
-                        y = y - 1;
-                    matrix[x, y].BackColor = Color.Green;
-                }
-                else if (theSmallest == resultUp && possibleWays.Contains(resultUp))
-                {
-                   if (x > 0)
-                   x = x - 1;
-                   matrix[x, y].BackColor = Color.Green;
-                }
-                else if (theSmallest == resultDown && possibleWays.Contains(resultDown))
-                {
-                   if (x < 5)
-                   x = x + 1;
-                   matrix[x, y].BackColor = Color.Green;
-                }
+                closedList.Add(item);
 
                 if (x == targetX && y == targetY)
                 {
                    pathFound = true;
-                   matrix[x, y].BackColor = Color.BlueViolet;
                    break;
                 }
 
-                System.Threading.Thread.Sleep(650);
+                System.Threading.Thread.Sleep(50);
+                closedListVar++;
+                openList.Clear();
+            }
 
-                possibleWays.Clear();
-                }
+            for(int temp = 1; temp < closedListVar; temp++)
+            {
+                closedList[temp].Item1.BackColor = Color.DarkSeaGreen;
+            }
+
+            matrix[targetX, targetY].BackColor = Color.BlueViolet;
+
         }
-
 
         private int CalculateH(int x, int y, int targetX, int targetY)
         {

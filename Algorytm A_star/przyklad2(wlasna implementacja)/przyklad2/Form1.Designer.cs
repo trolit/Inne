@@ -341,7 +341,7 @@
             // 
             // pictureBox18
             // 
-            this.pictureBox18.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pictureBox18.BackColor = System.Drawing.Color.Tan;
             this.pictureBox18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox18.Location = new System.Drawing.Point(122, 68);
             this.pictureBox18.Name = "pictureBox18";
@@ -376,9 +376,9 @@
             // 
             this.pictureBox21.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.pictureBox21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox21.Location = new System.Drawing.Point(507, 124);
+            this.pictureBox21.Location = new System.Drawing.Point(504, 124);
             this.pictureBox21.Name = "pictureBox21";
-            this.pictureBox21.Size = new System.Drawing.Size(49, 50);
+            this.pictureBox21.Size = new System.Drawing.Size(52, 50);
             this.pictureBox21.TabIndex = 29;
             this.pictureBox21.TabStop = false;
             this.pictureBox21.Tag = "moveAble";
@@ -726,7 +726,7 @@
             // 
             // pictureBox61
             // 
-            this.pictureBox61.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pictureBox61.BackColor = System.Drawing.Color.Tan;
             this.pictureBox61.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox61.Location = new System.Drawing.Point(232, 124);
             this.pictureBox61.Name = "pictureBox61";
@@ -737,7 +737,7 @@
             // 
             // pictureBox26
             // 
-            this.pictureBox26.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pictureBox26.BackColor = System.Drawing.Color.Tan;
             this.pictureBox26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox26.Location = new System.Drawing.Point(177, 124);
             this.pictureBox26.Name = "pictureBox26";
@@ -748,7 +748,7 @@
             // 
             // pictureBox27
             // 
-            this.pictureBox27.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pictureBox27.BackColor = System.Drawing.Color.Tan;
             this.pictureBox27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox27.Location = new System.Drawing.Point(122, 124);
             this.pictureBox27.Name = "pictureBox27";
@@ -759,7 +759,7 @@
             // 
             // pictureBox28
             // 
-            this.pictureBox28.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pictureBox28.BackColor = System.Drawing.Color.Tan;
             this.pictureBox28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox28.Location = new System.Drawing.Point(342, 180);
             this.pictureBox28.Name = "pictureBox28";
@@ -770,7 +770,7 @@
             // 
             // pictureBox34
             // 
-            this.pictureBox34.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pictureBox34.BackColor = System.Drawing.Color.Tan;
             this.pictureBox34.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox34.Location = new System.Drawing.Point(397, 68);
             this.pictureBox34.Name = "pictureBox34";
@@ -781,7 +781,7 @@
             // 
             // pictureBox13
             // 
-            this.pictureBox13.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pictureBox13.BackColor = System.Drawing.Color.Tan;
             this.pictureBox13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox13.Location = new System.Drawing.Point(122, 236);
             this.pictureBox13.Name = "pictureBox13";
@@ -792,7 +792,7 @@
             // 
             // pictureBox48
             // 
-            this.pictureBox48.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pictureBox48.BackColor = System.Drawing.Color.Tan;
             this.pictureBox48.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox48.Location = new System.Drawing.Point(122, 295);
             this.pictureBox48.Name = "pictureBox48";
@@ -803,7 +803,7 @@
             // 
             // pictureBox23
             // 
-            this.pictureBox23.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pictureBox23.BackColor = System.Drawing.Color.Tan;
             this.pictureBox23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox23.Location = new System.Drawing.Point(397, 124);
             this.pictureBox23.Name = "pictureBox23";
@@ -816,8 +816,8 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Matura MT Script Capitals", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(566, 38);
+            this.label1.ForeColor = System.Drawing.Color.Tan;
+            this.label1.Location = new System.Drawing.Point(569, 97);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(172, 16);
             this.label1.TabIndex = 67;
@@ -827,8 +827,8 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Matura MT Script Capitals", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(566, 68);
+            this.label2.ForeColor = System.Drawing.Color.Tan;
+            this.label2.Location = new System.Drawing.Point(569, 127);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(178, 16);
             this.label2.TabIndex = 68;
@@ -844,16 +844,17 @@
             // 
             // ResetButton
             // 
-            this.ResetButton.BackColor = System.Drawing.Color.SeaGreen;
+            this.ResetButton.BackColor = System.Drawing.Color.Tan;
+            this.ResetButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.ResetButton.FlatAppearance.BorderSize = 0;
             this.ResetButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.ResetButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSlateBlue;
             this.ResetButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ResetButton.Font = new System.Drawing.Font("Lato", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResetButton.Font = new System.Drawing.Font("Lato", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ResetButton.ForeColor = System.Drawing.Color.White;
-            this.ResetButton.Location = new System.Drawing.Point(572, 133);
+            this.ResetButton.Location = new System.Drawing.Point(665, 188);
             this.ResetButton.Name = "ResetButton";
-            this.ResetButton.Size = new System.Drawing.Size(180, 41);
+            this.ResetButton.Size = new System.Drawing.Size(87, 41);
             this.ResetButton.TabIndex = 70;
             this.ResetButton.Text = "RESET";
             this.ResetButton.UseVisualStyleBackColor = false;
@@ -861,7 +862,7 @@
             // 
             // pictureBox55
             // 
-            this.pictureBox55.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pictureBox55.BackColor = System.Drawing.Color.Tan;
             this.pictureBox55.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox55.Location = new System.Drawing.Point(287, 295);
             this.pictureBox55.Name = "pictureBox55";
@@ -874,8 +875,8 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Matura MT Script Capitals", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.ForeColor = System.Drawing.Color.AntiqueWhite;
-            this.label4.Location = new System.Drawing.Point(611, 9);
+            this.label4.ForeColor = System.Drawing.Color.Tan;
+            this.label4.Location = new System.Drawing.Point(614, 68);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(98, 19);
             this.label4.TabIndex = 72;
@@ -884,16 +885,17 @@
             // 
             // ExitButton
             // 
-            this.ExitButton.BackColor = System.Drawing.Color.SeaGreen;
+            this.ExitButton.BackColor = System.Drawing.Color.Tan;
+            this.ExitButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.ExitButton.FlatAppearance.BorderSize = 0;
             this.ExitButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.ExitButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSlateBlue;
             this.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ExitButton.Font = new System.Drawing.Font("Lato", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExitButton.Font = new System.Drawing.Font("Lato", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExitButton.ForeColor = System.Drawing.Color.White;
-            this.ExitButton.Location = new System.Drawing.Point(572, 180);
+            this.ExitButton.Location = new System.Drawing.Point(572, 188);
             this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(180, 41);
+            this.ExitButton.Size = new System.Drawing.Size(87, 41);
             this.ExitButton.TabIndex = 73;
             this.ExitButton.Text = "KONIEC";
             this.ExitButton.UseVisualStyleBackColor = false;
@@ -903,8 +905,8 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Matura MT Script Capitals", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(566, 92);
+            this.label5.ForeColor = System.Drawing.Color.Tan;
+            this.label5.Location = new System.Drawing.Point(569, 151);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(103, 24);
             this.label5.TabIndex = 74;
@@ -914,7 +916,7 @@
             // pictureBox58
             // 
             this.pictureBox58.BackColor = System.Drawing.Color.BlueViolet;
-            this.pictureBox58.Location = new System.Drawing.Point(572, 262);
+            this.pictureBox58.Location = new System.Drawing.Point(618, 274);
             this.pictureBox58.Name = "pictureBox58";
             this.pictureBox58.Size = new System.Drawing.Size(34, 29);
             this.pictureBox58.TabIndex = 75;
@@ -923,7 +925,7 @@
             // pictureBox62
             // 
             this.pictureBox62.BackColor = System.Drawing.Color.PowderBlue;
-            this.pictureBox62.Location = new System.Drawing.Point(572, 227);
+            this.pictureBox62.Location = new System.Drawing.Point(618, 239);
             this.pictureBox62.Name = "pictureBox62";
             this.pictureBox62.Size = new System.Drawing.Size(34, 29);
             this.pictureBox62.TabIndex = 76;
@@ -933,8 +935,8 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Matura MT Script Capitals", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(612, 233);
+            this.label6.ForeColor = System.Drawing.Color.Tan;
+            this.label6.Location = new System.Drawing.Point(658, 245);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(62, 16);
             this.label6.TabIndex = 77;
@@ -944,8 +946,8 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Matura MT Script Capitals", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(612, 270);
+            this.label7.ForeColor = System.Drawing.Color.Tan;
+            this.label7.Location = new System.Drawing.Point(658, 282);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(44, 16);
             this.label7.TabIndex = 78;
@@ -955,7 +957,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.BackColor = System.Drawing.Color.LightSlateGray;
             this.ClientSize = new System.Drawing.Size(764, 357);
             this.ControlBox = false;
             this.Controls.Add(this.label7);
@@ -1029,7 +1031,7 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Cursor = System.Windows.Forms.Cursors.PanNW;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
