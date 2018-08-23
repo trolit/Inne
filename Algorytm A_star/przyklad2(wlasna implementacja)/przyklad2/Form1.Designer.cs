@@ -94,7 +94,6 @@
             this.pictureBox55 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.ExitButton = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
             this.pictureBox58 = new System.Windows.Forms.PictureBox();
             this.pictureBox62 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -209,14 +208,14 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.pictureBox5.BackColor = System.Drawing.Color.Tan;
             this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox5.Location = new System.Drawing.Point(232, 12);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(49, 50);
             this.pictureBox5.TabIndex = 4;
             this.pictureBox5.TabStop = false;
-            this.pictureBox5.Tag = "moveAble";
+            this.pictureBox5.Tag = "blocker";
             // 
             // pictureBox6
             // 
@@ -442,7 +441,7 @@
             // 
             this.pictureBox31.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.pictureBox31.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox31.Location = new System.Drawing.Point(507, 180);
+            this.pictureBox31.Location = new System.Drawing.Point(507, 181);
             this.pictureBox31.Name = "pictureBox31";
             this.pictureBox31.Size = new System.Drawing.Size(49, 50);
             this.pictureBox31.TabIndex = 39;
@@ -453,7 +452,7 @@
             // 
             this.pictureBox32.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.pictureBox32.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox32.Location = new System.Drawing.Point(452, 180);
+            this.pictureBox32.Location = new System.Drawing.Point(452, 181);
             this.pictureBox32.Name = "pictureBox32";
             this.pictureBox32.Size = new System.Drawing.Size(49, 50);
             this.pictureBox32.TabIndex = 38;
@@ -464,7 +463,7 @@
             // 
             this.pictureBox33.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.pictureBox33.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox33.Location = new System.Drawing.Point(397, 180);
+            this.pictureBox33.Location = new System.Drawing.Point(397, 181);
             this.pictureBox33.Name = "pictureBox33";
             this.pictureBox33.Size = new System.Drawing.Size(49, 50);
             this.pictureBox33.TabIndex = 37;
@@ -475,7 +474,7 @@
             // 
             this.pictureBox35.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.pictureBox35.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox35.Location = new System.Drawing.Point(287, 180);
+            this.pictureBox35.Location = new System.Drawing.Point(287, 181);
             this.pictureBox35.Name = "pictureBox35";
             this.pictureBox35.Size = new System.Drawing.Size(49, 50);
             this.pictureBox35.TabIndex = 35;
@@ -486,7 +485,7 @@
             // 
             this.pictureBox36.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.pictureBox36.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox36.Location = new System.Drawing.Point(232, 180);
+            this.pictureBox36.Location = new System.Drawing.Point(232, 181);
             this.pictureBox36.Name = "pictureBox36";
             this.pictureBox36.Size = new System.Drawing.Size(49, 50);
             this.pictureBox36.TabIndex = 34;
@@ -497,7 +496,7 @@
             // 
             this.pictureBox37.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.pictureBox37.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox37.Location = new System.Drawing.Point(177, 180);
+            this.pictureBox37.Location = new System.Drawing.Point(177, 181);
             this.pictureBox37.Name = "pictureBox37";
             this.pictureBox37.Size = new System.Drawing.Size(49, 50);
             this.pictureBox37.TabIndex = 33;
@@ -508,7 +507,7 @@
             // 
             this.pictureBox38.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.pictureBox38.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox38.Location = new System.Drawing.Point(122, 180);
+            this.pictureBox38.Location = new System.Drawing.Point(122, 181);
             this.pictureBox38.Name = "pictureBox38";
             this.pictureBox38.Size = new System.Drawing.Size(49, 50);
             this.pictureBox38.TabIndex = 32;
@@ -519,7 +518,7 @@
             // 
             this.pictureBox39.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.pictureBox39.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox39.Location = new System.Drawing.Point(67, 180);
+            this.pictureBox39.Location = new System.Drawing.Point(67, 181);
             this.pictureBox39.Name = "pictureBox39";
             this.pictureBox39.Size = new System.Drawing.Size(49, 50);
             this.pictureBox39.TabIndex = 31;
@@ -530,7 +529,7 @@
             // 
             this.pictureBox40.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.pictureBox40.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox40.Location = new System.Drawing.Point(12, 180);
+            this.pictureBox40.Location = new System.Drawing.Point(12, 181);
             this.pictureBox40.Name = "pictureBox40";
             this.pictureBox40.Size = new System.Drawing.Size(49, 50);
             this.pictureBox40.TabIndex = 30;
@@ -539,20 +538,20 @@
             // 
             // pictureBox41
             // 
-            this.pictureBox41.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.pictureBox41.BackColor = System.Drawing.Color.Tan;
             this.pictureBox41.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox41.Location = new System.Drawing.Point(507, 236);
+            this.pictureBox41.Location = new System.Drawing.Point(507, 237);
             this.pictureBox41.Name = "pictureBox41";
             this.pictureBox41.Size = new System.Drawing.Size(49, 50);
             this.pictureBox41.TabIndex = 49;
             this.pictureBox41.TabStop = false;
-            this.pictureBox41.Tag = "moveAble";
+            this.pictureBox41.Tag = "blocker";
             // 
             // pictureBox42
             // 
             this.pictureBox42.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.pictureBox42.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox42.Location = new System.Drawing.Point(452, 236);
+            this.pictureBox42.Location = new System.Drawing.Point(452, 237);
             this.pictureBox42.Name = "pictureBox42";
             this.pictureBox42.Size = new System.Drawing.Size(49, 50);
             this.pictureBox42.TabIndex = 48;
@@ -563,7 +562,7 @@
             // 
             this.pictureBox43.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.pictureBox43.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox43.Location = new System.Drawing.Point(397, 236);
+            this.pictureBox43.Location = new System.Drawing.Point(397, 237);
             this.pictureBox43.Name = "pictureBox43";
             this.pictureBox43.Size = new System.Drawing.Size(49, 50);
             this.pictureBox43.TabIndex = 47;
@@ -574,7 +573,7 @@
             // 
             this.pictureBox44.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.pictureBox44.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox44.Location = new System.Drawing.Point(342, 236);
+            this.pictureBox44.Location = new System.Drawing.Point(342, 237);
             this.pictureBox44.Name = "pictureBox44";
             this.pictureBox44.Size = new System.Drawing.Size(49, 50);
             this.pictureBox44.TabIndex = 46;
@@ -585,7 +584,7 @@
             // 
             this.pictureBox45.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.pictureBox45.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox45.Location = new System.Drawing.Point(287, 236);
+            this.pictureBox45.Location = new System.Drawing.Point(287, 237);
             this.pictureBox45.Name = "pictureBox45";
             this.pictureBox45.Size = new System.Drawing.Size(49, 50);
             this.pictureBox45.TabIndex = 45;
@@ -596,7 +595,7 @@
             // 
             this.pictureBox46.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.pictureBox46.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox46.Location = new System.Drawing.Point(232, 236);
+            this.pictureBox46.Location = new System.Drawing.Point(232, 237);
             this.pictureBox46.Name = "pictureBox46";
             this.pictureBox46.Size = new System.Drawing.Size(49, 50);
             this.pictureBox46.TabIndex = 44;
@@ -605,20 +604,20 @@
             // 
             // pictureBox47
             // 
-            this.pictureBox47.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.pictureBox47.BackColor = System.Drawing.Color.Tan;
             this.pictureBox47.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox47.Location = new System.Drawing.Point(177, 236);
+            this.pictureBox47.Location = new System.Drawing.Point(177, 237);
             this.pictureBox47.Name = "pictureBox47";
             this.pictureBox47.Size = new System.Drawing.Size(49, 50);
             this.pictureBox47.TabIndex = 43;
             this.pictureBox47.TabStop = false;
-            this.pictureBox47.Tag = "moveAble";
+            this.pictureBox47.Tag = "blocker";
             // 
             // pictureBox49
             // 
             this.pictureBox49.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.pictureBox49.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox49.Location = new System.Drawing.Point(67, 236);
+            this.pictureBox49.Location = new System.Drawing.Point(67, 237);
             this.pictureBox49.Name = "pictureBox49";
             this.pictureBox49.Size = new System.Drawing.Size(49, 50);
             this.pictureBox49.TabIndex = 41;
@@ -629,7 +628,7 @@
             // 
             this.pictureBox50.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.pictureBox50.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox50.Location = new System.Drawing.Point(12, 236);
+            this.pictureBox50.Location = new System.Drawing.Point(12, 237);
             this.pictureBox50.Name = "pictureBox50";
             this.pictureBox50.Size = new System.Drawing.Size(49, 50);
             this.pictureBox50.TabIndex = 40;
@@ -640,7 +639,7 @@
             // 
             this.pictureBox51.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.pictureBox51.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox51.Location = new System.Drawing.Point(507, 295);
+            this.pictureBox51.Location = new System.Drawing.Point(507, 293);
             this.pictureBox51.Name = "pictureBox51";
             this.pictureBox51.Size = new System.Drawing.Size(49, 50);
             this.pictureBox51.TabIndex = 59;
@@ -651,7 +650,7 @@
             // 
             this.pictureBox52.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.pictureBox52.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox52.Location = new System.Drawing.Point(452, 295);
+            this.pictureBox52.Location = new System.Drawing.Point(452, 293);
             this.pictureBox52.Name = "pictureBox52";
             this.pictureBox52.Size = new System.Drawing.Size(49, 50);
             this.pictureBox52.TabIndex = 58;
@@ -660,20 +659,20 @@
             // 
             // pictureBox53
             // 
-            this.pictureBox53.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.pictureBox53.BackColor = System.Drawing.Color.Tan;
             this.pictureBox53.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox53.Location = new System.Drawing.Point(397, 295);
+            this.pictureBox53.Location = new System.Drawing.Point(397, 293);
             this.pictureBox53.Name = "pictureBox53";
             this.pictureBox53.Size = new System.Drawing.Size(49, 50);
             this.pictureBox53.TabIndex = 57;
             this.pictureBox53.TabStop = false;
-            this.pictureBox53.Tag = "moveAble";
+            this.pictureBox53.Tag = "blocker";
             // 
             // pictureBox54
             // 
             this.pictureBox54.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.pictureBox54.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox54.Location = new System.Drawing.Point(342, 295);
+            this.pictureBox54.Location = new System.Drawing.Point(342, 293);
             this.pictureBox54.Name = "pictureBox54";
             this.pictureBox54.Size = new System.Drawing.Size(49, 50);
             this.pictureBox54.TabIndex = 56;
@@ -684,7 +683,7 @@
             // 
             this.pictureBox56.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.pictureBox56.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox56.Location = new System.Drawing.Point(232, 295);
+            this.pictureBox56.Location = new System.Drawing.Point(232, 293);
             this.pictureBox56.Name = "pictureBox56";
             this.pictureBox56.Size = new System.Drawing.Size(49, 50);
             this.pictureBox56.TabIndex = 54;
@@ -693,31 +692,31 @@
             // 
             // pictureBox57
             // 
-            this.pictureBox57.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.pictureBox57.BackColor = System.Drawing.Color.Tan;
             this.pictureBox57.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox57.Location = new System.Drawing.Point(177, 295);
+            this.pictureBox57.Location = new System.Drawing.Point(177, 293);
             this.pictureBox57.Name = "pictureBox57";
             this.pictureBox57.Size = new System.Drawing.Size(49, 50);
             this.pictureBox57.TabIndex = 53;
             this.pictureBox57.TabStop = false;
-            this.pictureBox57.Tag = "moveAble";
+            this.pictureBox57.Tag = "blocker";
             // 
             // pictureBox59
             // 
-            this.pictureBox59.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.pictureBox59.BackColor = System.Drawing.Color.Tan;
             this.pictureBox59.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox59.Location = new System.Drawing.Point(67, 295);
+            this.pictureBox59.Location = new System.Drawing.Point(67, 293);
             this.pictureBox59.Name = "pictureBox59";
             this.pictureBox59.Size = new System.Drawing.Size(49, 50);
             this.pictureBox59.TabIndex = 51;
             this.pictureBox59.TabStop = false;
-            this.pictureBox59.Tag = "moveAble";
+            this.pictureBox59.Tag = "blocker";
             // 
             // pictureBox60
             // 
             this.pictureBox60.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.pictureBox60.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox60.Location = new System.Drawing.Point(12, 295);
+            this.pictureBox60.Location = new System.Drawing.Point(12, 293);
             this.pictureBox60.Name = "pictureBox60";
             this.pictureBox60.Size = new System.Drawing.Size(49, 50);
             this.pictureBox60.TabIndex = 50;
@@ -761,7 +760,7 @@
             // 
             this.pictureBox28.BackColor = System.Drawing.Color.Tan;
             this.pictureBox28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox28.Location = new System.Drawing.Point(342, 180);
+            this.pictureBox28.Location = new System.Drawing.Point(342, 181);
             this.pictureBox28.Name = "pictureBox28";
             this.pictureBox28.Size = new System.Drawing.Size(49, 50);
             this.pictureBox28.TabIndex = 62;
@@ -781,25 +780,25 @@
             // 
             // pictureBox13
             // 
-            this.pictureBox13.BackColor = System.Drawing.Color.Tan;
+            this.pictureBox13.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.pictureBox13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox13.Location = new System.Drawing.Point(122, 236);
+            this.pictureBox13.Location = new System.Drawing.Point(122, 237);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(49, 50);
             this.pictureBox13.TabIndex = 64;
             this.pictureBox13.TabStop = false;
-            this.pictureBox13.Tag = "blocker";
+            this.pictureBox13.Tag = "moveAble";
             // 
             // pictureBox48
             // 
-            this.pictureBox48.BackColor = System.Drawing.Color.Tan;
+            this.pictureBox48.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.pictureBox48.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox48.Location = new System.Drawing.Point(122, 295);
+            this.pictureBox48.Location = new System.Drawing.Point(122, 293);
             this.pictureBox48.Name = "pictureBox48";
             this.pictureBox48.Size = new System.Drawing.Size(49, 50);
             this.pictureBox48.TabIndex = 65;
             this.pictureBox48.TabStop = false;
-            this.pictureBox48.Tag = "blocker";
+            this.pictureBox48.Tag = "moveAble";
             // 
             // pictureBox23
             // 
@@ -817,22 +816,24 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Matura MT Script Capitals", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.ForeColor = System.Drawing.Color.Tan;
-            this.label1.Location = new System.Drawing.Point(569, 97);
+            this.label1.Location = new System.Drawing.Point(569, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(172, 16);
+            this.label1.Size = new System.Drawing.Size(169, 32);
             this.label1.TabIndex = 67;
-            this.label1.Text = "1. Wybierz punkt startowy.";
+            this.label1.Text = "1. Wybierz punkt startowy\r\n(i potwierdź)\r\n";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Matura MT Script Capitals", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label2.ForeColor = System.Drawing.Color.Tan;
-            this.label2.Location = new System.Drawing.Point(569, 127);
+            this.label2.Location = new System.Drawing.Point(569, 71);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(178, 16);
+            this.label2.Size = new System.Drawing.Size(175, 32);
             this.label2.TabIndex = 68;
-            this.label2.Text = "2. Wybierz punkt docelowy.";
+            this.label2.Text = "2. Wybierz punkt docelowy\r\n(i potwierdź)\r\n";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
@@ -852,7 +853,7 @@
             this.ResetButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ResetButton.Font = new System.Drawing.Font("Lato", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ResetButton.ForeColor = System.Drawing.Color.White;
-            this.ResetButton.Location = new System.Drawing.Point(665, 188);
+            this.ResetButton.Location = new System.Drawing.Point(665, 121);
             this.ResetButton.Name = "ResetButton";
             this.ResetButton.Size = new System.Drawing.Size(87, 41);
             this.ResetButton.TabIndex = 70;
@@ -864,7 +865,7 @@
             // 
             this.pictureBox55.BackColor = System.Drawing.Color.Tan;
             this.pictureBox55.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox55.Location = new System.Drawing.Point(287, 295);
+            this.pictureBox55.Location = new System.Drawing.Point(287, 293);
             this.pictureBox55.Name = "pictureBox55";
             this.pictureBox55.Size = new System.Drawing.Size(49, 50);
             this.pictureBox55.TabIndex = 71;
@@ -876,7 +877,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Matura MT Script Capitals", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label4.ForeColor = System.Drawing.Color.Tan;
-            this.label4.Location = new System.Drawing.Point(614, 68);
+            this.label4.Location = new System.Drawing.Point(614, 12);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(98, 19);
             this.label4.TabIndex = 72;
@@ -893,7 +894,7 @@
             this.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExitButton.Font = new System.Drawing.Font("Lato", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExitButton.ForeColor = System.Drawing.Color.White;
-            this.ExitButton.Location = new System.Drawing.Point(572, 188);
+            this.ExitButton.Location = new System.Drawing.Point(572, 121);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(87, 41);
             this.ExitButton.TabIndex = 73;
@@ -901,22 +902,10 @@
             this.ExitButton.UseVisualStyleBackColor = false;
             this.ExitButton.Click += new System.EventHandler(this.button2_Click);
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Matura MT Script Capitals", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label5.ForeColor = System.Drawing.Color.Tan;
-            this.label5.Location = new System.Drawing.Point(569, 151);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(103, 24);
-            this.label5.TabIndex = 74;
-            this.label5.Text = "*aby załapało wybór\r\nkliknąć kilka razy\r\n";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // pictureBox58
             // 
             this.pictureBox58.BackColor = System.Drawing.Color.BlueViolet;
-            this.pictureBox58.Location = new System.Drawing.Point(618, 274);
+            this.pictureBox58.Location = new System.Drawing.Point(618, 207);
             this.pictureBox58.Name = "pictureBox58";
             this.pictureBox58.Size = new System.Drawing.Size(34, 29);
             this.pictureBox58.TabIndex = 75;
@@ -925,7 +914,7 @@
             // pictureBox62
             // 
             this.pictureBox62.BackColor = System.Drawing.Color.PowderBlue;
-            this.pictureBox62.Location = new System.Drawing.Point(618, 239);
+            this.pictureBox62.Location = new System.Drawing.Point(618, 172);
             this.pictureBox62.Name = "pictureBox62";
             this.pictureBox62.Size = new System.Drawing.Size(34, 29);
             this.pictureBox62.TabIndex = 76;
@@ -936,7 +925,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Matura MT Script Capitals", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label6.ForeColor = System.Drawing.Color.Tan;
-            this.label6.Location = new System.Drawing.Point(658, 245);
+            this.label6.Location = new System.Drawing.Point(658, 178);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(62, 16);
             this.label6.TabIndex = 77;
@@ -947,7 +936,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Matura MT Script Capitals", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label7.ForeColor = System.Drawing.Color.Tan;
-            this.label7.Location = new System.Drawing.Point(658, 282);
+            this.label7.Location = new System.Drawing.Point(658, 215);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(44, 16);
             this.label7.TabIndex = 78;
@@ -958,13 +947,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSlateGray;
-            this.ClientSize = new System.Drawing.Size(764, 357);
+            this.ClientSize = new System.Drawing.Size(764, 390);
             this.ControlBox = false;
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.pictureBox62);
             this.Controls.Add(this.pictureBox58);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox55);
@@ -1171,7 +1159,6 @@
         private System.Windows.Forms.PictureBox pictureBox55;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button ExitButton;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox58;
         private System.Windows.Forms.PictureBox pictureBox62;
         private System.Windows.Forms.Label label6;

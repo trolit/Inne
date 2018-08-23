@@ -6,7 +6,7 @@ dwoma zadanymi punktami. Bardzo często wykorzystuje się go w - grach aby np. A
 podejścia do bohatera przez co inteligencja wroga wydaje nam się bardziej naturalna. </br>
 </p>
 
-<img align="left" src="https://github.com/trolit/Moje.dokumenty/blob/master/Algorytm%20A_star/images/example1.PNG" width="490">
+<img align="center" src="https://github.com/trolit/Moje.dokumenty/blob/master/Algorytm%20A_star/images/example1.PNG" width="490">
 
 
 

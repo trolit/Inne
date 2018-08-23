@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.Design;
 
 // DO UKONCZENIA!!!
 
@@ -27,6 +28,8 @@ namespace przyklad2
         int targetX;
         int targetY;
 
+        int countTime = 0;
+
         PictureBox startingPoint;
         PictureBox targetPoint;
 
@@ -39,6 +42,8 @@ namespace przyklad2
         public Form1()
         {
             InitializeComponent();
+
+            countTime = 0;
 
             // storing all tiles
             PictureBox[,] matrix = new PictureBox[,]
@@ -83,14 +88,15 @@ namespace przyklad2
                         matrix[x, y].Click += TargetEventHandler;
                     }
                 }
+
+                label1.BackColor = Color.Transparent;
+                label2.BackColor = Color.ForestGreen;
+
                 return;
             }
 
             pickedStart = true;
             PictureBox clickedPicture = (PictureBox)sender;
-
-            label1.BackColor = Color.Transparent;
-            label2.BackColor = Color.ForestGreen;
 
             // get name of clicked picture
             startingPoint = (PictureBox)sender;
@@ -130,14 +136,14 @@ namespace przyklad2
                     }
                 }
 
+                label2.BackColor = Color.Transparent;
+
                 SearchPath();
                 return;
             }
 
             pickedTarget = true;
             PictureBox clickedPicture = (PictureBox)sender;
-
-            label2.BackColor = Color.Transparent;
 
             // get name of clicked picture
             targetPoint = (PictureBox)sender;
@@ -196,7 +202,6 @@ namespace przyklad2
                         }
                     }
                 }
-
                 int rightScore = 0;
                 int leftScore = 0;
                 int upScore = 0;
@@ -233,19 +238,11 @@ namespace przyklad2
                 {
                     if ((string)matrix[x, y + 1].Tag == "moveAble")
                     {
-                        openList.Add(new Tuple<PictureBox,int>(matrix[x, y + 1], resultRight));
+                        openList.Add(new Tuple<PictureBox, int>(matrix[x, y + 1], resultRight));
                     }
                 }
 
-                if(y > 0)
-                {
-                    if ((string)matrix[x, y - 1].Tag == "moveAble")
-                    {
-                        openList.Add(new Tuple<PictureBox, int>(matrix[x, y - 1], resultLeft));
-                    }
-                }
-
-                if(x > 0)
+                if (x > 0)
                 {
                     if ((string)matrix[x - 1, y].Tag == "moveAble")
                     {
@@ -253,11 +250,19 @@ namespace przyklad2
                     }
                 }
 
-                if(x < 5)
+                if (x < 5)
                 {
                     if ((string)matrix[x + 1, y].Tag == "moveAble")
                     {
                         openList.Add(new Tuple<PictureBox, int>(matrix[x + 1, y], resultDown));
+                    }
+                }
+
+                if (y > 0)
+                {
+                    if ((string)matrix[x, y - 1].Tag == "moveAble")
+                    {
+                        openList.Add(new Tuple<PictureBox, int>(matrix[x, y - 1], resultLeft));
                     }
                 }
 
@@ -276,19 +281,20 @@ namespace przyklad2
 
                 if (x == targetX && y == targetY)
                 {
+                   Console.WriteLine("Koniec!");
                    pathFound = true;
                    break;
                 }
 
-                System.Threading.Thread.Sleep(1);
                 closedListVar++;
                 openList.Clear();
+                System.Threading.Thread.Sleep(1);
             }
 
             for(int temp = 1; temp < closedListVar; temp++)
             {
                 closedList[temp].Item1.BackColor = Color.DarkSeaGreen;
-                System.Threading.Thread.Sleep(1000);
+                System.Threading.Thread.Sleep(500);
             }
         }
 
@@ -314,5 +320,7 @@ namespace przyklad2
         {
             Application.Exit();
         }
+
+        
     }
 }
