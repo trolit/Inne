@@ -43,14 +43,15 @@ namespace przyklad2
         {
             InitializeComponent();
 
-            countTime = 0;
+            Console.WriteLine("-------------------------------");
+            Console.WriteLine("KONSOLA DO WYKONYWANIA TESTÓW\n");
 
             // storing all tiles
             PictureBox[,] matrix = new PictureBox[,]
             {
                 { pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6, pictureBox7, pictureBox8, pictureBox9, pictureBox10 },
                 { pictureBox20, pictureBox19, pictureBox18, pictureBox17, pictureBox16, pictureBox15, pictureBox14, pictureBox34, pictureBox12, pictureBox11 },
-                { pictureBox30, pictureBox29, pictureBox27, pictureBox61, pictureBox25, pictureBox25, pictureBox24, pictureBox23, pictureBox22, pictureBox21 },
+                { pictureBox30, pictureBox29, pictureBox27, pictureBox26, pictureBox61, pictureBox25, pictureBox24, pictureBox23, pictureBox22, pictureBox21 },
                 { pictureBox40, pictureBox39, pictureBox38, pictureBox37, pictureBox36, pictureBox35, pictureBox28, pictureBox33, pictureBox32, pictureBox31 },
                 { pictureBox50, pictureBox49, pictureBox13, pictureBox47, pictureBox46, pictureBox45, pictureBox44, pictureBox43, pictureBox42, pictureBox41 },
                 { pictureBox60, pictureBox59, pictureBox48, pictureBox57, pictureBox56, pictureBox55, pictureBox54, pictureBox53, pictureBox52, pictureBox51 }
@@ -75,7 +76,7 @@ namespace przyklad2
                 {
                 { pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6, pictureBox7, pictureBox8, pictureBox9, pictureBox10 },
                 { pictureBox20, pictureBox19, pictureBox18, pictureBox17, pictureBox16, pictureBox15, pictureBox14, pictureBox34, pictureBox12, pictureBox11 },
-                { pictureBox30, pictureBox29, pictureBox27, pictureBox61, pictureBox25, pictureBox25, pictureBox24, pictureBox23, pictureBox22, pictureBox21 },
+                { pictureBox30, pictureBox29, pictureBox27, pictureBox26, pictureBox61, pictureBox25, pictureBox24, pictureBox23, pictureBox22, pictureBox21 },
                 { pictureBox40, pictureBox39, pictureBox38, pictureBox37, pictureBox36, pictureBox35, pictureBox28, pictureBox33, pictureBox32, pictureBox31 },
                 { pictureBox50, pictureBox49, pictureBox13, pictureBox47, pictureBox46, pictureBox45, pictureBox44, pictureBox43, pictureBox42, pictureBox41 },
                 { pictureBox60, pictureBox59, pictureBox48, pictureBox57, pictureBox56, pictureBox55, pictureBox54, pictureBox53, pictureBox52, pictureBox51 }
@@ -110,12 +111,12 @@ namespace przyklad2
             {
                 PictureBox[,] matrix = new PictureBox[,]
                 {
-                    { pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6, pictureBox7, pictureBox8, pictureBox9, pictureBox10 },
-                    { pictureBox20, pictureBox19, pictureBox18, pictureBox17, pictureBox16, pictureBox15, pictureBox14, pictureBox34, pictureBox12, pictureBox11 },
-                    { pictureBox30, pictureBox29, pictureBox27, pictureBox61, pictureBox25, pictureBox25, pictureBox24, pictureBox23, pictureBox22, pictureBox21 },
-                    { pictureBox40, pictureBox39, pictureBox38, pictureBox37, pictureBox36, pictureBox35, pictureBox28, pictureBox33, pictureBox32, pictureBox31 },
-                    { pictureBox50, pictureBox49, pictureBox13, pictureBox47, pictureBox46, pictureBox45, pictureBox44, pictureBox43, pictureBox42, pictureBox41 },
-                    { pictureBox60, pictureBox59, pictureBox48, pictureBox57, pictureBox56, pictureBox55, pictureBox54, pictureBox53, pictureBox52, pictureBox51 }
+                { pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6, pictureBox7, pictureBox8, pictureBox9, pictureBox10 },
+                { pictureBox20, pictureBox19, pictureBox18, pictureBox17, pictureBox16, pictureBox15, pictureBox14, pictureBox34, pictureBox12, pictureBox11 },
+                { pictureBox30, pictureBox29, pictureBox27, pictureBox26, pictureBox61, pictureBox25, pictureBox24, pictureBox23, pictureBox22, pictureBox21 },
+                { pictureBox40, pictureBox39, pictureBox38, pictureBox37, pictureBox36, pictureBox35, pictureBox28, pictureBox33, pictureBox32, pictureBox31 },
+                { pictureBox50, pictureBox49, pictureBox13, pictureBox47, pictureBox46, pictureBox45, pictureBox44, pictureBox43, pictureBox42, pictureBox41 },
+                { pictureBox60, pictureBox59, pictureBox48, pictureBox57, pictureBox56, pictureBox55, pictureBox54, pictureBox53, pictureBox52, pictureBox51 }
                 };
 
                 for (int x = 0; x < 6; x++)
@@ -134,6 +135,10 @@ namespace przyklad2
                             targetY = y;
                         }
                     }
+
+                    //Console.WriteLine("X = " + targetX);
+                    //Console.WriteLine("Y = " + targetY);
+                    //Thread.Sleep(10000);
                 }
 
                 label2.BackColor = Color.Transparent;
@@ -163,18 +168,18 @@ namespace przyklad2
         {
             if (pathFound)
             {
-                // stop           
+                // stop  
                 return;
             }
 
             PictureBox[,] matrix = new PictureBox[,]
             {
-               { pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6, pictureBox7, pictureBox8, pictureBox9, pictureBox10 },
-               { pictureBox20, pictureBox19, pictureBox18, pictureBox17, pictureBox16, pictureBox15, pictureBox14, pictureBox34, pictureBox12, pictureBox11 },
-               { pictureBox30, pictureBox29, pictureBox27, pictureBox61, pictureBox25, pictureBox25, pictureBox24, pictureBox23, pictureBox22, pictureBox21 },
-               { pictureBox40, pictureBox39, pictureBox38, pictureBox37, pictureBox36, pictureBox35, pictureBox28, pictureBox33, pictureBox32, pictureBox31 },
-               { pictureBox50, pictureBox49, pictureBox13, pictureBox47, pictureBox46, pictureBox45, pictureBox44, pictureBox43, pictureBox42, pictureBox41 },
-               { pictureBox60, pictureBox59, pictureBox48, pictureBox57, pictureBox56, pictureBox55, pictureBox54, pictureBox53, pictureBox52, pictureBox51 }
+                { pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6, pictureBox7, pictureBox8, pictureBox9, pictureBox10 },
+                { pictureBox20, pictureBox19, pictureBox18, pictureBox17, pictureBox16, pictureBox15, pictureBox14, pictureBox34, pictureBox12, pictureBox11 },
+                { pictureBox30, pictureBox29, pictureBox27, pictureBox26, pictureBox61, pictureBox25, pictureBox24, pictureBox23, pictureBox22, pictureBox21 },
+                { pictureBox40, pictureBox39, pictureBox38, pictureBox37, pictureBox36, pictureBox35, pictureBox28, pictureBox33, pictureBox32, pictureBox31 },
+                { pictureBox50, pictureBox49, pictureBox13, pictureBox47, pictureBox46, pictureBox45, pictureBox44, pictureBox43, pictureBox42, pictureBox41 },
+                { pictureBox60, pictureBox59, pictureBox48, pictureBox57, pictureBox56, pictureBox55, pictureBox54, pictureBox53, pictureBox52, pictureBox51 }
             };
 
             int x = startX;
@@ -186,6 +191,8 @@ namespace przyklad2
 
             // add start point to closedList
             closedList.Add(new Tuple<PictureBox, int>(matrix[x, y], 1));
+
+            int zlicz = 0;
 
             while (!pathFound)
             {
@@ -202,6 +209,7 @@ namespace przyklad2
                         }
                     }
                 }
+
                 int rightScore = 0;
                 int leftScore = 0;
                 int upScore = 0;
@@ -234,39 +242,196 @@ namespace przyklad2
                 // Console.WriteLine("up score: " + upScore);
                 // Console.WriteLine("down score: " + downScore);
 
-                if (y < 9)
+                int least = 0;
+
+                if (targetX <= 2 && targetY <= 4)
                 {
-                    if ((string)matrix[x, y + 1].Tag == "moveAble")
+                    Console.WriteLine("Sektor1");
+
+                    if (y > 0)
                     {
-                        openList.Add(new Tuple<PictureBox, int>(matrix[x, y + 1], resultRight));
+                        if ((string)matrix[x, y - 1].Tag == "moveAble")
+                        {
+                            openList.Add(new Tuple<PictureBox, int>(matrix[x, y - 1], resultLeft));
+                        }
                     }
+
+                    if (x > 0)
+                    {
+                        if ((string)matrix[x - 1, y].Tag == "moveAble")
+                        {
+                            openList.Add(new Tuple<PictureBox, int>(matrix[x - 1, y], resultUp));
+                        }
+                    }
+
+                    if (x < 5)
+                    {
+                        if ((string)matrix[x + 1, y].Tag == "moveAble")
+                        {
+                            openList.Add(new Tuple<PictureBox, int>(matrix[x + 1, y], resultDown));
+                        }
+                    }
+
+                    if (y < 9)
+                    {
+                        if ((string)matrix[x, y + 1].Tag == "moveAble")
+                        {
+                            openList.Add(new Tuple<PictureBox, int>(matrix[x, y + 1], resultRight));
+                        }
+                    }
+
+                    least = resultLeft;
                 }
 
-                if (x > 0)
+                if (targetX <= 2 && targetY >= 5)
                 {
-                    if ((string)matrix[x - 1, y].Tag == "moveAble")
+                    Console.WriteLine("Sektor2");
+
+                    if (y < 9)
                     {
-                        openList.Add(new Tuple<PictureBox, int>(matrix[x - 1, y], resultUp));
+                        if ((string)matrix[x, y + 1].Tag == "moveAble")
+                        {
+                            openList.Add(new Tuple<PictureBox, int>(matrix[x, y + 1], resultRight));
+                        }
                     }
+
+                    if (x > 0)
+                    {
+                        if ((string)matrix[x - 1, y].Tag == "moveAble")
+                        {
+                            openList.Add(new Tuple<PictureBox, int>(matrix[x - 1, y], resultUp));
+                        }
+                    }
+
+                    if (y > 0)
+                    {
+                        if ((string)matrix[x, y - 1].Tag == "moveAble")
+                        {
+                            openList.Add(new Tuple<PictureBox, int>(matrix[x, y - 1], resultLeft));
+                        }
+                    }
+
+                    if (x < 5)
+                    {
+                        if ((string)matrix[x + 1, y].Tag == "moveAble")
+                        {
+                            openList.Add(new Tuple<PictureBox, int>(matrix[x + 1, y], resultDown));
+                        }
+                    }
+                    least = resultRight;
                 }
 
-                if (x < 5)
+                if (targetX >= 3 && targetY <= 4)
                 {
-                    if ((string)matrix[x + 1, y].Tag == "moveAble")
+                    Console.WriteLine("Sektor3");
+
+                    if (x < 5)
                     {
-                        openList.Add(new Tuple<PictureBox, int>(matrix[x + 1, y], resultDown));
+                        if ((string)matrix[x + 1, y].Tag == "moveAble")
+                        {
+                            openList.Add(new Tuple<PictureBox, int>(matrix[x + 1, y], resultDown));
+                        }
                     }
+
+                    if (y > 0)
+                    {
+                        if ((string)matrix[x, y - 1].Tag == "moveAble")
+                        {
+                            openList.Add(new Tuple<PictureBox, int>(matrix[x, y - 1], resultLeft));
+                        }
+                    }
+
+                    if (x > 0)
+                    {
+                        if ((string)matrix[x - 1, y].Tag == "moveAble")
+                        {
+                            openList.Add(new Tuple<PictureBox, int>(matrix[x - 1, y], resultUp));
+                        }
+                    }
+
+                    if (y < 9)
+                    {
+                        if ((string)matrix[x, y + 1].Tag == "moveAble")
+                        {
+                            openList.Add(new Tuple<PictureBox, int>(matrix[x, y + 1], resultRight));
+                        }
+                    }
+
+                    least = resultDown;
                 }
 
-                if (y > 0)
+                if (targetX >= 3 && targetY >= 5)
                 {
-                    if ((string)matrix[x, y - 1].Tag == "moveAble")
+                    Console.WriteLine("Sektor4");
+
+                    if (y < 9)
                     {
-                        openList.Add(new Tuple<PictureBox, int>(matrix[x, y - 1], resultLeft));
+                        if ((string)matrix[x, y + 1].Tag == "moveAble")
+                        {
+                            openList.Add(new Tuple<PictureBox, int>(matrix[x, y + 1], resultRight));
+                        }
                     }
+
+                    if (x > 0)
+                    {
+                        if ((string)matrix[x - 1, y].Tag == "moveAble")
+                        {
+                            openList.Add(new Tuple<PictureBox, int>(matrix[x - 1, y], resultUp));
+                        }
+                    }
+
+                    if (y > 0)
+                    {
+                        if ((string)matrix[x, y - 1].Tag == "moveAble")
+                        {
+                            openList.Add(new Tuple<PictureBox, int>(matrix[x, y - 1], resultLeft));
+                        }
+                    }
+
+                    if (x < 5)
+                    {
+                        if ((string)matrix[x + 1, y].Tag == "moveAble")
+                        {
+                            openList.Add(new Tuple<PictureBox, int>(matrix[x + 1, y], resultDown));
+                        }
+                    }
+
+                    least = resultRight;
                 }
 
-                int least = resultRight;
+                //if (y < 9)
+                //{
+                //    if ((string)matrix[x, y + 1].Tag == "moveAble")
+                //    {
+                //        openList.Add(new Tuple<PictureBox, int>(matrix[x, y + 1], resultRight));
+                //    }
+                //}
+
+                //if (x > 0)
+                //{
+                //    if ((string)matrix[x - 1, y].Tag == "moveAble")
+                //    {
+                //        openList.Add(new Tuple<PictureBox, int>(matrix[x - 1, y], resultUp));
+                //    }
+                //}
+
+                //if (x < 5)
+                //{
+                //    if ((string)matrix[x + 1, y].Tag == "moveAble")
+                //    {
+                //        openList.Add(new Tuple<PictureBox, int>(matrix[x + 1, y], resultDown));
+                //    }
+                //}
+
+                //if (y > 0)
+                //{
+                //    if ((string)matrix[x, y - 1].Tag == "moveAble")
+                //    {
+                //        openList.Add(new Tuple<PictureBox, int>(matrix[x, y - 1], resultLeft));
+                //    }
+                //}
+
+                //least = resultRight;
                 Tuple<PictureBox, int> item = openList[0];
 
                 // dodaj do zamknietej listy pole z najmniejszym wynikiem
@@ -278,7 +443,7 @@ namespace przyklad2
                     }
                 }
                 closedList.Add(item);
-
+                
                 if (x == targetX && y == targetY)
                 {
                    Console.WriteLine("Koniec!");
