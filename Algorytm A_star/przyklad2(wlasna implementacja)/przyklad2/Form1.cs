@@ -209,7 +209,6 @@ namespace przyklad2
                         }
                     }
                 }
-
                 // if we are on the point - STOP
                 if (x == targetX && y == targetY)
                 {
@@ -217,7 +216,7 @@ namespace przyklad2
                     pathFound = true;
                     break;
                 }
-                // else mark the current tile as "visited"
+                // mark the current tile as "visited"
                 else
                 {
                     matrix[x, y].Tag = "blocker";
@@ -255,7 +254,7 @@ namespace przyklad2
                 // Console.WriteLine("up score: " + upScore);
                 // Console.WriteLine("down score: " + downScore);
 
-                #region Sektory - narazie off 
+                #region Sektory - narazie off bo nie przyniosły dobrego skutku :) 
                 //if (targetX <= 2 && targetY <= 4)
                 //{
                 //    Console.WriteLine("Sektor1");
@@ -428,7 +427,7 @@ namespace przyklad2
                     }
                 }
 
-                if (x <= 4)
+                if (x < 5)
                 {
                     if ((string)matrix[x + 1, y].Tag == "moveAble")
                     {
@@ -445,14 +444,13 @@ namespace przyklad2
                 }
 
                 int least = resultRight;
-
                 //TESTY
                 //Console.WriteLine("iteracja: " + iteracja);
                 //Console.WriteLine("X = " + x);
                 //Console.WriteLine("Y = " + y);
                 //Console.WriteLine();
                 //iteracja++;
-                //Thread.Sleep(2000);
+                //Thread.Sleep(1000);
                 Tuple<PictureBox, int> item = openList[0];
 
                 // dodaj do zamknietej listy pole z najmniejszym wynikiem
