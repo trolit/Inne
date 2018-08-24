@@ -64,7 +64,7 @@ namespace przyklad2
                     matrix[x, y].Click += StartEventHandler;
                 }
             }
-
+            
             label1.BackColor = Color.ForestGreen;
         }
 
@@ -192,7 +192,7 @@ namespace przyklad2
             // add start point to closedList
             closedList.Add(new Tuple<PictureBox, int>(matrix[x, y], 1));
 
-            int zlicz = 0;
+            int iteracja = 0;
 
             while (!pathFound)
             {
@@ -208,6 +208,19 @@ namespace przyklad2
                             break;
                         }
                     }
+                }
+
+                // if we are on the point - STOP
+                if (x == targetX && y == targetY)
+                {
+                    Console.WriteLine("Koniec!");
+                    pathFound = true;
+                    break;
+                }
+                // else mark the current tile as "visited"
+                else
+                {
+                    matrix[x, y].Tag = "blocker";
                 }
 
                 int rightScore = 0;
@@ -242,196 +255,204 @@ namespace przyklad2
                 // Console.WriteLine("up score: " + upScore);
                 // Console.WriteLine("down score: " + downScore);
 
-                int least = 0;
-
-                if (targetX <= 2 && targetY <= 4)
-                {
-                    Console.WriteLine("Sektor1");
-
-                    if (y > 0)
-                    {
-                        if ((string)matrix[x, y - 1].Tag == "moveAble")
-                        {
-                            openList.Add(new Tuple<PictureBox, int>(matrix[x, y - 1], resultLeft));
-                        }
-                    }
-
-                    if (x > 0)
-                    {
-                        if ((string)matrix[x - 1, y].Tag == "moveAble")
-                        {
-                            openList.Add(new Tuple<PictureBox, int>(matrix[x - 1, y], resultUp));
-                        }
-                    }
-
-                    if (x < 5)
-                    {
-                        if ((string)matrix[x + 1, y].Tag == "moveAble")
-                        {
-                            openList.Add(new Tuple<PictureBox, int>(matrix[x + 1, y], resultDown));
-                        }
-                    }
-
-                    if (y < 9)
-                    {
-                        if ((string)matrix[x, y + 1].Tag == "moveAble")
-                        {
-                            openList.Add(new Tuple<PictureBox, int>(matrix[x, y + 1], resultRight));
-                        }
-                    }
-
-                    least = resultLeft;
-                }
-
-                if (targetX <= 2 && targetY >= 5)
-                {
-                    Console.WriteLine("Sektor2");
-
-                    if (y < 9)
-                    {
-                        if ((string)matrix[x, y + 1].Tag == "moveAble")
-                        {
-                            openList.Add(new Tuple<PictureBox, int>(matrix[x, y + 1], resultRight));
-                        }
-                    }
-
-                    if (x > 0)
-                    {
-                        if ((string)matrix[x - 1, y].Tag == "moveAble")
-                        {
-                            openList.Add(new Tuple<PictureBox, int>(matrix[x - 1, y], resultUp));
-                        }
-                    }
-
-                    if (y > 0)
-                    {
-                        if ((string)matrix[x, y - 1].Tag == "moveAble")
-                        {
-                            openList.Add(new Tuple<PictureBox, int>(matrix[x, y - 1], resultLeft));
-                        }
-                    }
-
-                    if (x < 5)
-                    {
-                        if ((string)matrix[x + 1, y].Tag == "moveAble")
-                        {
-                            openList.Add(new Tuple<PictureBox, int>(matrix[x + 1, y], resultDown));
-                        }
-                    }
-                    least = resultRight;
-                }
-
-                if (targetX >= 3 && targetY <= 4)
-                {
-                    Console.WriteLine("Sektor3");
-
-                    if (x < 5)
-                    {
-                        if ((string)matrix[x + 1, y].Tag == "moveAble")
-                        {
-                            openList.Add(new Tuple<PictureBox, int>(matrix[x + 1, y], resultDown));
-                        }
-                    }
-
-                    if (y > 0)
-                    {
-                        if ((string)matrix[x, y - 1].Tag == "moveAble")
-                        {
-                            openList.Add(new Tuple<PictureBox, int>(matrix[x, y - 1], resultLeft));
-                        }
-                    }
-
-                    if (x > 0)
-                    {
-                        if ((string)matrix[x - 1, y].Tag == "moveAble")
-                        {
-                            openList.Add(new Tuple<PictureBox, int>(matrix[x - 1, y], resultUp));
-                        }
-                    }
-
-                    if (y < 9)
-                    {
-                        if ((string)matrix[x, y + 1].Tag == "moveAble")
-                        {
-                            openList.Add(new Tuple<PictureBox, int>(matrix[x, y + 1], resultRight));
-                        }
-                    }
-
-                    least = resultDown;
-                }
-
-                if (targetX >= 3 && targetY >= 5)
-                {
-                    Console.WriteLine("Sektor4");
-
-                    if (y < 9)
-                    {
-                        if ((string)matrix[x, y + 1].Tag == "moveAble")
-                        {
-                            openList.Add(new Tuple<PictureBox, int>(matrix[x, y + 1], resultRight));
-                        }
-                    }
-
-                    if (x > 0)
-                    {
-                        if ((string)matrix[x - 1, y].Tag == "moveAble")
-                        {
-                            openList.Add(new Tuple<PictureBox, int>(matrix[x - 1, y], resultUp));
-                        }
-                    }
-
-                    if (y > 0)
-                    {
-                        if ((string)matrix[x, y - 1].Tag == "moveAble")
-                        {
-                            openList.Add(new Tuple<PictureBox, int>(matrix[x, y - 1], resultLeft));
-                        }
-                    }
-
-                    if (x < 5)
-                    {
-                        if ((string)matrix[x + 1, y].Tag == "moveAble")
-                        {
-                            openList.Add(new Tuple<PictureBox, int>(matrix[x + 1, y], resultDown));
-                        }
-                    }
-
-                    least = resultRight;
-                }
-
-                //if (y < 9)
+                #region Sektory - narazie off 
+                //if (targetX <= 2 && targetY <= 4)
                 //{
-                //    if ((string)matrix[x, y + 1].Tag == "moveAble")
+                //    Console.WriteLine("Sektor1");
+
+                //    if (x > 0)
                 //    {
-                //        openList.Add(new Tuple<PictureBox, int>(matrix[x, y + 1], resultRight));
+                //        if ((string)matrix[x - 1, y].Tag == "moveAble")
+                //        {
+                //            openList.Add(new Tuple<PictureBox, int>(matrix[x - 1, y], resultUp));
+                //        }
                 //    }
+
+                //    if (y > 0)
+                //    {
+                //        if ((string)matrix[x, y - 1].Tag == "moveAble")
+                //        {
+                //            openList.Add(new Tuple<PictureBox, int>(matrix[x, y - 1], resultLeft));
+                //        }
+                //    }
+
+                //    if (x < 5)
+                //    {
+                //        if ((string)matrix[x + 1, y].Tag == "moveAble")
+                //        {
+                //            openList.Add(new Tuple<PictureBox, int>(matrix[x + 1, y], resultDown));
+                //        }
+                //    }
+
+                //    if (y < 9)
+                //    {
+                //        if ((string)matrix[x, y + 1].Tag == "moveAble")
+                //        {
+                //            openList.Add(new Tuple<PictureBox, int>(matrix[x, y + 1], resultRight));
+                //        }
+                //    }
+
+                //    least = resultUp;
                 //}
 
-                //if (x > 0)
+                //if (targetX <= 2 && targetY >= 5)
                 //{
-                //    if ((string)matrix[x - 1, y].Tag == "moveAble")
+                //    Console.WriteLine("Sektor2");
+
+                //    if (y < 9)
                 //    {
-                //        openList.Add(new Tuple<PictureBox, int>(matrix[x - 1, y], resultUp));
+                //        if ((string)matrix[x, y + 1].Tag == "moveAble")
+                //        {
+                //            openList.Add(new Tuple<PictureBox, int>(matrix[x, y + 1], resultRight));
+                //        }
                 //    }
+
+                //    if (x > 0)
+                //    {
+                //        if ((string)matrix[x - 1, y].Tag == "moveAble")
+                //        {
+                //            openList.Add(new Tuple<PictureBox, int>(matrix[x - 1, y], resultUp));
+                //        }
+                //    }
+
+                //    if (y > 0)
+                //    {
+                //        if ((string)matrix[x, y - 1].Tag == "moveAble")
+                //        {
+                //            openList.Add(new Tuple<PictureBox, int>(matrix[x, y - 1], resultLeft));
+                //        }
+                //    }
+
+                //    if (x < 5)
+                //    {
+                //        if ((string)matrix[x + 1, y].Tag == "moveAble")
+                //        {
+                //            openList.Add(new Tuple<PictureBox, int>(matrix[x + 1, y], resultDown));
+                //        }
+                //    }
+                //    least = resultRight;
                 //}
 
-                //if (x < 5)
+                //if (targetX >= 3 && targetY <= 4)
                 //{
-                //    if ((string)matrix[x + 1, y].Tag == "moveAble")
+                //    Console.WriteLine("Sektor3");
+
+                //    if (x > 0)
                 //    {
-                //        openList.Add(new Tuple<PictureBox, int>(matrix[x + 1, y], resultDown));
+                //        if ((string)matrix[x - 1, y].Tag == "moveAble")
+                //        {
+                //            openList.Add(new Tuple<PictureBox, int>(matrix[x - 1, y], resultUp));
+                //        }
                 //    }
+
+                //    if (y > 0)
+                //    {
+                //        if ((string)matrix[x, y - 1].Tag == "moveAble")
+                //        {
+                //            openList.Add(new Tuple<PictureBox, int>(matrix[x, y - 1], resultLeft));
+                //        }
+                //    }
+
+                //    if (x < 5)
+                //    {
+                //        if ((string)matrix[x + 1, y].Tag == "moveAble")
+                //        {
+                //            openList.Add(new Tuple<PictureBox, int>(matrix[x + 1, y], resultDown));
+                //        }
+                //    }
+
+                //    if (y < 9)
+                //    {
+                //        if ((string)matrix[x, y + 1].Tag == "moveAble")
+                //        {
+                //            openList.Add(new Tuple<PictureBox, int>(matrix[x, y + 1], resultRight));
+                //        }
+                //    }
+
+                //    least = resultDown;
                 //}
 
-                //if (y > 0)
+                //if (targetX >= 3 && targetY >= 5)
                 //{
-                //    if ((string)matrix[x, y - 1].Tag == "moveAble")
-                //    {
-                //        openList.Add(new Tuple<PictureBox, int>(matrix[x, y - 1], resultLeft));
-                //    }
-                //}
+                //    Console.WriteLine("Sektor4");
 
-                //least = resultRight;
+                //    if (y < 9)
+                //    {
+                //        if ((string)matrix[x, y + 1].Tag == "moveAble")
+                //        {
+                //            openList.Add(new Tuple<PictureBox, int>(matrix[x, y + 1], resultRight));
+                //        }
+                //    }
+
+                //    if (x > 0)
+                //    {
+                //        if ((string)matrix[x - 1, y].Tag == "moveAble")
+                //        {
+                //            openList.Add(new Tuple<PictureBox, int>(matrix[x - 1, y], resultUp));
+                //        }
+                //    }
+
+                //    if (y > 0)
+                //    {
+                //        if ((string)matrix[x, y - 1].Tag == "moveAble")
+                //        {
+                //            openList.Add(new Tuple<PictureBox, int>(matrix[x, y - 1], resultLeft));
+                //        }
+                //    }
+
+                //    if (x < 5)
+                //    {
+                //        if ((string)matrix[x + 1, y].Tag == "moveAble")
+                //        {
+                //            openList.Add(new Tuple<PictureBox, int>(matrix[x + 1, y], resultDown));
+                //        }
+                //    }
+
+                //    least = resultRight;
+                //}
+                #endregion
+
+                if (y < 9)
+                {
+                    if ((string)matrix[x, y + 1].Tag == "moveAble")
+                    {
+                        openList.Add(new Tuple<PictureBox, int>(matrix[x, y + 1], resultRight));
+                    }
+                }
+
+                if (x > 0)
+                {
+                    if ((string)matrix[x - 1, y].Tag == "moveAble")
+                    {
+                        openList.Add(new Tuple<PictureBox, int>(matrix[x - 1, y], resultUp));
+                    }
+                }
+
+                if (x <= 4)
+                {
+                    if ((string)matrix[x + 1, y].Tag == "moveAble")
+                    {
+                        openList.Add(new Tuple<PictureBox, int>(matrix[x + 1, y], resultDown));
+                    }
+                }
+
+                if (y > 0)
+                {
+                    if ((string)matrix[x, y - 1].Tag == "moveAble")
+                    {
+                        openList.Add(new Tuple<PictureBox, int>(matrix[x, y - 1], resultLeft));
+                    }
+                }
+
+                int least = resultRight;
+
+                //TESTY
+                //Console.WriteLine("iteracja: " + iteracja);
+                //Console.WriteLine("X = " + x);
+                //Console.WriteLine("Y = " + y);
+                //Console.WriteLine();
+                //iteracja++;
+                //Thread.Sleep(2000);
                 Tuple<PictureBox, int> item = openList[0];
 
                 // dodaj do zamknietej listy pole z najmniejszym wynikiem
@@ -443,13 +464,6 @@ namespace przyklad2
                     }
                 }
                 closedList.Add(item);
-                
-                if (x == targetX && y == targetY)
-                {
-                   Console.WriteLine("Koniec!");
-                   pathFound = true;
-                   break;
-                }
 
                 closedListVar++;
                 openList.Clear();
