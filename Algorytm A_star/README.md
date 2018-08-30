@@ -1,18 +1,16 @@
 # o Algorytmie A*
 
-<p align="left">
-Algorytm A* jest jednym z najbardziej popularnych sposobów przeliczania/obliczania najkrótszej trasy pomiędzy </br>
-dwoma zadanymi punktami. Bardzo często wykorzystuje się go w - grach aby np. AI obliczało najkrótszą trasę do </br>
-podejścia do bohatera przez co inteligencja wroga wydaje nam się bardziej naturalna. </br>
-</p>
+Algorytm A* jest jednym z najbardziej popularnych sposobów przeliczania/obliczania najkrótszej trasy pomiędzy
+dwoma zadanymi punktami. Bardzo często wykorzystuje się go w - grach aby np. AI obliczało najkrótszą trasę do 
+podejścia do bohatera przez co inteligencja wroga wydaje nam się bardziej naturalna. 
 
-![Error](https://github.com/trolit/Moje.dokumenty/blob/master/Algorytm%20A_star/images/przyklad2_v0.5.PNG)
+![Error](https://github.com/trolit/Moje.dokumenty/blob/master/Algorytm%20A_star/images/example1.PNG)
 Powyżej efekt implementacji algorytmu w oparciu o jeden z wymienionych artykułów.
 
 Postanowiłem od 0 spróbować zaimplementować ten algorytm w oparciu o WinForms w programie Visual Studio :) 
 
 Widok aplikacji(v0.5):
-![Error](https://github.com/trolit/Moje.dokumenty/blob/master/Algorytm%20A_star/images/example1.PNG)
+![Error](https://github.com/trolit/Moje.dokumenty/blob/master/Algorytm%20A_star/images/przyklad2_v0.5.PNG)
 
 Na ten moment program potrafi bez problemu odnaleźć drogę jednak nie zawsze jest ona "najkrótsza" -
 problemem jest taki sam wynik "H" dla każdej z płytek przez którą możemy przejść. Mając sytuacje przykładowo
