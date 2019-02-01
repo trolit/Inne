@@ -1,0 +1,325 @@
+/* ***************************************************************** */
+/* Reset */
+html
+{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Verdana, Arial, SansSerif, "Times New Roman";
+    background-color: #5c4d85;
+}
+/* ***************************************************************** */
+/* Main bar */
+#main-wrapper {
+    transition: all 0.4s ease 0s;
+}
+
+div#main-wrapper.active::after {
+    transition: all 0.89s ease 0s;
+}
+
+div#main-wrapper.active::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: block;
+    top: 0;
+    z-index: 999;
+
+}
+
+#sidebar-wrapper {
+    left: -250px;
+    width: 250px;
+    background: #534F59;
+    position: fixed;
+    height: 100%;
+    overflow-y: auto;
+    z-index: 1000;
+    transition: all 0.4s ease 0s;
+
+}
+
+#main-wrapper.active #sidebar-wrapper {
+    left: 0px;
+    box-shadow: 4px 2px 11px rgba(8, 25, 23, 0.25);
+    border-right: 1px solid #2d4240;
+}
+
+#page-content-wrapper {
+    width: 100%;
+}
+
+.sidebar-nav {
+    position: relative;
+    top: 0px;
+    width: 250px;
+    list-style: none;
+    margin: 50px 0 0;
+    padding: 0;
+}
+
+.sidebar-nav li {
+    line-height: 40px;
+    text-indent: 20px;
+    /* obramowanie kafelek odsylaczy */
+    border-bottom: 1px solid #1f1b24;
+}
+
+.sidebar-nav li a {
+    color: white;
+    transition: all 0.2s ease-in;
+    display: block;
+    text-decoration: none;
+    padding: 5px 15px 5px 20px;
+    /* tlo kafelek odsylaczy */
+    background: #5c4d85;
+}
+
+.sidebar-nav li a:hover {
+    background: #fff;
+    font-size: 13px;
+    color: #056b61;
+}
+
+.content-header {
+    line-height: 45px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #262339;
+    opacity: 0.4;
+    height: fit-content;
+    z-index: 8;
+}
+
+.content-header:hover {
+    opacity: 1; !important;
+}
+
+.content-header.scrolled {
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+.content-header h3 {
+    margin: 0;
+    margin-left: 20px;
+    line-height: 45px;
+    display: inline-block;
+}
+
+.btn-menu {
+    color: white !important;
+    font-size: 30px;
+    text-decoration: none!important;
+}
+
+.nav-arrow {
+    padding: 5px 10px 5px 10px;
+    transition: all 0.3s ease-in;
+    color: #fff!important;
+    width: 45px;
+    margin: 5px;
+    /* kolor obramowania strzalki po rozwinieciu menu */
+    border: 1px solid white;
+    border-radius: 4px;
+    display: inline-block;
+    font-size: 25px;
+}
+
+.btn-menu:before {
+    color: white;
+}
+
+.nav-arrow:before {
+    color: white;
+}
+
+.nav-arrow:hover {
+    padding: 5px 25px 5px 5px;
+    width: 45px;
+}
+
+.tinysliderBox {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    margin-bottom: 55px;
+}
+
+.tinyslide {
+    width: 100%;
+    height: 100%;
+    position: absolute!important;
+    overflow: hidden!important;
+    z-index: 6!important;
+    top: 0!important;
+}
+
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 12px;
+    line-height: 1.428571429;
+    border-radius: 15px;
+}
+.btn-circle.btn-lg {
+    width: 50px;
+    height: 50px;
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.33;
+    border-radius: 25px;
+}
+.btn-circle.btn-xl {
+    width: 70px;
+    height: 70px;
+    padding: 10px 16px;
+    font-size: 24px;
+    line-height: 1.33;
+    border-radius: 35px;
+}
+
+.zoom {
+    transition: all .2s ease-in-out;
+    border: black 3px solid;
+}
+
+.zoom:hover {
+    transform: scale(1.2);
+}
+
+.interactiveIMG {
+    transition: all .2s ease-in-out;
+    border: black 3px solid;
+}
+.interactiveIMG:hover { transform: scale(1.2); }
+
+/* ***************************************************************** */
+/* FORMULARZE */
+
+/* Textarea */
+#tresc {
+    width: 30%;
+    height: 250px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+}
+
+/* Formatowanie input textow */
+.inputBox {
+    width: 30%;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+}
+
+input[type=text]:focus {
+     background-color: #4B4A4D;
+     color: white;
+ }
+
+input[type=email]:focus {
+    background-color: #4B4A4D;
+    color: white;
+}
+
+#tresc:focus {
+    background-color: #4B4A4D;
+    color: white;
+}
+
+label {
+    font-size: 200%;
+}
+
+form {
+    padding-top: 8%;
+    padding-bottom: 3%;
+}
+
+/* ***************************************************************** */
+/* LIGHTBOX */
+#lightbox .modal-content {
+    display: inline-block;
+    text-align: center;
+}
+
+#lightbox .close {
+    opacity: 1;
+    color: rgb(255, 255, 255);
+    background-color: rgb(25, 25, 25);
+    padding: 5px 8px;
+    border-radius: 30px;
+    border: 2px solid rgb(255, 255, 255);
+    position: absolute;
+    top: -15px;
+    right: -55px;
+    z-index:1032;
+}
+
+/* CSS Zalaczniki */
+.hrefEdit a:link  {
+    color: red;
+}
+
+.hrefEdit a:visited  {
+    color: red;
+}
+
+.hrefEdit a:hover  {
+    color: darkred;
+}
+
+.hrefEdit a:active  {
+    color: red;
+}
+
+/* ZRODLA - zdjecia */
+.hrefEdit img {
+    border: 1px solid black;
+    position: relative;
+    float: left;
+    width:  200px;
+    height: 200px;
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size:     cover;
+}
+
+/* Transpozycja zrodel */
+
+.hrefEdit td {
+    transition:All 0.5693s linear;
+    -webkit-transition:All 0.5693s linear;
+    -moz-transition:All 0.5693s linear;
+    -o-transition:All 0.5693s linear;
+    transform: rotate(4deg) scale(1) skew(1deg) translate(10px);
+    -webkit-transform: rotate(4deg) scale(1) skew(1deg) translate(10px);
+    -moz-transform: rotate(4deg) scale(1) skew(1deg) translate(10px);
+    -o-transform: rotate(4deg) scale(1) skew(1deg) translate(10px);
+    -ms-transform: rotate(4deg) scale(1) skew(1deg) translate(10px);
+    z-index: 5;
+}
+.hrefEdit td:hover {
+    transform: rotate(0deg) scale(1.336) skew(1deg) translate(0px);
+    -webkit-transform: rotate(0deg) scale(1.336) skew(1deg) translate(0px);
+    -moz-transform: rotate(0deg) scale(1.336) skew(1deg) translate(0px);
+    -o-transform: rotate(0deg) scale(1.336) skew(1deg) translate(0px);
+    -ms-transform: rotate(0deg) scale(1.336) skew(1deg) translate(0px);
+    z-index: 15;
+}

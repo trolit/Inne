@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1 class="display-3" style="margin-top: 100px;">Jak użyć Muuri?</h1>
+<p style="letter-spacing: 5px; font-weight: bold;"><i class="far fa-caret-square-right"></i>  Wstępna konfiguracja Muuri</p>
+<div class="alert text-justify" style="background-color: #9a63c2; !important;">
+    <strong><i class="fas fa-exclamation"></i> Uwaga <i class="fas fa-exclamation"></i> </strong> Biblioteki <strong>Hammer.js</strong> i <strong>Web-Animations</strong> są opcjonalnymi bibliotekami, które powinieneś dołączyć aby uzyskać
+    więcej możliwości z Muuri. Hammer.js pozwoli Ci na przesuwanie układów(dostarcza Drag&Drop) natomiast Web-animations dostarczy animacji przy
+    pojawianiu się układów, zamykaniu.</a>.
+</div>
+
+<p style="font-size: 25px; font-family: Calibri; margin-bottom: 10px;"><strong><i class="fas fa-hand-point-right"></i> Dodaj biblioteki do swojego projektu za pomocą CDN lub pobierając je</strong></p>
+
+<p style="font-size: 18px; font-family: Calibri; margin-bottom: 0;"><strong>Biblioteki CDN</strong></p>
+<div class="codeBlock">
+    <pre><code>
+    &lt;script src="https://unpkg.com/web-animations-js@2.3.1/web-animations.min.js"&gt;&lt;/script&gt;
+    &lt;script src="https://unpkg.com/hammerjs@2.0.8/hammer.min.js"&gt;&lt;/script&gt;
+    &lt;script src="https://unpkg.com/muuri@0.7.1/dist/muuri.min.js"&gt;&lt;/script>
+    </code></pre>
+</div>
+
+<p style="font-size: 18px; font-family: Calibri; margin-bottom: 0;"><strong>Biblioteki do pobrania</strong></p>
+<div class="codeBlock" style="font-size: 20px;">
+    <pre><code>
+    <a style="margin-left: 10px; text-decoration: none;" href="https://github.com/hammerjs/hammer.js" target="_blank"><i class="fas fa-download"></i> Hammer.js</a><br/>
+    <a style="margin-left: 10px; text-decoration: none;" href="https://github.com/haltu/muuri" target="_blank"><i class="fas fa-download"></i> Muuri</a><br/>
+    <a style="margin-left: 10px; text-decoration: none;" href="https://github.com/web-animations/web-animations-js" target="_blank"><i class="fas fa-download"></i> Web-Animations</a>
+    </code></pre>
+</div>
+<p></p>
+<p style="font-size: 25px; font-family: Calibri; margin-bottom: 0;"><strong><i class="fas fa-hand-point-right"></i> Dodaj schemat do swojego projektu</strong></p>
+<div class="codeBlock">
+    <pre><code class="html">
+        &ltdiv class="grid"&gt
+            &nbsp &ltdiv class="item"&gt
+                &nbsp &nbsp &ltdiv class="item-content"&gt
+                    &nbsp &nbsp &nbsp &lt!-- Safe zone, enter your custom markup --&gt
+                    &nbsp &nbsp &nbsp This can be anything.
+                    &nbsp &nbsp &nbsp &lt!-- Safe zone ends --&gt
+                &nbsp &nbsp &lt/div&gt
+            &nbsp &lt/div&gt
+
+            &nbsp &ltdiv class="item"&gt
+                &nbsp &nbsp &ltdiv class="item-content"&gt
+                    &nbsp &nbsp &nbsp &lt!-- Safe zone, enter your custom markup --&gt
+                    &nbsp &nbsp &nbsp &ltdiv class="my-custom-content"&gt
+                    &nbsp &nbsp &nbsp &nbsp Yippee!
+                    &nbsp &nbsp &nbsp &lt/div&gt
+                &nbsp &nbsp &nbsp &lt!-- Safe zone ends --&gt
+                &nbsp &nbsp &lt/div&gt
+            &nbsp &lt/div&gt
+
+        &lt/div&gt
+    </code></pre>
+</div>
+
+<p style="font-size: 25px; font-family: Calibri; margin-bottom: 0;"><strong><i class="fas fa-hand-point-right"></i> Dodaj style</strong></p>
+<div class="codeBlock">
+    <pre><code class="css">
+    .grid {
+      position: relative;
+    }
+    .item {
+      display: block;
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      margin: 5px;
+      z-index: 1;
+      background: #000;
+      color: #fff;
+    }
+    .item.muuri-item-dragging {
+      z-index: 3;
+    }
+    .item.muuri-item-releasing {
+      z-index: 2;
+    }
+    .item.muuri-item-hidden {
+      z-index: 0;
+    }
+    .item-content {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+    </code></pre>
+</div>
+
+<p style="font-size: 25px; font-family: Calibri; margin-bottom: 0;"><strong><i class="fas fa-hand-point-right"></i> Uruchom Muuri</strong></p>
+<div class="codeBlock">
+    <pre><code class="javascript">
+    var grid = new Muuri('.grid');
+    </code></pre>
+</div>
+<p></p>
+<p style="font-size: 20px;">Po wykonaniu powyższych kroków otrzymasz taki oto efekt</p>
+<p data-height="528" data-theme-id="dark" data-slug-hash="wpwNjK" data-default-tab="result" data-user="niklasramo" data-pen-title="Muuri: barebones grid" class="codepen">See the Pen <a href="https://codepen.io/niklasramo/pen/wpwNjK/">Muuri: barebones grid</a> by Niklas Rämö (<a href="https://codepen.io/niklasramo">@niklasramo</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+<p style="margin-top: 90px;"></p>
+<img src="img/bored.png" alt="Emotka: bored" height="200"/>
+<p style="font-size: 20px;" class="text-justify">Nie za ciekawe co? Ale tyle właśnie kroków trzeba, aby doprowadzić Muuri do działania. Plugin zaczyna
+    być o wiele bardziej interesujący, gdy wprowadzimy więcej konfiguracji. Ciekawsze przykłady możesz sprawdzić w zakładce: Przykłady.</p>
+</body>
+</html>

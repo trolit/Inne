@@ -1,0 +1,57 @@
+/* Stylowanie tabel z sekcji Tabele + responsywność tabel */
+
+.ArrBody:hover{
+    background-color: #323133;
+}
+
+/* Naglowki tabeli */
+.ArrTable {
+    background-color: #262339;
+    color: white;
+    text-align: left;
+    padding-left: 20px;
+    font-size: 110%;
+    line-height: 50px;
+    font-family: 'Exo 2', sans-serif;
+}
+
+/* Dane w tabeli */
+.ArrBody {
+    background-color: #525063;
+    color: white;
+    text-align: center;
+    width: 150px;
+    font-size: 85%;
+    border: 1px solid black;
+    font-family: 'Fenix', sans-serif;
+}
+
+@media only screen and (max-width: 768px) {
+
+    tr {
+        line-height: 20px;
+    }
+
+    td {
+        width: 100px;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    .ArrTable {
+        background-color: #262339;
+        color: white;
+        text-align: center;
+        font-size: 120%;
+    }
+
+    /* Dane w tabeli */
+    .ArrBody {
+        background-color: #4B4A4D;
+        color: white;
+        text-align: center;
+        font-size: 110%;
+    }
+}

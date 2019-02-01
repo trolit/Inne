@@ -1,0 +1,68 @@
+/* Dla tabela.html */
+
+
+.ArrBody:hover{
+    background-color: #323133;
+}
+
+/* Naglowki tabeli */
+.ArrTable {
+    background-color: #262339;
+    color: white;
+    text-align: center;
+    font-size: 160%;
+    line-height: 50px;
+}
+
+/* Dane w tabeli */
+.ArrBody {
+    background-color: #4B4A4D;
+    color: white;
+    text-align: center;
+    font-size: 130%;
+}
+
+tr {
+    line-height: 20px;
+    width: 100px;
+    border: black 1px dashed;
+}
+
+td {
+    width: 250px;
+    border: black 1px dashed;
+}
+
+table {
+    margin-bottom: 2%;
+}
+
+@media only screen and (max-width: 768px) {
+
+    tr {
+        line-height: 20px;
+    }
+
+    td {
+        width: 100px;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    .ArrTable {
+        background-color: #262339;
+        color: white;
+        text-align: center;
+        font-size: 120%;
+    }
+
+    /* Dane w tabeli */
+    .ArrBody {
+        background-color: #4B4A4D;
+        color: white;
+        text-align: center;
+        font-size: 110%;
+    }
+}

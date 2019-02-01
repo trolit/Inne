@@ -1,0 +1,284 @@
+﻿/*
+
+
+                      INFORMACJE O PLIKU STYLE.CSS
+                     <<ostatnia zmiana: 27-10-18)>>
+
+
+=========================================================================
+PLIK STYLE.CSS ZAWIERAJĄCY NIEKTÓRE CECHY WSPÓLNE DLA
+KAŻDEGO Z PLIKÓW PODANYCH PONIŻEJ
+=========================================================================
+- kontakt_style.css    (zarządzający kontakt.html)
+- media_style.css      (zarządzający media.html)
+- opisowe_style.css    (zarządzający generalowie.html,
+                        op_wojskowe.html, s_specjalne.html,
+                        wojs_technologie.html)
+- tabela_style.css     (zarządzający tabela.html)
+
+
+=========================================================================
+                      Spis tresci pliku style.css
+=========================================================================
+1) Ustawienia startowe stron - czcionka, rozmiar, tło, marginesy itd.
+2) właściwości LOGO z nagłówka <header>
+3) Zarzadzanie zdjeciami IMG
+4) Panel nawigacyjny(poziomy) na wszystkich stronach(bez index)
+5) Oznaczenie w panelu nawigacyjnym - "tu jesteś"
+6) Zarzadzanie tekstem w panelu nawigacyjnym
+7) Edycja linkow(hiperlacz)
+8) Responsywnosc wszystkich stron za wyjątkiem index.html
+(index.html ma w pliku css swoją responsywność)
+9) UKLAD STRON
+
+ */
+
+
+
+/* --------------------------------------------------------------- */
+/* 1) USTAWIENIA STRONY */
+
+* {
+    box-sizing: border-box;
+}
+
+html, body, #strona {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: Verdana, Arial, SansSerif, "Times New Roman";
+    font-size: 62.5%;
+    background-color: #534F59;
+}
+
+.clear {
+    clear: both;
+}
+/* --------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+/* --------------------------------------------------------------- */
+/* 2) LOGO */
+
+header {
+    /* ramka do testowania */
+    /* border: 2px solid red; */
+    height: auto;
+    width: 100%;
+    float: left;
+
+    vertical-align: middle;
+    text-align: center;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    font: normal normal bold 66px/1 Arial Black, Gadget, sans-serif;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    letter-spacing: 16px;
+    color: #fff;
+    background-color: #b8b8b8;
+    text-shadow: #7a7a7a 4px 3px 0;
+}
+/* --------------------------------------------------------------- */
+
+
+
+
+
+
+/* --------------------------------------------------------------- */
+/* 3) ZARZADZANIE ZDJECIAMI IMG*/
+img {
+    transition: all .2s ease-in-out;
+    border: black 3px solid;
+}
+img:hover { transform: scale(1.2); }
+/* --------------------------------------------------------------- */
+
+
+
+
+
+/* --------------------------------------------------------------- */
+/* 4) PANEL NAWIGACYJNY */
+
+#panel {
+    height: 5%;
+    width: 100%;
+    float: left;
+}
+
+.panelLinkow {
+    height: 100%;
+    width: 12.50%;
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+    font-size: 140%;
+    background: #777777;
+    border:solid 1px #9D9C97;
+}
+
+.panelLinkow div:hover {
+    background-color: #656263;
+    height: 100%;
+}
+/* --------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------------------------------------------------- */
+/* 5) OZNACZENIE W PANELU NAWIGACYJNYM */
+#TuJestes {
+    background-color: #262339;
+}
+/* --------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------------------------------------------------- */
+/* 6) ZARZĄDZANIE TEKSTEM, PANEL NAWIGACYJNY */
+.napisy {
+    padding-top: 5%;
+    padding-bottom: auto;
+}
+/* --------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------------------------------------------------- */
+/* 7) EDYCJA LINKÓW */
+a:hover
+{
+    text-decoration: none;
+    background-color: #F2E8ED;
+}
+
+a:active, a:visited, a:link {
+    text-decoration: none;
+    color: #D6B3C5;
+}
+/* --------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+/* --------------------------------------------------------------- */
+/* 8) RESPONSYWNOSC */
+/* GDY EKRAN < 768px */
+@media only screen and (max-width: 768px) {
+    /* Smartfony customowe parametry.. : */
+
+    header, .tytul, #panel, .panelLinkow {
+        float: left;
+        display: block;
+        min-width: 100%;
+    }
+
+    .obrazki, .tresc {
+        float: left;
+        min-width: 100%;
+        display: block;
+    }
+
+    #panel {
+        height: auto;
+    }
+}
+/* --------------------------------------------------------------- */
+
+
+
+
+
+/* --------------------------------------------------------------- */
+/* 9) UKLAD STRON */
+section {
+    /* border: 2px solid cyan; */
+    width: 100%;
+    height: auto;
+    float: left;
+}
+
+.rozdzial {
+    width: 100%;
+    height: auto;
+    color: white;
+}
+
+.naglowek {
+    width: 100%;
+    margin-top: 3%;
+    font-size: 350%;
+    background-color: #97959B;
+    float: left;
+    display: flex;
+    text-shadow: rgba(0,0,0,.2) 2px 6px 5px,rgba(255,255,255,.4) 0 -4px 30px;
+}
+
+footer {
+    /* border: 2px solid red; */
+    float: left;
+    height: 10%;
+    width: 100%;
+    background: #656263;
+    text-align: center;
+    color: white;
+}
+/* --------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+

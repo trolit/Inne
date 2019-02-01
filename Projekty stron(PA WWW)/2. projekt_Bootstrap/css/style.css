@@ -1,0 +1,147 @@
+/*
+-----------------------------------------
+              Plik style.css
+-----------------------------------------
+ */
+
+body, html, .container-fluid {
+    height: 100%;
+    background-color: #3D59AB;
+}
+
+.tresc {
+    height: 90%;
+    color: white;
+}
+
+.btn {
+    background-color: #474747;
+    font-family: "Calibri";
+}
+
+/* odstęp slidera(karuzeli) od tytułu na głównej stronie */
+.karuzela {
+    margin-top: 60px;
+}
+
+/* identyfikatory tekstów na stronie głównej */
+#tytulProjektu {
+    font-family: Verdana, "Times New Roman";
+}
+
+#autorzyProjektu {
+    font-family: Verdana;
+    font-size: 35%;
+}
+
+/* ----------------------------------------------------- */
+/* STYLIZACJA LINKÓW W SLOWNIKU POJEC */
+/* ----------------------------------------------------- */
+a:link.pojecie {
+    text-decoration: none;
+    color: gold;
+    font-size: 150%;
+}
+
+a:visited.pojecie {
+    text-decoration: none;
+    color: gold;
+}
+
+a:hover.pojecie {
+    text-decoration: none;
+    color: gold;
+}
+
+a:active.pojecie {
+    text-decoration: none;
+    color: gold;
+}
+/* ----------------------------------------------------- */
+
+/* Klasa dla wszystkich nazw rozdzialow np. Diagram Obiektow itd..*/
+.nazwaRozdzialu {
+    color: white;
+}
+
+/* ----------------------------------------------------- */
+/* KLASY KONTROLUJACE WYSKAKUJACE DEFINICJE POJEC */
+/* ----------------------------------------------------- */
+
+/* Popover Header - nagłówek pojęcia */
+.popover-title {
+    /* niestety nie dziala opcja background-color wiec musimy zostać przy białym :) */
+    color: black;
+}
+
+/* Popover Body - ciało pojęcia */
+.popover-content {
+    background-color: #A3A3FF;
+    font-family: Arial;
+    color: black;
+    padding: 25px;
+}
+
+/* Popover Arrow */
+.arrow {
+    border-right-color: white !important;
+}
+
+/* ----------------------------------------------------- */
+
+
+/* KLASA DLA PEŁNEJ LISTY ZE SLOWNIKA POJEC */
+#numerowanePojecia {
+    background-color: #344152;
+    font-family: Calibri;
+    word-wrap: break-word;
+}
+
+
+/* ----------------------------------------------------- */
+/* IDENTYFIKATORY I KLASY GALERII ZDJEC */
+/* ----------------------------------------------------- */
+#demo {
+    height:100%;
+    position:relative;
+    overflow:hidden;
+}
+
+.green{
+    background-color:#6fb936;
+}
+.thumb{
+    margin-bottom: 30px;
+}
+
+.page-top{
+    margin-top:85px;
+}
+
+img.zoom {
+    width: 100%;
+    height: 200px;
+    border-radius:1px;
+    object-fit:cover;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+}
+
+.transition {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+}
+.modal-header {
+    border-bottom: none;
+}
+.modal-title {
+    color:#000;
+}
+.modal-footer{
+    display:none;
+}
+/* ----------------------------------------------------- */

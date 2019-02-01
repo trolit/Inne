@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<!--
+****************************************************************************
+/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+
+-------------------------------------------------
+              INFORMACJE O SZABLONIE
+-------------------------------------------------
+
+     <> Tytuł: Szablon strony wykonany przy użyciu
+     framework'u Bootstrap
+     <> Autor szablonu: Paweł Idzikowski
+     <> Data wykonania: Listopad 2018
+
+-------------------------------------------------
+                     LICENCJA
+-------------------------------------------------
+
+     Licencja projektu: (CC BY-NC-SA 4.0)
+
+      <> link do licencji <>
+      https://creativecommons.org/licenses/by-nc-sa/4.0/deed.pl
+
+     ===== W skrócie =====
+
+     Wolno:
+        -> dzielić się utworem w dowolnym medium i formacie
+        -> remiksować, zmieniać, i tworzyć na bazie tego szablonu swój
+
+     Na następujących warunkach:
+        -> uznania autorstwa
+        -> użycia niekomerycjnego
+        -> na tych samych warunkach tzn. modyfikując, przetwarzając
+          bądź tworząc na podstawie tego szablonu własny należy
+          rozpowszechniać własne dzieło na tej samej licencji co
+          oryginał
+
+-------------------------------------------------
+                 Polecane strony
+-------------------------------------------------
+<> bootsnipp - ciekawe template'y
+<> bootstrap 4 kurs
+<> w3schools bootstrap
+
+\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+****************************************************************************
+ -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Niestandardowe czcionki -->
+    <link href='http://fonts.googleapis.com/css?family=Amiko&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Biryani&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Chakra+Petch&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+    <!-- Tytuł strony -->
+    <title>System XYZ</title>
+
+    <!-- Referencje do frameworku i do javascript - nie kasować! -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/bootstrap-reboot.css">
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery-3.3.1.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Referencja do pliku z istotnymi funkcjami -->
+    <script src="skrypty/skrypty_strony.js"></script>
+
+    <!-- Nie usuwaj tego fragmentu, potrzebne do działania karuzeli - źródło: W3SCHOOLS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Referencje dla dynamicznego MENU -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Referencje dla galerii projektu -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+</head>
+
+<body>
+
+<div class="container-fluid">
+
+    <!-- Panel nawigacyjny strony -->
+    <div class="row">
+            <ul class="nav nav-pills bg-dark col-md-12 navbar-fixed-top" style="font-size: 12px; font-family: 'Amiko', sans-serif;">
+                <li class="active"><a data-toggle="pill" href="#home"><i class="glyphicon glyphicon-home"></i> Strona główna</a></li>
+                <li><a data-toggle="pill" href="#menu1"><i class="glyphicon glyphicon-menu-right"></i> Analiza wymagań</a></li>
+                <li><a data-toggle="pill" href="#menu2"><i class="glyphicon glyphicon-menu-right"></i> Diagram PU</a></li>
+                <li><a data-toggle="pill" href="#menu3"><i class="glyphicon glyphicon-menu-right"></i> Diagram klas</a></li>
+                <li><a data-toggle="pill" href="#menu4"><i class="glyphicon glyphicon-menu-right"></i> Diagram obiektów</a></li>
+                <li><a data-toggle="pill" href="#menu5"><i class="glyphicon glyphicon-menu-right"></i> Diagram DDL</a></li>
+                <li><a data-toggle="pill" href="#menu6"><i class="glyphicon glyphicon-book"></i> Słownik danych</a></li>
+                <li><a data-toggle="pill" href="#menu7"><i class="glyphicon glyphicon-info-sign"></i> Szczegóły projektu</a></li>
+                <li><a data-toggle="pill" href="#menu8"><i class="glyphicon glyphicon-camera"></i> Galeria projektu</a></li>
+            </ul>
+    </div>
+
+    <div class="tab-content">
+        <!-- Zakładka: Strona główna(HOME) -->
+        <div id="home" class="tab-pane fade in active row tresc">
+                        <div class="col-md-12 text-center display-2">
+                            <br/>
+                            <p id="tytulProjektu" style="font-family: 'Biryani', sans-serif;">SYSTEM OBSŁUGI KLIENTA - UŻYTKOWNIKA</p>
+                            <h5 id="autorzyProjektu" style="font-family: 'Chakra Petch', sans-serif;">ZESPÓŁ REALIZUJĄCY: Adam Xant, Paweł Wig(szef), Ania Zarez, Dawid Wolia</h5>
+
+                            <!-- kod karuzeli -->
+                            <div class="container karuzela">
+                                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                                    <!-- wskaźniki -->
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                                    </ol>
+
+                                    <div class="carousel-inner">
+                                        <div class="item active">
+                                            <img src="./img/ea1.png" alt="tekst alternatywny" style="width:100%;">
+                                        </div>
+
+                                        <div class="item">
+                                            <img src="./img/ea2.png" alt="tekst alternatywny" style="width:100%;">
+                                        </div>
+
+                                        <div class="item">
+                                            <img src="./img/ea3.png" alt="tekst alternatywny" style="width:100%;">
+                                        </div>
+                                    </div>
+
+                                    <!-- sterowanie lewo / prawo -->
+                                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                                        <span class="glyphicon glyphicon-chevron-left"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                                        <span class="glyphicon glyphicon-chevron-right"></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+
+        <!-- Zakładka: Analiza wymagań -->
+        <div id="menu1" class="tab-pane fade" style="margin-top:80px">
+
+                    <!-- tytul rozdzialu -->
+                    <h1 class="nazwaRozdzialu">Analiza wymagań</h1>
+
+                    <!-- glowna tresc -->
+                    <div class="row">
+                        <div class="col-md-12 text-white">
+                            <h3 style="color: gold;">Zakres przyszłego SI "Dział Klienta"</h3>
+                            <img src="img/zakres_SI.png" class="img-fluid" height="486" width="661"/>
+
+                            <h3 style="color: gold;">Wymagania funkcjonalne aktorów względem SI "Dział Klienta"</h3>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul class="text-justify">
+                                        <li>Aktor1_nazwa: Quisque dictum neque orci, tincidunt vehicula magna molestie in. Donec vel justo dignissim, varius quam vel, vulputate nisl. In nec ligula non nulla fringilla vehicula non id nisi. Nullam eros ex, semper sed felis quis, gravida laoreet quam. Suspendisse eget magna elementum, pharetra dui et, porta dui.</li>
+                                        <li>Aktor2_nazwa: Sed tincidunt nisl dui, malesuada fermentum nisi consectetur eu. Morbi consectetur eleifend sem ac vehicula. Nam eget hendrerit nisi, a egestas lectus.</li>
+                                        <li>Aktor3_nazwa: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pellentesque, tortor a viverra rhoncus, mi quam hendrerit orci, sed sagittis dolor tellus non tellus. Donec ac elementum nunc. Donec in consectetur augue. Morbi et tincidunt ipsum.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h3 style="color: gold;">Specyfikacja wymagań na SI</h3>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p>
+                                        <h5 style="color: gold;">Aktor 1</h5>
+                                        - tekst tekst tekst tekst tekst tekst tekst tekst<br/>
+                                        - tekst tekst tekst tekst tekst tekst tekst tekst<br/>
+                                        - tekst tekst tekst tekst tekst tekst tekst tekst<br/>
+                                    </p>
+
+                                    <p>
+                                        <h5 style="color: gold;">Aktor 2</h5>
+                                        - tekst tekst tekst tekst tekst tekst tekst tekst<br/>
+                                        - tekst tekst tekst tekst tekst tekst tekst tekst<br/>
+                                        - tekst tekst tekst tekst tekst tekst tekst tekst<br/>
+                                    </p>
+
+                                    <p>
+                                        <h5 style="color: gold;">Aktor 3</h5>
+                                        - tekst tekst tekst tekst tekst tekst tekst tekst<br/>
+                                        - tekst tekst tekst tekst tekst tekst tekst tekst<br/>
+                                        - tekst tekst tekst tekst tekst tekst tekst tekst<br/>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        <!-- Zakładka: Diagram Przypadków Użycia -->
+        <div id="menu2" class="tab-pane fade" style="margin-top:80px">
+
+                    <h1 class="nazwaRozdzialu">Diagram przypadków użycia</h1>
+
+                    <!-- tresc strony -->
+                    <div id="dpu" class="row">
+                        <div class="col-md-12 text-white">
+                            <h3 style="color: gold;">Diagram przypadków użycia w perspektywie zewnętrznej</h3>
+                            <img src="img/dpu_1.png" class="img-fluid" height="486" width="661"/>
+
+                            <br/>
+
+                            <h3 style="color: gold;">Lista aktorów biznesowych</h3>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul class="text-justify">
+                                        <li>Aktor1_nazwa</li>
+                                        <li>Aktor2_nazwa</li>
+                                        <li>Aktor3_nazwa</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h3 style="color: gold;">Lista PU</h3>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul class="text-justify">
+                                        <li>PU1</li>
+                                        <li>PU2</li>
+                                        <li>PU3</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        <!-- Zakładka: Diagram Klas -->
+        <div id="menu3" class="tab-pane fade" style="margin-top:80px">
+
+                    <h1 class="nazwaRozdzialu">Diagram klas</h1>
+
+                    <!-- tresc strony -->
+                    <div class="row">
+                        <div class="col-md-12 text-white">
+                            <h3 style="color: gold;">Diagram klas</h3>
+                            <h5 style="color: gold;">od lewej strony: konceptualny, implementacyjny</h5>
+                            <!-- miejsce na fotografie -->
+                            <img src="img/diag_klas(konceptualny).png" class="img-fluid" height="486" width="661"/>
+                            <img src="img/diag_klas(implementacyjny).png" class="img-fluid" height="486" width="661"/>
+                        </div>
+
+                        <!-- Klasy i ich atrybuty -->
+                        <div class="col-md-9 text-white">
+                            <h3 style="color: gold;">Klasy i ich atrybuty</h3>
+
+                            <!-- Klasa 1 -->
+                            <table class="table table-bordered table-dark" style="width: 15%; float: left;">
+                                <tr>
+                                    <td>Klasa 1</td>
+                                </tr>
+
+                                <tr>
+                                    <td>- imie: string<br/>
+                                        - nazwisko: string<br/>
+                                        - id_Klienta: int
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>+ CRUD(): void<br/>
+                                        + zmienDane(): void
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!-- Klasa 2 (zwróć uwagę, że aby był odstęp od poprzedniej do atrybutu style poniżej został dodany margin-left na 10px) -->
+                            <table class="table table-bordered table-dark" style="margin-left: 10px; width: 10%; float: left;">
+                                <tr>
+                                    <td>Klasa 2</td>
+                                </tr>
+
+                                <tr>
+                                    <td>- telefon: string<br/>
+                                        - nazwaFirmy: string<br/>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>+ CRUD(): void
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <!-- Podsumowanie -->
+                        <div class="col-md-9 text-white text-justify">
+                            <h3 style="color: gold;">Podsumowanie</h3>
+                            <p>
+                                Quisque dictum neque orci, tincidunt vehicula magna molestie in. Donec vel justo dignissim, varius quam vel, vulputate nisl. In nec ligula non nulla fringilla vehicula non id nisi.
+                                Nullam eros ex, semper sed felis quis, gravida laoreet quam. Suspendisse eget magna elementum, pharetra dui et, porta dui. Curabitur libero lacus, gravida at venenatis non, hendrerit
+                                sit amet ligula. Donec rhoncus velit at sapien euismod, maximus lacinia velit iaculis. In commodo vitae nisl quis facilisis. Etiam auctor diam non accumsan viverra. In aliquet neque
+                                ultricies nisi maximus, ac venenatis turpis varius. Nulla convallis turpis vitae porttitor condimentum. Aenean elementum urna nec turpis semper condimentum. Quisque dictum neque orci,
+                                tincidunt vehicula magna molestie in. Donec vel justo dignissim, varius quam vel, vulputate nisl. In nec ligula non nulla fringilla vehicula non id nisi. Nullam eros ex, semper sed
+                                felis quis, gravida laoreet quam. Suspendisse eget magna elementum, pharetra dui et, porta dui. Curabitur libero lacus, gravida at venenatis non, hendrerit sit amet ligula. Donec
+                                rhoncus velit at sapien euismod, maximus lacinia velit iaculis. In commodo vitae nisl quis facilisis. Etiam auctor diam non accumsan viverra. In aliquet neque ultricies nisi maximus,
+                                ac venenatis turpis varius. Nulla convallis turpis vitae porttitor condimentum. Aenean elementum urna nec turpis semper condimentum.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+        <!-- Zakładka: Diagram Obiektów -->
+        <div id="menu4" class="tab-pane fade" style="margin-top:80px">
+
+                    <h1 class="nazwaRozdzialu">Diagram obiektów</h1>
+
+                    <!-- Tresc strony -->
+                    <div class="row">
+                        <div class="col-md-12 text-white">
+                            <h3 style="color: gold;">Diagram obiektów</h3>
+                            <img src="img/diag_obiektow1.png" class="img-fluid" height="486" width="661"/>
+                        </div>
+
+                        <div class="col-md-9 text-white">
+                            <h3 style="color: gold;">Obiekty</h3>
+
+                            <!-- Obiekt 1 -->
+                            <table class="table table-bordered table-dark" style="width: 15%; float: left;">
+                                <tr>
+                                    <td><h6 class="text-center" style="color: gold;">Kowalski:Człowiek</h6>
+                                        <p style="font-size: 80%;">
+                                            imie=Adam<br/>
+                                            nazwisko=Kowalski<br/>
+                                            identyfikator=35
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!-- Obiekt 2 (z marginesem lewym ustawionym domyslnie na 5%) -->
+                            <table class="table table-bordered table-dark" style="margin-left: 5%; width: 15%; float: left;">
+                                <tr>
+                                    <td><h6 class="text-center" style="color: gold;">Polak:Kierowca</h6>
+                                        <p style="font-size: 80%;">
+                                            imie=Daniel<br/>
+                                            nazwisko=Polak<br/>
+                                            identyfikator=70
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="col-md-9 text-white text-justify">
+                            <h3 style="color: gold;">Podsumowanie</h3>
+                            <p>
+                                Quisque dictum neque orci, tincidunt vehicula magna molestie in. Donec vel justo dignissim, varius quam vel, vulputate nisl. In nec ligula non nulla fringilla vehicula non id nisi.
+                                Nullam eros ex, semper sed felis quis, gravida laoreet quam. Suspendisse eget magna elementum, pharetra dui et, porta dui. Curabitur libero lacus, gravida at venenatis non, hendrerit
+                                sit amet ligula. Donec rhoncus velit at sapien euismod, maximus lacinia velit iaculis. In commodo vitae nisl quis facilisis. Etiam auctor diam non accumsan viverra. In aliquet neque
+                                ultricies nisi maximus, ac venenatis turpis varius. Nulla convallis turpis vitae porttitor condimentum. Aenean elementum urna nec turpis semper condimentum. Quisque dictum neque orci,
+                                tincidunt vehicula magna molestie in. Donec vel justo dignissim, varius quam vel, vulputate nisl. In nec ligula non nulla fringilla vehicula non id nisi. Nullam eros ex, semper sed
+                                felis quis, gravida laoreet quam. Suspendisse eget magna elementum, pharetra dui et, porta dui. Curabitur libero lacus, gravida at venenatis non, hendrerit sit amet ligula. Donec
+                                rhoncus velit at sapien euismod, maximus lacinia velit iaculis. In commodo vitae nisl quis facilisis. Etiam auctor diam non accumsan viverra. In aliquet neque ultricies nisi maximus,
+                                ac venenatis turpis varius. Nulla convallis turpis vitae porttitor condimentum. Aenean elementum urna nec turpis semper condimentum.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+        <!-- Zakładka: Diagram DDL -->
+        <div id="menu5" class="tab-pane fade" style="margin-top:80px">
+
+                    <h1 class="nazwaRozdzialu">Diagram DDL</h1>
+
+                    <!-- Tresc zakladki -->
+                    <div class="row">
+                        <div class="col-md-12 text-white">
+                            <h3 style="color: gold;">Diagram DDL</h3>
+                            <img src="img/diag_ddl1.png" class="img-fluid" height="486" width="661"/>
+                        </div>
+
+                        <div class="col-md-9 text-white text-justify">
+                            <h3 style="color: gold;">Podsumowanie</h3>
+                            <p>
+                                Quisque dictum neque orci, tincidunt vehicula magna molestie in. Donec vel justo dignissim, varius quam vel, vulputate nisl. In nec ligula non nulla fringilla vehicula non id nisi.
+                                Nullam eros ex, semper sed felis quis, gravida laoreet quam. Suspendisse eget magna elementum, pharetra dui et, porta dui. Curabitur libero lacus, gravida at venenatis non, hendrerit
+                                sit amet ligula. Donec rhoncus velit at sapien euismod, maximus lacinia velit iaculis. In commodo vitae nisl quis facilisis. Etiam auctor diam non accumsan viverra. In aliquet neque
+                                ultricies nisi maximus, ac venenatis turpis varius. Nulla convallis turpis vitae porttitor condimentum. Aenean elementum urna nec turpis semper condimentum. Quisque dictum neque orci,
+                                tincidunt vehicula magna molestie in. Donec vel justo dignissim, varius quam vel, vulputate nisl. In nec ligula non nulla fringilla vehicula non id nisi. Nullam eros ex, semper sed
+                                felis quis, gravida laoreet quam. Suspendisse eget magna elementum, pharetra dui et, porta dui. Curabitur libero lacus, gravida at venenatis non, hendrerit sit amet ligula. Donec
+                                rhoncus velit at sapien euismod, maximus lacinia velit iaculis. In commodo vitae nisl quis facilisis. Etiam auctor diam non accumsan viverra. In aliquet neque ultricies nisi maximus,
+                                ac venenatis turpis varius. Nulla convallis turpis vitae porttitor condimentum. Aenean elementum urna nec turpis semper condimentum.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+        <!-- Zakładka: Słownik pojęć -->
+        <div id="menu6" class="tab-pane fade" style="margin-top:80px">
+
+                    <h1 class="nazwaRozdzialu">Słownik pojęć</h1>
+
+                    <!-- Fragment odpowiadajacy za wyswietlenie uwagi w formie ramki, którą można zamknąć -->
+                    <div class="row">
+                        <div class="alert alert-primary alert-dismissible col-md-5 text-justify" style="margin-left: 15px;" role="alert">
+                            <span type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></span>
+                            <strong>Uwaga!</strong> Kliknij na dane pojęcie aby obejrzeć jego definicję. Jeżeli chcesz schować definicję,
+                            kliknij jeszcze raz na to samo pojęcie. Możesz też wyświetlić od razu wszystkie pojęcia w postaci listy numerowanej
+                            za pomocą poniższego przycisku!
+                        </div>
+                    </div>
+
+                    <!-- Przycisk pokazywania/ukrywania listy pojęć -->
+                    <button id="ukrywacz" onclick="hideAll()" class="btn btn-dark" style="margin-bottom: 20px; margin-top: 10px;">Pokaż wszystkie pojęcia za pomocą listy</button>
+
+                    <!-- W poniższym div znajduja się pojecia w wersji do wyklikiwania
+                         Uwaga ! Na jeden wiersz przypadają 4 pojęcia.
+                    -->
+                    <div class="col-md-12">
+                        <!-- Wiersz 1 pojęć -->
+                        <div class="row ukrywanie">
+                            <div class="col-md-3 text-center">
+                                <a href="#" data-toggle="popover" title="Bilet" data-content="Bilet w naszym systemie oznacza rzecz, która uprawnia do zakupu" class="pojecie">Bilet</a>
+                            </div>
+
+                            <div class="col-md-3 text-center">
+                                <a href="#" data-toggle="popover" title="Dyspozytor" data-content="Zajmuje się czymś" class="pojecie">Dyspozytor</a>
+                            </div>
+
+                            <div class="col-md-3 text-center">
+                                <a href="#" data-toggle="popover" title="Kierowca" data-content="Prowadzi samochód" class="pojecie">Kierowca</a>
+                            </div>
+
+                            <div class="col-md-3 text-center">
+                                <a href="#" data-toggle="popover" title="Kierowca" data-content="Wypłaca i wpłaca" class="pojecie">Bankomat</a>
+                            </div>
+                        </div>
+
+                        <br/>
+
+                        <!-- Wiersz 2 pojęć -->
+                        <div class="row ukrywanie">
+                            <div class="col-md-3 text-center">
+                                <a href="#" data-toggle="popover" title="Bilet" data-content="Można kupić kawę" class="pojecie">System Kawy</a>
+                            </div>
+
+                            <div class="col-md-3 text-center">
+                                <a href="#" data-toggle="popover" title="Dyspozytor" data-content="Pilnuje prawa" class="pojecie">Policjant</a>
+                            </div>
+
+                            <div class="col-md-3 text-center">
+                                <a href="#" data-toggle="popover" title="Kierowca" data-content="Określenie do kiedy coś ktoś" class="pojecie">Termin</a>
+                            </div>
+
+                            <div class="col-md-3 text-center">
+                                <a href="#" data-toggle="popover" title="Kierowca" data-content="Taka do ręki" class="pojecie">Karta</a>
+                            </div>
+                        </div>
+
+                        <br/>
+
+                        <!-- Wiersz 3 pojęć -->
+                        <div class="row ukrywanie">
+                            <div class="col-md-3 text-center">
+                                <a href="#" data-toggle="popover" title="Bilet" data-content="Moje zajęcia to PAWWW" class="pojecie">Przedmiot</a>
+                            </div>
+
+                            <div class="col-md-3 text-center">
+                                <a href="#" data-toggle="popover" title="Dyspozytor" data-content="Kim jesteś?" class="pojecie">Rola</a>
+                            </div>
+
+                            <div class="col-md-3 text-center">
+                                <a href="#" data-toggle="popover" title="Kierowca" data-content="Każdy ma unikalny" class="pojecie">Identyfikator</a>
+                            </div>
+
+                            <div class="col-md-3 text-center">
+                                <a href="#" data-toggle="popover" title="Kierowca" data-content="Bierzemy i musimy oddać" class="pojecie">Pożyczka</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--
+                    Poniżej znajduje się panel: "Wszystkie pojecia" gdzie jest lista wszystkich pojęć, którą można wyświetlić przyciskiem
+                    jeżeli ktoś nie chce np. przeklikiwać wszystkich pojęć..
+
+                    PS: Uwaga: tam gdzie wasze pojęcie ma np. więcej niż 2 linijki możecie użyć klasy text-justify
+                    (przykładowo zastosowałem ją do pojęcia Kierowca poniżej...
+                    -->
+                    <div id="pelnaLista" class="col-md-6 text-white" style="display: none; margin-top: 0px;">
+                        <ol id="numerowanePojecia">
+                            <h3>Pełna lista pojęć</h3>
+                            <h5 style="color: gold;">Podpowiedź: kliknij jeszcze raz na przycisk aby ukryć ten sposób prezentacji pojęć!</h5>
+
+                            <br/>
+
+                            <li>Bilet - Bilet w naszym systemie oznacza rzecz, która uprawnia do zakupu czegoś i wtedy blablabla jesteśmy zadowoleni, że mamy bilet, tekst przykład.
+                                Tekst przykład tekst przykład i tak dalej sobie tekst przykład tekst przykład tekst przykład i tak dalej i tak dalej i tekst i tekst i tekst.</li>
+                            <br/>
+                            <li>Dyspozytor - Zajmuje się czymś co interesuje tak naprawdę każdego, lorem ipsum set el lorem ipsum lorem ipsum lorem ipsum i to jest przykład tekstu.</li>
+                            <br/>
+                            <li class="text-justify">Kierowca - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultrices vel ante viverra faucibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam lacinia nec quam et commodo. Cras eget iaculis risus. Phasellus dictum posuere tortor eget feugiat. Sed commodo sem in imperdiet aliquet. Integer vel sagittis magna, a varius massa. Nulla tempus ornare laoreet. Proin eros magna, rhoncus et blandit in, condimentum in dui. Donec placerat varius eros vitae mattis. Sed vulputate sagittis tellus, eget volutpat nunc semper in. Fusce ac arcu vel nisi rutrum commodo. Ut massa est, ornare in massa eget, ullamcorper ultricies urna. </li>
+                            <br/>
+                            <li>Bankomat - Aliquam vitae neque fermentum, elementum mauris nec, cursus felis. Proin congue vitae lectus eget molestie. In tempor rutrum dolor. Etiam consectetur, felis in efficitur consectetur, mauris neque venenatis dui, eget tincidunt urna purus non dolor. Maecenas vulputate bibendum leo, id ultrices nisl interdum sit amet. Proin efficitur, felis at aliquam vestibulum, nibh lectus pellentesque est, sed pharetra tortor risus vitae tellus.</li>
+                            <br/>
+                            <li>System Kawy - Nulla tellus magna, rutrum non elit eget, facilisis suscipit tellus. In hac habitasse platea dictumst. Ut non luctus nulla. Aenean vel elit auctor, tincidunt elit ac, egestas mi. Vivamus convallis interdum nibh non consectetur. Praesent quis felis enim. Cras porta malesuada elit vitae suscipit. </li>
+                            <br/>
+                            <li>Policjant - Aliquam vitae neque fermentum, elementum mauris nec, cursus felis. Proin congue vitae lectus eget molestie. In tempor rutrum dolor. Etiam consectetur, felis in efficitur consectetur, mauris neque venenatis dui, eget tincidunt urna purus non dolor. Maecenas vulputate bibendum leo, id ultrices nisl interdum sit amet. Proin efficitur, felis at aliquam vestibulum, nibh lectus pellentesque est, sed pharetra tortor risus vitae tellus.</li>
+                            <br/>
+                            <li>Termin - Aenean eros ipsum, euismod vitae ligula in, congue rhoncus orci. Mauris laoreet quam libero, a elementum purus consequat quis. Suspendisse maximus velit elit, non pharetra quam pharetra ac. Sed lobortis lacus velit, sed fringilla odio malesuada laoreet. Fusce lacinia luctus aliquet. Vivamus nunc mi, blandit nec diam ut, commodo dignissim sapien. Suspendisse potenti. Etiam quis massa eu eros facilisis molestie. Donec et suscipit est, nec suscipit odio. Integer laoreet neque urna, ac auctor dui faucibus id. Phasellus convallis suscipit urna sit amet porttitor. Sed ante purus, molestie et congue ut, maximus sit amet sem. Phasellus non tempor magna, efficitur dictum urna. Nunc viverra tellus non leo molestie, eu sodales lorem ornare. Vivamus ullamcorper gravida orci, a tempor justo tempor sed. </li>
+                            <br/>
+                            <li>itd...</li>
+                        </ol>
+                    </div>
+        </div>
+
+        <!-- Zakładka: Szczegóły projektu -->
+        <div id="menu7" class="tab-pane fade text-white" style="margin-top:80px">
+
+                    <h1 class="nazwaRozdzialu">Szczegóły projektu</h1>
+
+                    <!-- Autorzy projektu -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3 style="color: gold;">Autorzy projektu</h3>
+                            <br/>
+
+                            <!-- Profil 1 -->
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div>
+                                        <div class="row bg-dark">
+                                            <div class="col-sm-6 col-md-8">
+                                                <i class="glyphicon glyphicon-user"></i> Adam Xant<br/>
+                                                <p style="margin-left: 15px; padding-top: 6px;">
+                                                    <i class="glyphicon glyphicon-envelope"></i> xant@zz.pl
+                                                    <br/>
+                                                    <i class="glyphicon glyphicon-education"></i> grupa II, specjalność IO
+                                                    <br/>
+                                                    <i class="glyphicon glyphicon-pushpin"></i> szef
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <br/>
+
+                            <!-- Profil 2 -->
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div>
+                                        <div class="row bg-dark">
+                                            <div class="col-sm-6 col-md-8">
+                                                <i class="glyphicon glyphicon-user"></i> Paweł Wig<br/>
+                                                <p style="margin-left: 15px; padding-top: 6px;">
+                                                    <i class="glyphicon glyphicon-envelope"></i> wig@zz.pl
+                                                    <br/>
+                                                    <i class="glyphicon glyphicon-education"></i> grupa III, specjalność ISI
+                                                    <br/>
+                                                    <i class="glyphicon glyphicon-pushpin"></i> członek zespołu
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <br/>
+
+                            <!-- Profil 3 -->
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div>
+                                        <div class="row bg-dark">
+                                            <div class="col-sm-6 col-md-8">
+                                                <i class="glyphicon glyphicon-user"></i> Ania Zarez<br/>
+                                                <p style="margin-left: 15px; padding-top: 6px;">
+                                                    <i class="glyphicon glyphicon-envelope"></i> zar@zz.pl
+                                                    <br/>
+                                                    <i class="glyphicon glyphicon-education"></i> grupa IV, specjalność IO
+                                                    <br/>
+                                                    <i class="glyphicon glyphicon-pushpin"></i> członek zespołu
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <br/>
+
+                            <!-- Profil 4 -->
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div>
+                                        <div class="row bg-dark">
+                                            <div class="col-sm-6 col-md-8">
+                                                <i class="glyphicon glyphicon-user"></i> Dawid Wolia<br/>
+                                                <p style="margin-left: 15px; padding-top: 6px;">
+                                                    <i class="glyphicon glyphicon-envelope"></i> wolia@erka.pl
+                                                    <br/>
+                                                    <i class="glyphicon glyphicon-education"></i> grupa I, specjalność IO
+                                                    <br/>
+                                                    <i class="glyphicon glyphicon-pushpin"></i> członek zespołu
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br/>
+                    <br/>
+                    <br/>
+
+                    <!-- Informacje o projekcie(systemie) -->
+                    <div class="row">
+                        <div class="col-md-4 bg-dark">
+                            <h3>Informacje o projekcie(systemie)</h3>
+
+                            <br/>
+
+                            <ul>
+                                <li>Tytuł: ...</li>
+                                <li>Data wykonania: ...</li>
+                                <li>Przedmiot: ...</li>
+                                <li>Prowadzący: ...</li>
+                                <li>Numer wersji dokumentu: ...</li>
+                                <li>Uczelnia: ...</li>
+                                <li>Miejscowość: ...</li>
+                            </ul>
+
+                            <br/>
+
+                            <div class="col-md-12" style="overflow: hidden;">
+                                <h4 style="color: gold; text-decoration: underline;">Krótki opis projektu</h4>
+                                <p class="text-justify">
+                                    Projekt został wykonany aby usprawnić(ułatwić) pracę recepcjonistów(recepcjonistek). Stworzony system pozwoli także lepiej obsługiwać klientów/użytkowników
+                                    danej firmy. Zautmatyzowaliśmy dzięki systemowi przede wszystkim możliwość rejestrowania się, wnoszenia opłat, wysyłania skarg i innych komunikatów(np. pytania).
+                                    Dzięki niemu zarówno pracownicy jaki i klienci czy użytkownicy systemu powinny być zadowoleni z szybszej i bezstresowej obsługi. A tak to jest próbny tekst
+                                    pozostały żeby sprawdzić jak działa - taki szablon. Tekst lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                    lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                    lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+        <!-- Zakładka: Galeria zdjęć projektu -->
+        <div id="menu8" class="tab-pane fade" style="margin-top:80px">
+
+            <h1 class="nazwaRozdzialu">Galeria projektu</h1>
+
+            <!-- Galeria fotografii w formie kart(z podpisami) -->
+            <div class="container page-top">
+                        <div class="row">
+
+                            <!-- zastępujemy własnym zdjęciem w miejscu href i src! -->
+                            <!-- zdjęcia polecam przechowywać w katalogu img -->
+                            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                                <a href="./img/dpu_1.png" class="fancybox" rel="ligthbox" style="text-decoration: none !important">
+                                    <div class="card border-dark">
+                                    <img src="./img/dpu_1.png" class="zoom img-fluid card-img-top"  alt="">
+                                        <div class="card-body bg-dark text-white">
+                                            <p class="card-text">Diagram przypadków użycia</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- Karta 2 -->
+                            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                                <a href="./img/diag_klas(implementacyjny).png" class="fancybox" rel="ligthbox" style="text-decoration: none !important">
+                                    <div class="card border-dark">
+                                        <img src="./img/diag_klas(implementacyjny).png" class="zoom img-fluid card-img-top"  alt="">
+                                        <div class="card-body bg-dark text-white">
+                                            <p class="card-text">Diagram klas - implementacyjny</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- Karta 3 -->
+                            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                                <a href="./img/diag_klas(konceptualny).png" class="fancybox" rel="ligthbox" style="text-decoration: none !important">
+                                    <div class="card border-dark">
+                                        <img src="./img/diag_klas(konceptualny).png" class="zoom img-fluid card-img-top"  alt="">
+                                        <div class="card-body bg-dark text-white">
+                                            <p class="card-text">Diagram klas - konceptualny</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- Karta 4 -->
+                            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                                <a href="./img/diag_ddl1.png" class="fancybox" rel="ligthbox" style="text-decoration: none !important">
+                                    <div class="card border-dark">
+                                        <img src="./img/diag_ddl1.png" class="zoom img-fluid card-img-top"  alt="">
+                                        <div class="card-body bg-dark text-white">
+                                            <p class="card-text">Diagram DDL</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- Karta 5 -->
+                            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                                <a href="./img/diag_ddl1.png" class="fancybox" rel="ligthbox" style="text-decoration: none !important">
+                                    <div class="card border-dark">
+                                        <img src="./img/diag_ddl1.png" class="zoom img-fluid card-img-top"  alt="">
+                                        <div class="card-body bg-dark text-white">
+                                            <p class="card-text">Miejsce wolne</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- Karta 6 -->
+                            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                                <a href="./img/diag_ddl1.png" class="fancybox" rel="ligthbox" style="text-decoration: none !important">
+                                    <div class="card border-dark">
+                                        <img src="./img/diag_ddl1.png" class="zoom img-fluid card-img-top"  alt="">
+                                        <div class="card-body bg-dark text-white">
+                                            <p class="card-text">Miejsce wolne</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- Karta 7 -->
+                            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                                <a href="./img/diag_ddl1.png" class="fancybox" rel="ligthbox" style="text-decoration: none !important">
+                                    <div class="card border-dark">
+                                        <img src="./img/diag_ddl1.png" class="zoom img-fluid card-img-top"  alt="">
+                                        <div class="card-body bg-dark text-white">
+                                            <p class="card-text">Miejsce wolne</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- Karta 8 -->
+                            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                                <a href="./img/diag_ddl1.png" class="fancybox" rel="ligthbox" style="text-decoration: none !important">
+                                    <div class="card border-dark">
+                                        <img src="./img/diag_ddl1.png" class="zoom img-fluid card-img-top"  alt="">
+                                        <div class="card-body bg-dark text-white">
+                                            <p class="card-text">Miejsce wolne</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- Karta 9 -->
+                            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                                <a href="./img/diag_ddl1.png" class="fancybox" rel="ligthbox" style="text-decoration: none !important">
+                                    <div class="card border-dark">
+                                        <img src="./img/diag_ddl1.png" class="zoom img-fluid card-img-top"  alt="">
+                                        <div class="card-body bg-dark text-white">
+                                            <p class="card-text">Miejsce wolne</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+        </div>
+    </div>
+
+    <!-- Credits -->
+    <div class="fixed-bottom text-right text-white" style="font-size: 80%; font-family: 'Lucida Sans';">Autor: Paweł Idzikowski</div>
+</div>
+
+</body>
+</html>

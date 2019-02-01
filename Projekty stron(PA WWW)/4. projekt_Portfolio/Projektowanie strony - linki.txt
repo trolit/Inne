@@ -1,0 +1,44 @@
+/***************************************************/
+Do kolorów na strone:
+=> https://www.color-hex.com/
+=> https://clrs.cc/
+=> https://www.w3schools.com/colors/colors_trends.asp
+=> https://www.w3schools.com/colors/colors_groups.asp
+=> http://everyknightshoulddesign.blogspot.com/2013/08/beautiful-color-palettes-their-hex-codes.html
+
+=> https://www.december.com/html/spec/color2.html
+tu jest ogromny wybór kolorów, je¿eli chcesz inny kolorek zast¹p
+w linku liczbê w color2 na inn¹ np. color5, color10 etc.. 
+np. 
+https://www.december.com/html/spec/color4.html
+https://www.december.com/html/spec/color6.html
+tylko musisz sobie posprawdzaæ 
+
+/***************************************************/
+Fajne elementy bootstrap na strone:
+alerty => https://www.w3schools.com/bootstrap/bootstrap_alerts.asp
+baza wiedzy(zescrolluj na dó³ po menu) => https://bs4.kursbootstrap.pl/
+tooltipy => https://www.w3schools.com/bootstrap/bootstrap_tooltip.asp
+popovery => https://www.w3schools.com/bootstrap/bootstrap_popover.asp
+collapse => https://www.w3schools.com/bootstrap/bootstrap_collapse.asp
+modal => https://www.w3schools.com/bootstrap/bootstrap_modal.asp
+wyszukiwarka(filtr) => https://www.w3schools.com/bootstrap/bootstrap_filters.asp
+
+/***************************************************/
+Inne
+niestandardowe ikony(duu¿o ikon): https://fontawesome.com/
+ikony bootstrapa: https://www.w3schools.com/bootstrap/bootstrap_ref_comp_glyphs.asp
+
+animacje bootstrap: https://mdbootstrap.com/docs/jquery/css/animations/
+(wystarczy tylko Basic usage - czyli dodaj klase animated
+a potem dodajesz jedna z dostepnych animacji)
+
+biblioteka do kolorowania sk³adni: https://highlightjs.org/
+
+darmowe snippety bootstrap(gotowe elementy): https://bootsnipp.com/
+
+walidator CSS: https://jigsaw.w3.org/css-validator/
+
+walidator HTML: https://validator.w3.org/
+
+walidator Javascript: https://codebeautify.org/jsvalidate

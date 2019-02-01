@@ -1,0 +1,46 @@
+/* wlasciwosci tabeli */
+
+tr, td, table {
+    color: white;
+    font-family: Verdana;
+    border-collapse: collapse;
+}
+
+tr:nth-child(even){background-color: #3f3061 !important}
+tr:nth-child(odd){background-color: #584d7a !important}
+
+tr {
+    height: 50px; !important;
+}
+
+.naglowki {
+    background-color: #301257;
+    text-align: center;
+    height: 40pt;
+    font-family: "Calibri Light";
+    font-size: 25px;
+}
+
+.tytul, .domyslna {
+    text-align: center;
+}
+
+.domyslna {
+    font-size: 11px;
+}
+
+.tytul {
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.wiersze {
+    vertical-align: top;
+    text-align: left;
+    font-size: 12px;
+}
+
+tr:hover td {
+    background-color: #19113b;
+    border: 2px dashed #22316C;
+}

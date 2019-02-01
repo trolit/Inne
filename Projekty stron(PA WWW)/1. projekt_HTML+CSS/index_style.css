@@ -1,0 +1,171 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body, #strona {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: Verdana, Arial, SansSerif, "Times New Roman";
+    font-size: 62.5%;
+    background-color: #534F59;
+}
+
+/* Responsywność index.html */
+/* GDY EKRAN < 768px */
+@media only screen and (max-width: 768px) {
+    /* Smartfony customowe parametry.. : */
+
+    header, nav, footer, section, .motto, .menu {
+        float: left;
+        display: block;
+        min-width: 100%;
+    }
+}
+
+header {
+    /* do testowania */
+    /* border: 2px solid red; */
+    height: auto;
+    width: 100%;
+    float: left;
+
+    /* Logo stworzone w edytorze online na stronie enjoyCSS */
+    vertical-align: middle;
+    text-align: center;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    font: normal normal bold 66px/1 Arial Black, Gadget, sans-serif;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    letter-spacing: 16px;
+    color: #fff;
+    background-color: #b8b8b8;
+    text-shadow: #7a7a7a 4px 3px 0;
+}
+
+img {
+    filter: grayscale(100%);
+}
+
+.motto {
+    height: 20%;
+    font-size: 200%;
+    float:left;
+    margin-top: 6%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 9%;
+    text-align: left;
+    text-shadow: rgba(0,0,0,.2) 2px 6px 5px,rgba(255,255,255,.4) 0 -4px 30px;
+}
+
+#spis {
+    width: 110%;
+    font-size: 200%;
+    text-shadow: #fff 0 0 10px;
+    margin-bottom: 0%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#komentarzspis {
+    font-size: 60%;
+    margin-top: 0%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section {
+    height: auto;
+    width: 80%;
+    float: left;
+    background: #534F59;
+    color:white;
+    text-align: center;
+}
+
+nav {
+    /* border: 2px solid red; */
+    height: 80%;
+    width: 20%;
+    float: left;
+    background: #777777;
+    text-align: left;
+    font-size: 170%;
+    display : flex;
+    align-items : center;
+    color: white;
+}
+
+
+.menu {
+    float: left;
+    margin-right: auto;
+    margin-left: 5%;
+}
+
+
+footer {
+    /* border: 2px solid red; */
+    float: left;
+    height: 10%;
+    width: 100%;
+    background: #656263;
+    text-align: center;
+    color: white;
+}
+
+
+.clear {
+     clear: both;
+ }
+
+a:hover
+{
+    text-decoration: none;
+    background-color: #F2E8ED;
+}
+
+a:active, a:visited, a:link {
+    text-decoration: none;
+    color: #D6B3C5;
+}
+
+/* --------------------------------------------------------------------------- */
+/* ODNOŚNIE PANELU WYBORU */
+.panelWyboru ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.panelWyboru li {
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color: #534F59;
+    color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.panelWyboru li:hover {
+    background-color: #262339;
+}
+
+.panelWyboru {
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* --------------------------------------------------------------------------- */
+/* Przybliżanie zdjęć */
+img {
+    transition: all .2s ease-in-out;
+    border: black 2px solid;
+}
+img:hover { transform: scale(1.5); }

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/draggable/1.0.0-beta.8/draggable.bundle.js">
+    <script type="text/javascript">
+        function draw() {
+            var canvas = document.getElementById('image');
+            var context = canvas.getContext('2d');
+            context.beginPath();
+            context.arc(200,200,111,Math.PI,55,false)
+            context.fillStyle='black';
+            context.fill();
+            context.closePath();
+            context.lineWidth=10;
+            context.strokeStyle="black";
+            context.stroke();
+            context.fillStyle='red';
+            context.fillRect(115,205,170,100);
+            context.fillStyle='black';
+            context.fillRect(140,225,25,25);
+            context.fillRect(230,225,25,25);
+            context.fillRect(115,280,170,35);
+            context.fillStyle='grey';
+            context.fillRect(115,315,170,160);
+            context.fillStyle='black';
+            context.fillRect(280,315,170,50);
+        }
+    </script>
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+
+        function editPhoto(div)
+        {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+
+            div.style.backgroundColor=color;
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #111111;
+            margin-left: 2%;
+            margin-top: 10%;
+        }
+    </style>
+
+</head>
+<body ondrop="drop(event)" ondragover="allowDrop(event)">
+<script>
+    $(function () {
+        $("#draggable").draggable();
+    })
+</script>
+
+<img id="drag1" src="https://img.itch.zone/aW1nLzc3NjkzNC5naWY=/original/OXf8zn.gif" draggable="true" width="350px" ondragstart="drag(event)" style="position: absolute;" loop="infinite">
+
+<div id="div1" ondrop="drop(event); editPhoto(this)" ondragover="allowDrop(event)" style="background-color: #0074D9; border: 1px solid black; width: 350px; height: 250px; float: left;"></div>
+<div id="div2" ondrop="drop(event); editPhoto(this)" ondragover="allowDrop(event)" style="background-color: #001f3f; border: 1px solid black; width: 350px; height: 250px; float: left;"></div>
+<div id="div3" ondrop="drop(event); editPhoto(this)" ondragover="allowDrop(event)" style="background-color: #0074D9; border: 1px solid black; width: 350px; height: 250px; float: left;"></div>
+<div id="div4" ondrop="drop(event); editPhoto(this)" ondragover="allowDrop(event)" style="background-color: #001f3f; border: 1px solid black; width: 350px; height: 250px; float: left;"></div>
+<div id="div5" ondrop="drop(event); editPhoto(this)" ondragover="allowDrop(event)" style="background-color: #0074D9; border: 1px solid black; width: 350px; height: 250px; float: left;"></div>
+<div id="div6" ondrop="drop(event); editPhoto(this)" ondragover="allowDrop(event)" style="background-color: #001f3f; border: 1px solid black; width: 350px; height: 250px; float: left;"></div>
+<div id="div7" ondrop="drop(event); editPhoto(this)" ondragover="allowDrop(event)" style="background-color: #0074D9; border: 1px solid black; width: 350px; height: 250px; float: left;"></div>
+<div id="div8" ondrop="drop(event); editPhoto(this)" ondragover="allowDrop(event)" style="background-color: #001f3f; border: 1px solid black; width: 350px; height: 250px; float: left;"></div>
+<div id="div9" ondrop="drop(event); editPhoto(this)" ondragover="allowDrop(event)" style="background-color: #0074D9; border: 1px solid black; width: 350px; height: 250px; float: left;"></div>
+<div id="div10" ondrop="drop(event); editPhoto(this)" ondragover="allowDrop(event)" style="background-color: #001f3f; border: 1px solid black; width: 350px; height: 250px; float: left;"></div>
+</body>
+</html>

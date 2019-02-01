@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 class="display-3" style="margin-top: 100px;">API</h1>
+<p></p>
+<div style="margin-bottom: 20px;">
+    <input class="form-control" id="myInput" type="text" placeholder="Wpisz tutaj co chcesz wyszukać z API Muuri.." style="float: left; width: 40%;">   <a data-toggle="tooltip" style="color: white;" data-placement="right" title="Skorzystaj z wyszukiwarki jeżeli chcesz znaleźć coś konkretnego :)"><i class="far fa-question-circle" style="font-size: 40px; margin-left: 5px; color: gray;"></i></a>
+</div>
+
+<table style="width:100%; height:100%; table-layout:fixed; overflow:hidden; ">
+    <tr>
+        <td class="naglowki">Nazwa</td>
+        <td class="naglowki">Wartość domyślna</td>
+        <td class="naglowki">Opis</td>
+<tbody id="myTable">
+    </tr>
+    <tr>
+        <td class="tytul">showDuration</td>
+        <td class="domyslna">300</td>
+        <td class="wiersze">Pokazuje animacje przez podaną liczbę milisekund. Wartość 0 wyłącza animacje.</td>
+    </tr>
+    <tr>
+        <td class="tytul">showEasing</td>
+        <td class="domyslna">'ease'</td>
+        <td class="wiersze">Nadaje animacji efekt: 'ease'. Podajemy jako łańcuch znaków. Inne przykładowe rodzaje
+        animacji: ease-in, ease-out, step-start.. itd</td>
+    </tr>
+    <tr>
+        <td class="tytul">hideDuration</td>
+        <td class="domyslna">300</td>
+        <td class="wiersze">Animacja ukrywania przez podaną liczbę milisekund. Wartość 0 oznacza wyłączenie animacji ukrywania.</td>
+    </tr>
+    <tr>
+        <td class="tytul">hideEasing</td>
+        <td class="domyslna">'ease'</td>
+        <td class="wiersze">Nadaje animacje ukrywania 'ease'. Inne przykładowe rodzaje animacji, które można tu wpisać:
+            ease-in, ease-out, step-start</td>
+    </tr>
+    <tr>
+        <td class="tytul">visibleStyles</td>
+        <td class="domyslna">{opacity: 1, transform: 'scale(1)'}</td>
+        <td class="wiersze">Podane style będą aplikowane do wszystkich widocznych elementów. Te style są także używane do
+        pokazywania/ukrywania animacji.</td>
+    </tr>
+    <tr>
+        <td class="tytul">hiddenStyles</td>
+        <td class="domyslna">{opacity: 0, transform: 'scale(0.5)'}</td>
+        <td class="wiersze">Podane style będą aplikowane do wszystkich niewidocznych elementów. Te style są także używane
+        do pokazywania/ukrywania animacji.</td>
+    </tr>
+    <tr>
+        <td class="tytul">layout</td>
+        <td class="domyslna">{fillGaps: false, horizontal: false, alignRight: false, alignBottom: false}</td>
+        <td class="wiersze">Definiuje w jaki sposób elementy będą układane. Domyślnie, Muuri ma wbudowany domyślny algorytm.
+        Możemy zaimplementować własny algorytm.</td>
+    </tr>
+    <tr>
+        <td class="tytul">layoutOnInit</td>
+        <td class="domyslna">true</td>
+        <td class="wiersze">Ustawia czy Muuri powinien uruchamiać metodę layout podczas inicjalizacji.</td>
+    </tr>
+    <tr>
+        <td class="tytul">layoutDuration</td>
+        <td class="domyslna">300</td>
+        <td class="wiersze">Czas animacji układu elementu w milisekundach. Wartość 0 wyłącza layoutDuration.</td>
+    </tr>
+    <tr>
+        <td class="tytul">layoutEasing</td>
+        <td class="domyslna">'ease'</td>
+        <td class="wiersze">Animacja 'ease' układu elementu. Dopuszczalne są inne prawidłowe rodzaje animacji ease. (link: <a href="https://developer.mozilla.org/en-US/docs/Web/API/AnimationEffectTimingProperties/easing" target="_blank" style="color: yellow; font-weight: bold;">Animacje ease</a>)</td>
+    </tr>
+    <tr>
+        <td class="tytul">sortData</td>
+        <td class="domyslna">null</td>
+        <td class="wiersze">Podając tej metodzie obiekt gdzie kluczem jest nazwa atrybutu, który można posortować zwraca informacje
+        o tym, który z elementów da się posortować.</td>
+    </tr>
+    <tr>
+        <td class="tytul">dragEnabled</td>
+        <td class="domyslna">false</td>
+        <td class="wiersze">Ustawia czy elementy można 'przeciągać'.</td>
+    </tr>
+    <tr>
+        <td class="tytul">dragContainer</td>
+        <td class="domyslna">null</td>
+        <td class="wiersze">Kontener do którego element powinien być wstawiony na czas przeciągania go. Jeżeli ustawione na null,
+        użyty zostanie kontener siatki</td>
+    </tr>
+    <tr>
+        <td class="tytul">dragStartPredicate</td>
+        <td class="domyslna">{distance: 0, delay: 0, handle: false}</td>
+        <td class="wiersze">Funkcja ustawiająca kiedy element powinien rozpocząć przemieszczanie gdy będzie przeciągany. Domyślnie
+        używa wbudowanego predykatu, który ma kilka wbudowanych opcji.</td>
+    </tr>
+    <tr>
+        <td class="tytul">dragAxis</td>
+        <td class="domyslna">null</td>
+        <td class="wiersze">Ustawia czy elementy mają być przemieszczane poziomo czy pionowo. Jeżeli 'x' to poziome ustawianie.
+        Jeżeli 'y' to pionowe ustawianie. Gdy 'null' - elementy mogą być przemieszczane pionowo i poziomo.</td>
+    </tr>
+    <tr>
+        <td class="tytul">dragSort</td>
+        <td class="domyslna">true</td>
+        <td class="wiersze">Ustawia czy elementy powinny być sortowane podczas przeciągania</td>
+    </tr>
+    <tr>
+        <td class="tytul">dragSortInterval</td>
+        <td class="domyslna">100</td>
+        <td class="wiersze">Definiuje ilość czasu przez który element musi być przeciągany aby nastąpiło aktywowanie funkcji
+        dragSortPredicate. Wartość 0 nie jest rekomendowana.</td>
+    </tr>
+    <tr>
+        <td class="tytul">dragSortPredicate</td>
+        <td class="domyslna">{action: 'move', threshold: 50}</td>
+        <td class="wiersze">Definiuje logikę procedury sortowania podczas przeciągania elementu</td>
+    </tr>
+    <tr>
+        <td class="tytul">dragReleaseDuration</td>
+        <td class="domyslna">300</td>
+        <td class="wiersze">Czas animacji upuszczania przeciąganego elementu. Ustawienie na 0 spowoduje wyłączenie tej
+        funkcjonalności.</td>
+    </tr>
+    <tr>
+        <td class="tytul">dragReleaseEasing</td>
+        <td class="domyslna">'ease'</td>
+        <td class="wiersze">Animacja 'ease' przy upuszczaniu przeciąganego elementu. Dostępne animacje ease: <a href="https://developer.mozilla.org/en-US/docs/Web/API/AnimationEffectTimingProperties/easing" target="_blank" style="color: yellow; font-weight: bold;">animacje ease</a> </td>
+    </tr>
+    <tr>
+        <td class="tytul">containerClass</td>
+        <td class="domyslna">'muuri'</td>
+        <td class="wiersze">Nazwa kontenera elementu</td>
+    </tr>
+    <tr>
+        <td class="tytul">itemClass</td>
+        <td class="domyslna">'muuri-item'</td>
+        <td class="wiersze">Nazwa elementu</td>
+    </tr>
+    <tr>
+        <td class="tytul">itemVisibleClass</td>
+        <td class="domyslna">'muuri-item-shown'</td>
+        <td class="wiersze">Nazwa widocznego elementu klasy</td>
+    </tr>
+    <tr>
+        <td class="tytul">itemHiddenClass</td>
+        <td class="domyslna">'muuri-item-hidden'</td>
+        <td class="wiersze">Nazwa ukrytego elementu klasy</td>
+    </tr>
+    <tr>
+        <td class="tytul">itemPositioningClass</td>
+        <td class="domyslna">'muuri-item-positioning'</td>
+        <td class="wiersze">Nazwa tej klasy jest dodawana do elementu na czas pozycjonowania(position)</td>
+    </tr>
+    <tr>
+        <td class="tytul">itemDraggingClass</td>
+        <td class="domyslna">'muuri-item-dragging'</td>
+        <td class="wiersze">Nazwa tej klasy jest dodawana do elementu na czas przeciągania(drag)</td>
+    </tr>
+    <tr>
+        <td class="tytul">itemReleasingClass</td>
+        <td class="domyslna">'muuri-item-releasing'</td>
+        <td class="wiersze">Nazwa tej klasy jest dodawana do elementu na czas upuszczania(drop)</td>
+    </tr>
+    <tr>
+        <td class="tytul">grid.getElement()</td>
+        <td class="domyslna">-</td>
+        <td class="wiersze">Zwraca element(jego instancje)</td>
+    </tr>
+    <tr>
+        <td class="tytul">grid.getItems( [targets] )</td>
+        <td class="domyslna">-</td>
+        <td class="wiersze">Zwraca wszystkie elementy będące w siatce</td>
+    </tr>
+    <tr>
+        <td class="tytul">grid.refreshItems( [items] )</td>
+        <td class="domyslna">-</td>
+        <td class="wiersze">Odświeża wymiary elementów w siatce. Jeżeli nie podano argumentów, wszystkie elementy zostaną
+        zsnychronizowane.</td>
+    </tr>
+    <tr>
+        <td class="tytul">grid.refreshSortData( [items] )</td>
+        <td class="domyslna">-</td>
+        <td class="wiersze">Synchronizuje dane posortowanych elementów</td>
+    </tr>
+    <tr>
+        <td class="tytul">grid.synchronize()</td>
+        <td class="domyslna">-</td>
+        <td class="wiersze">Synchronizuje elementy w taki sposób aby były ułożone zgodnie ze strukturą DOM</td>
+    </tr>
+    <tr>
+        <td class="tytul">grid.layout( [instant], [callback] )</td>
+        <td class="domyslna">-</td>
+        <td class="wiersze">Wylicza pozycje elementów i ich pozycje chyba, że są już ułożone prawidłowo. Wysokość i szerokość
+        siatki w której są elementy jest także dostosowywana do liczby elementów.</td>
+    </tr>
+    <tr>
+        <td class="tytul">grid.add( elements, [options] )</td>
+        <td class="domyslna">-</td>
+        <td class="wiersze">Dodaje nowe elementy do siatki.</td>
+    </tr>
+    <tr>
+        <td class="tytul">grid.remove( items, [options] )</td>
+        <td class="domyslna">-</td>
+        <td class="wiersze">Usuwa elementy z instancji grid</td>
+    </tr>
+    <tr>
+        <td class="tytul">grid.show( items, [options] )</td>
+        <td class="domyslna">-</td>
+        <td class="wiersze">Pokazuje elementy instacji grid</td>
+    </tr>
+    <tr>
+        <td class="tytul">grid.hide( items, [options] )</td>
+        <td class="domyslna">-</td>
+        <td class="wiersze">Ukrywa podane elementy</td>
+    </tr>
+    <tr>
+        <td class="tytul">grid.filter( predicate, [options] )</td>
+        <td class="domyslna">-</td>
+        <td class="wiersze">Filtruje elementy siatki grid według zadanych parametrów np. koloru</td>
+    </tr>
+    <tr>
+        <td class="tytul">grid.sort( comparer, [options] )</td>
+        <td class="domyslna">-</td>
+        <td class="wiersze">Sortuje elementy</td>
+    </tr>
+    <tr>
+        <td class="tytul">grid.move( item, position, [options] )</td>
+        <td class="domyslna">-</td>
+        <td class="wiersze">Przemieszcza element w inną pozycję na siatce</td>
+    </tr>
+    <tr>
+        <td class="tytul">grid.send( item, grid, position, [options] )</td>
+        <td class="domyslna">-</td>
+        <td class="wiersze">Przerzuca elementy do innej siatki</td>
+    </tr>
+    <tr>
+        <td class="tytul">grid.on( event, listener )</td>
+        <td class="domyslna">-</td>
+        <td class="wiersze">Binduje podsłuchiwany event(event - łańcuch, listener - funkcja)</td>
+    </tr>
+    <tr>
+        <td class="tytul">grid.once( event, listener )</td>
+        <td class="domyslna">-</td>
+        <td class="wiersze">Binduje podsłuchiwany event, który aktywuje się tylko raz</td>
+    </tr>
+    <tr>
+        <td class="tytul">grid.off( event, listener )</td>
+        <td class="domyslna">-</td>
+        <td class="wiersze">Odbindowuje podsłuchiwany event</td>
+    </tr>
+    <tr>
+        <td class="tytul">grid.destroy( [removeElements] )</td>
+        <td class="domyslna">-</td>
+        <td class="wiersze">Niszczy instancje grid</td>
+    </tr>
+</tbody>
+</table>
+
+<img src="img/heyy.png" alt="Emotka: thinking" height="200" style="margin-top: 50px; margin-bottom: 2px;"/>
+<p class="text-justify" style="font-size: 18px">Na stronie autora(<i class="fas fa-arrow-alt-circle-right"></i> sprawdź zakładkę odsyłacze <i class="fas fa-arrow-alt-circle-left"></i>) znajdziesz o wiele więcej funkcji na, które warto zwrócić uwagę. API autora
+wzbogacone jest także o przykłady i szczegółowe opisanie argumentów, które dana metoda przyjmuje. Zachęcam do odwiedzenia API autora :)</p>
+</body>
+</html>

@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<!--
+********************************************
+Autor projektu: Paweł Idzikowski
+********************************************
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>Wszystko wojskowe</title>
+
+    <!-- Czcionki niestandardowe -->
+    <link href='http://fonts.googleapis.com/css?family=Russo+One&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Exo+2&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Fenix&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Petit+Formal+Script&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Cutive&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Courgette&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Bungee&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Eagle+Lake&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+    <!-- Zależności css,js -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href='http://fonts.googleapis.com/css?family=Amiko&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/tabele.css">
+    <link href='http://fonts.googleapis.com/css?family=Black+Ops+One&subset=latin,latin-ext' rel='stylesheet' type='text/css'>    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="https://www.jqueryscript.net/demo/Fullscreen-Responsive-Image-Slider-with-jQuery-Tinyslide/css/tinyslide.css" >
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/skrypty.js"></script>
+
+    <!-- Do pinesek -->
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('[data-toggle="popover"]').popover();
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+</head>
+
+
+<body>
+
+<!-- Moja strona -->
+<div id="main-wrapper">
+
+
+    <!-- Boczne menu -->
+    <div id="sidebar-wrapper" style="font-family: 'Cutive', sans-serif;">
+        <div>
+            <a id="menu-toggle1" href="#" class="glyphicon glyphicon-arrow-left btn-menu toggle pull-right nav-arrow menu-toggle">
+                <i class="fa fa-delete"></i>
+            </a>
+        </div>
+        <nav id="spy">
+            <ul class="sidebar-nav nav">
+                <li class="">
+                    <a href="./index.html">
+                        <span class="solo"><i class="fas fa-home" style="font-size: 14px;"></i>  Strona główna</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#anch1" data-scroll>
+                        <span class="solo"><i class="fas fa-fighter-jet" style="font-size: 14px;"></i>  Pojazdy</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#anch2" data-scroll>
+                        <span class="solo"><i class="fas fa-star" style="font-size: 14px;"></i>  Dowódcy</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#anch3" data-scroll>
+                        <span class="solo"><i class="fab fa-d-and-d" style="font-size: 14px;"></i>  Siły specjalne</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#anch4" data-scroll>
+                        <span class="solo"><i class="fas fa-map" style="font-size: 14px;"></i>  Operacje wojskowe</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#anch5" data-scroll>
+                        <span class="solo"><i class="fas fa-table" style="font-size: 14px;"></i>  Tabele</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#anch6" data-scroll>
+                        <span class="solo"><i class="fas fa-video" style="font-size: 14px;"></i>  Media</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#anch7" data-scroll>
+                        <span class="solo"><i class="fab fa-optin-monster" style="font-size: 14px;"></i>  Kontakt</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#anch8" data-scroll>
+                        <span class="solo"><i class="fas fa-terminal" style="font-size: 14px;"></i>  Źródła</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#anch9" data-scroll>
+                        <span class="solo"><i class="fas fa-globe-europe" style="font-size: 14px;"></i>  Mapa</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <!-- tu strona() -->
+    <div id="page-content-wrapper">
+
+        <!-- gorny pasek strony -->
+        <div class="content-header">
+            <h3 id="home" style="margin-left: 0px;">
+                <a href="./index.html"><img src="./img/logo.png" data-toggle="tooltip" title="Hooray!" width="100" alt="logo strony"/></a>
+
+                <a id="menu-toggle" href="#" class="btn-menu toggle menu-toggle" style="vertical-align: middle;">
+                    <i class="fas fa-align-justify"></i>
+                </a>
+            </h3>
+        </div>
+
+        <!-- tu strona(zawartosc) -->
+        <div class="page-content inset" data-spy="scroll" data-target="#spy">
+
+            <div class="tinysliderBox">
+                <div id="tiny" class="tinyslide">
+                    <!-- <h1> Slider </h1> -->
+                    <aside class="slides">
+                        <figure>
+                            <img src="./img/main_logo.png" alt="Logo - obrazek" />
+                        </figure>
+                        <figure>
+                            <img src="./img/bg1.png" alt="Czolg - obrazek" />
+                            <figcaption> Pojazdy wojskowe </figcaption>
+                        </figure>
+                        <figure>
+                            <img src="./img/bg2.png" alt="Pilsudski - obrazek" />
+                            <figcaption> Znani dowódcy </figcaption>
+                        </figure>
+                        <figure>
+                            <img src="./img/bg3.png" alt="Sily specjalne - obrazek" />
+                            <figcaption> Siły specjalne </figcaption>
+                        </figure>
+                        <figure>
+                            <img src="./img/bg4.png" alt="Planowanie obrony - obrazek" />
+                            <figcaption> Operacje wojskowe </figcaption>
+                        </figure>
+                    </aside>
+                </div>
+            </div>
+
+            <div class="container">
+
+                <!-- ******************************************* -->
+                <!-- MYSL -->
+                <!-- ******************************************* -->
+                <div class="row">
+                    <br>
+                    <div class="jumbotron text-center" style="font-family: 'Courgette', sans-serif;">
+                        <p style="font-size: 30px;">Nie każde dane to informacja, nie każda informacja to wiedza, wiedzieć nie znaczy zrozumieć,
+                            a zrozumienie to jeszcze nie mądrość.</p>
+                        <p>
+                            - Clifford Stoll
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- ******************************************* -->
+                <!-- cialo strony -->
+                <!-- ******************************************* -->
+                <div class="row">
+
+                    <!-- ******************************************* -->
+                    <!-- KARTA POJAZDY -->
+                    <!-- ******************************************* -->
+                    <div class="col-md-12 well">
+                        <div id="anch1" style="font-size: 65px; font-family: 'Bungee', sans-serif;">
+                            Pojazdy
+                        </div>
+
+                        <!-- M1 Abrams -->
+                        <div style="font-size: 40px;">
+                            <i class="fas fa-sticky-note"></i> M1 Abrams
+                        </div>
+
+                        <div>
+                            <img src="./img/content/m1a1_abrams(1).jpg" class="interactiveIMG" width="500" alt="M1A1 Abrams obrazek 1"/>
+                        </div>
+
+                        <div style="margin-top: 25px; margin-bottom: 25px;">
+                            <p style="font-size: 20px;">Krótkie informacje o pojeździe znajdziesz w przypinkach poniżej</p>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom " title="Produkcja" data-toggle="popover" data-placement="right" data-content="Od 1980 roku" style="background-color: #9E1030; !important; border: 1px solid #9E1030; !important;"><i class="fas fa-thumbtack pin"></i></button>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom" title="Pierwszy prototyp" data-toggle="popover" data-placement="right" data-content="Lata 70" style="margin-left: 5px; background-color: #FE840E; !important; border: 1px solid #FE840E; !important;"><i class="fas fa-thumbtack pin"></i></button>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom" title="Producent" data-toggle="popover" data-placement="right" data-content="General Dynamics" style="margin-left: 5px; background-color: #A9754F; !important; border: 1px solid #A9754F; !important;"><i class="fas fa-thumbtack pin"></i></button>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom" title="Pojemność silnika" data-toggle="popover" data-placement="right" data-content="1900dm3" style="margin-left: 5px; background-color: #00539C; !important; border: 1px solid #00539C; !important;"><i class="fas fa-thumbtack pin"></i></button>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom" title="Pancerz" data-toggle="popover" data-placement="right" data-content="Warstwowy/reaktywny (szczegóły tajne)" style="margin-left: 5px; background-color: #755139; !important; border: 1px solid #755139; !important;"><i class="fas fa-thumbtack pin"></i></button>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom" title="Masa bojowa" data-toggle="popover" data-placement="right" data-content="54 000kg(wersja: M1)" style="margin-left: 5px; background-color: #4C6A92; !important; border: 1px solid #4C6A92; !important;"><i class="fas fa-thumbtack pin"></i></button>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom" title="Prędkość" data-toggle="popover" data-placement="right" data-content="72,42km/h (w terenie: 48,3km/h)" style="margin-left: 5px; background-color: #343148; !important; border: 1px solid #343148; !important;"><i class="fas fa-thumbtack pin"></i></button>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom" title="Użytkownicy" data-toggle="popover" data-placement="right" data-content="Arabia Saudyjska, Australia, Irak, Kuwejt, Egipt, Maroko, Stany Zjednoczone" style="margin-left: 5px; background-color: #005960; !important; border: 1px solid #005960; !important;"><i class="fas fa-thumbtack pin"></i></button>
+                        </div>
+
+                        <table>
+                            <tr>
+                                <td style="background-color: #2a2a2b;"><img src="./img/content/m1a1_abrams(2).jpg" class="interactiveIMG" width="300" style="float: left;" alt="M1A1 Abrams obrazek 2"/></td>
+                                <td class="text-justify" style="padding-left: 10px; padding-top: 5px; padding-right: 10px; font-family: 'Amiko', sans-serif; background-color: #4B4A4D; text-justify: inter-word; color: white; margin-top: 5%;">
+                                    <p><strong>M1 Abrams</strong> jest jednym z najlepiej sprawdzonych czołgów czasów obecnych. Nazwa czołgu wzięła się od imienia
+                                        generała Creightona Abramsa - dowódcy 37 Batalionu Pancernego Armii Stanów Zjednoczonych w czasie II wojny
+                                        światowej. Zaprojektowany został przez korporację Chrysler Defence, która została wykupiona przez General
+                                        Dynamics. Abrams przeszedł chrzest bojowy w trakcie operacji "Pustynna Burza". Do dziś ceniony jest przez
+                                        wiele państw. </p><p>Żaden Abrams nie został nigdy zniszczony w wyniku trafienia z wrogiego czołgu, jednakże
+                                    pewna liczba została uszkodzona w zasadzkach przy użyciu granatników przeciwpancernych oraz ppk krótkiego zasięgu
+                                    (jak np. rosyjski RPG-7, RPG-18 lub AT-14 „Kornet”). Poza tym podczas operacji Pustynna Burza kilka Abramsów zostało
+                                    omyłkowo trafionych przez rakiety AGM-114 Hellfire wystrzelone z amerykańskich śmigłowców AH-64 Apache, na skutek czego
+                                    odniosły uszkodzenia, ich załogi jednak zdołały przeżyć(Źródło: <em>Wikipedia</em>)
+                                </td>
+                            </tr>
+                        </table>
+
+                        <!-- Chinook -->
+                        <div style="font-size: 40px; margin-top: 50px;">
+                            <i class="fas fa-sticky-note"></i> Chinook
+                        </div>
+
+                        <div>
+                            <img src="./img/content/chinook(2).jpg" class=interactiveIMG width="500" alt="Obrazek helikoptera Chinook"/>
+                        </div>
+
+                        <div style="margin-top: 25px; margin-bottom: 25px;">
+                            <p style="font-size: 20px;">Krótkie informacje o pojeździe znajdziesz w przypinkach poniżej</p>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom" title="Produkcja" data-toggle="popover" data-placement="right" data-content="Od 1962 roku" style="background-color: #BD3D3A; !important; border: 1px solid #BD3D3A; !important;"><i class="fas fa-thumbtack pin"></i></button>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom" title="Pierwszy lot" data-toggle="popover" data-placement="right" data-content="Wykonano w 1961 roku" style="margin-left: 5px; background-color: #006E6D; !important; border: 1px solid #006E6D; !important;"><i class="fas fa-thumbtack pin"></i></button>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom" title="Producent" data-toggle="popover" data-placement="right" data-content="Boeing Rotorcraft Systems" style="margin-left: 5px; background-color: #6F9FD8; !important; border: 1px solid #6F9FD8; !important;"><i class="fas fa-thumbtack pin"></i></button>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom" title="Koszt/sztuka" data-toggle="popover" data-placement="right" data-content="Cena wytworzenia jednej maszyny to koszt sięgający ponad 38 milionów dolarów" style="margin-left: 5px; background-color: #D69C2F; !important; border: 1px solid #D69C2F; !important;"><i class="fas fa-thumbtack pin"></i></button>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom" title="Stan posiadania" data-toggle="popover" data-placement="right" data-content="Ponad 1200 sztuk w armii amerykańskiej(stan z 2012 roku)" style="margin-left: 5px; background-color: #838487; !important; border: 1px solid #838487; !important;"><i class="fas fa-thumbtack pin"></i></button>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom" title="Użytkownicy" data-toggle="popover" data-placement="right" data-content="Armia Stanów Zjednoczonych, Armia Japońska, Siły Powietrzne Holandii" style="margin-left: 5px; background-color: #E47A2E; !important; border: 1px solid #E47A2E; !important;"><i class="fas fa-thumbtack pin"></i></button>
+                        </div>
+
+                        <table>
+                            <tr>
+                                <td style="background-color: #2a2a2b;"><img src="./img/content/chinook(3).jpg" width="300" class="interactiveIMG" style="float: left;" alt="Obrazek helikoptera Chinook"/></td>
+                                <td class="text-justify" style="padding-left: 10px; padding-top: 5px; padding-right: 10px; font-family: 'Amiko', sans-serif; background-color: #4B4A4D; text-justify: inter-word; color: white; margin-top: 5%;">
+                                    <p><strong>Chinook</strong> to helikopter transportowy wytworzony przede wszystkim na potrzeby amerykańskiego wojska.
+                                    Inwestorom zależało przede wszystkim na możliwości szybkiego przetransportowania dużego ładunku.
+                                    CH47 przydał się również jako jednostka do transportu żołnierzy na miejsce operacji. Służył do transportu
+                                    rannych i dostarczania zaopatrzenia. </p><p>Kosztem prędkości ogarniczono jego zdolności obronne do minimum.
+                                    Z powodu bycia łatwym celem dla granatników i samolotów wroga CH47 wykonuje manewry zwykle tuż przed obszarem
+                                    na którym prowadzona jest walka. Wykorzystywany jest jednak  do przeprowadzania operacji ratunkowych.
+                                    Ma za sobą piękną i długą historię. Do tego czasu jest niezastąpionym "żołnierzem" armii Stanów Zjednoczonych.
+                                    (Źródło: <em>Wikipedia</em> i wiedza własna)</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <!-- ******************************************* -->
+                    <!-- KARTA DOWÓDCY -->
+                    <!-- ******************************************* -->
+                    <div class="col-md-12 well">
+                        <div id="anch2" style="font-size: 65px; font-family: 'Bungee', sans-serif;">
+                            Dowódcy
+                        </div>
+
+                        <!-- Gen. Stanislaw Maczek -->
+                        <div style="font-size: 40px;">
+                            <i class="fas fa-sticky-note"></i> Generał Stanisław Maczek
+                        </div>
+
+                        <div>
+                            <img src="./img/content/maczek(1).jpg" class="interactiveIMG" width="500" alt="gen.Maczek - obrazek"/>
+                        </div>
+
+                        <div style="margin-top: 25px; margin-bottom: 25px;">
+                            <p style="font-size: 20px;">Krótkie informacje o dowódcy znajdziesz w przypinkach poniżej</p>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom" title="Produkcja" data-toggle="popover" data-placement="right" data-content="Od 1980 roku" style="background-color: #616247; !important; border: 1px solid #616247; !important;"><i class="fas fa-thumbtack pin"></i></button>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom" title="Pierwszy prototyp" data-toggle="popover" data-placement="right" data-content="Lata 70" style="margin-left: 5px; background-color: #615550; !important; border: 1px solid #615550; !important;"><i class="fas fa-thumbtack pin"></i></button>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom" title="Producent" data-toggle="popover" data-placement="right" data-content="General Dynamics" style="margin-left: 5px; background-color: #006E6D; !important; border: 1px solid #006E6D; !important;"><i class="fas fa-thumbtack pin"></i></button>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom" title="Pojemność silnika" data-toggle="popover" data-placement="right" data-content="1900dm3" style="margin-left: 5px; background-color: #944743; !important; border: 1px solid #944743; !important;"><i class="fas fa-thumbtack pin"></i></button>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom" title="Pancerz" data-toggle="popover" data-placement="right" data-content="Warstwowy/reaktywny (szczegóły tajne)" style="margin-left: 5px; background-color: #838487; !important; border: 1px solid #838487; !important;"><i class="fas fa-thumbtack pin"></i></button>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom" title="Masa bojowa" data-toggle="popover" data-placement="right" data-content="54 000kg(wersja: M1)" style="margin-left: 5px; background-color: #00A591; !important; border: 1px solid #00A591; !important;"><i class="fas fa-thumbtack pin"></i></button>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom" title="Prędkość" data-toggle="popover" data-placement="right" data-content="72,42km/h (w terenie: 48,3km/h)" style="margin-left: 5px; background-color: #F2552C; !important; border: 1px solid #F2552C; !important;"><i class="fas fa-thumbtack pin"></i></button>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom" title="Użytkownicy" data-toggle="popover" data-placement="right" data-content="Arabia Saudyjska, Australia, Irak, Kuwejt, Egipt, Maroko, Stany Zjednoczone" style="margin-left: 5px; background-color: #005960; !important; border: 1px solid #005960; !important;"><i class="fas fa-thumbtack pin"></i></button>
+                        </div>
+
+                        <table>
+                            <tr>
+                                <td style="background-color: #2a2a2b;"><img src="./img/content/maczek-eisenhower.jpg" class="interactiveIMG" width="300" style="float: left;" alt="gen.Maczek - obrazek"/></td>
+                                <td class="text-justify" style="padding-left: 10px; padding-top: 5px; padding-right: 10px; font-family: 'Amiko', sans-serif; background-color: #4B4A4D; text-justify: inter-word; color: white; margin-top: 5%;">
+                                    <p>W latach 1910-14 studiował filologię na Uniwersytecie Lwowskim. W tym czasie odbył szkolenie w Związku Strzeleckim. Służbę w Legionach Polskich uniemożliwiło mu powołanie do armii austriackiej.
+                                    Podczas I wojny światowej walczył m.in. na froncie rosyjskim w Karpatach i froncie włoskim w Alpach. Po kapitulacji państw centralnych 11 listopada 1918 r. zdezerterował i przedostał się do
+                                        Krosna, gdzie wstąpił do Wojska Polskiego.. </p><p>Gen. Maczek był zwolennikiem prowadzenia wojny w sposób nowoczesny, za pomocą cechujących się dużą manewrowością i szybkością samodzielnych pancernych
+                                    związków taktycznych, które zapewniły m.in. Niemcom zwycięstwo w kampanii 1939 r. Jego zdaniem, rola piechoty na polach bitew wyraźnie zmalała od czasów I wojny światowej; jej efektywność zależała
+                                    od wsparcia m.in. lotnictwa i broni pancernej. (Źródło: <a href="https://dzieje.pl/postacie/stanislaw-maczek-1892-1994" target="_blank">LINK</a>)</p>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <!-- Gen. Patton -->
+                        <div style="font-size: 40px; margin-top: 50px;">
+                            <i class="fas fa-sticky-note"></i> Generał Patton
+                        </div>
+
+                        <div>
+                            <img src="./img/content/patton(1).jpg" class="interactiveIMG" height="500" alt="gen.Patton - obrazek"/>
+                        </div>
+
+                        <div style="margin-top: 25px; margin-bottom: 25px;">
+                            <p style="font-size: 20px;">Krótkie informacje o dowódcy znajdziesz w przypinkach poniżej</p>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom" title="Data i miejsce urodzenia" data-toggle="popover" data-placement="right" data-content="11 listopada 1885, San Gabriel" style="background-color: #6C4F3D; !important; border: 1px solid #6C4F3D; !important;"><i class="fas fa-thumbtack pin"></i></button>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom" title="Data zgonu" data-toggle="popover" data-placement="right" data-content="21 grudnia 1945, Heidelberg" style="margin-left: 5px; background-color: #BFD641; !important; border: 1px solid #BFD641; !important;"><i class="fas fa-thumbtack pin"></i></button>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom" title="Lata służby" data-toggle="popover" data-placement="right" data-content="1909-1945" style="margin-left: 5px; background-color: #A9754F; !important; border: 1px solid #A9754F; !important;"><i class="fas fa-thumbtack pin"></i></button>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom" title="Stopień wojskowy" data-toggle="popover" data-placement="right" data-content="Generał" style="margin-left: 5px; background-color: #B4B7BA; !important; border: 1px solid #B4B7BA; !important;"><i class="fas fa-thumbtack pin"></i></button>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom" title="Uczestnictwo w operacjach" data-toggle="popover" data-placement="right" data-content="Torch, Husky, Overlord" style="margin-left: 5px; background-color: #838487; !important; border: 1px solid #838487; !important;"><i class="fas fa-thumbtack pin"></i></button>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom" title="Siły zbrojne" data-toggle="popover" data-placement="right" data-content="United States Army" style="margin-left: 5px; background-color: #4C6A92; !important; border: 1px solid #4C6A92; !important;"><i class="fas fa-thumbtack pin"></i></button>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom" title="Dowódca" data-toggle="popover" data-placement="right" data-content="2 Amerykańska Dywizja Pancerna" style="margin-left: 5px; background-color: #DC4C46; !important; border: 1px solid #DC4C46; !important;"><i class="fas fa-thumbtack pin"></i></button>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom" title="Gdzie walczył?" data-toggle="popover" data-placement="right" data-content="Ardeny" style="margin-left: 5px; background-color: #005960; !important; border: 1px solid #005960; !important;"><i class="fas fa-thumbtack pin"></i></button>
+                        </div>
+
+                        <table>
+                            <tr>
+                                <td style="background-color: #2a2a2b;"><img src="./img/content/patton-anders.jpg" class="interactiveIMG" width="300" style="float: left;" alt="gen.Patton - obrazek"/></td>
+                                <td class="text-justify" style="padding-left: 10px; padding-top: 5px; padding-right: 10px; font-family: 'Amiko', sans-serif; background-color: #4B4A4D; text-justify: inter-word; color: white; margin-top: 5%;">
+                                    <p>George Smith Patton IV – generał United States Army, syn generała George’a Pattona. Absolwent West Point, Patton służył w czasie konfliktów w Korei i Wietnamie jako dowódca 11.
+                                        Regimentu Kawalerii Pancernej. Urodził się na Rancho Lake Vineyard, w pobliżu miasta San Gabriel w Kalifornii. </p><p>Jego ojcem był George Smith Patton senior, matką: Ruth (Wilson) Patton.
+                                    Pochodził z rodziny z silnymi tradycjami wojskowymi, jego przodkowie walczyli w wielu wojnach, m.in. w czasie rewolucji amerykańskiej, a także w czasie wojny secesyjnej po stronie Konfederatów.
+                                    W dzieciństwie marzył o tym, by zostać bohaterem wojennym i generałem. Czytał książki i opracowania historyczne oraz wojskowe, cierpiał jednak na dysleksję, co spowodowało późniejsze trudności z nauką.(Źródło: <em>Wikipedia</em>)</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <!-- ******************************************* -->
+                    <!-- KARTA SILY SPECJALNE -->
+                    <!-- ******************************************* -->
+                    <div class="col-md-12 well">
+                        <div id="anch3" style="font-size: 65px; font-family: 'Bungee', sans-serif;">
+                            Siły specjalne
+                        </div>
+
+                        <!-- GROM -->
+                        <div style="font-size: 40px;">
+                            <i class="fas fa-sticky-note"></i> GROM
+                        </div>
+
+                        <div>
+                            <img src="./img/content/grom(1).JPEG" class=interactiveIMG width="500" alt="Obrazek GROM"/>
+                        </div>
+
+                        <div style="margin-top: 25px; margin-bottom: 25px;">
+                            <p style="font-size: 20px;">Krótkie informacje o jednostce znajdziesz w przypinkach poniżej</p>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom" title="Data sformowania" data-toggle="popover" data-placement="right" data-content="13 lipca 1990" style="background-color: #672E3B; !important; border: 1px solid #672E3B; !important;"><i class="fas fa-thumbtack pin"></i></button>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom" title="Państwo" data-toggle="popover" data-placement="right" data-content="Polska" style="margin-left: 5px; background-color: #C48F65; !important; border: 1px solid #C48F65; !important;"><i class="fas fa-thumbtack pin"></i></button>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom" title="Patron" data-toggle="popover" data-placement="right" data-content="Cichociemni spadochroniarze Armii Krajowej" style="margin-left: 5px; background-color: #D2691E; !important; border: 1px solid #D2691E; !important;"><i class="fas fa-thumbtack pin"></i></button>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom" title="Święto" data-toggle="popover" data-placement="right" data-content="Jednostka obchodzi święto 13 czerwca" style="margin-left: 5px; background-color: #5A7247; !important; border: 1px solid #5A7247; !important;"><i class="fas fa-thumbtack pin"></i></button>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom" title="Nadanie sztandaru" data-toggle="popover" data-placement="right" data-content="1 październik 1996 rok" style="margin-left: 5px; background-color: #AD5D5D; !important; border: 1px solid #AD5D5D; !important;"><i class="fas fa-thumbtack pin"></i></button>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom" title="Pierwszy dowódca" data-toggle="popover" data-placement="right" data-content="Pierwszy dowódca: gen. bryg. Sławomir Petelicki" style="margin-left: 5px; background-color: #838487; !important; border: 1px solid #838487; !important;"><i class="fas fa-thumbtack pin"></i></button>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom" title="Obecny dowódca" data-toggle="popover" data-placement="right" data-content="Obecny dowódca: płk. Mariusz Pawluk" style="margin-left: 5px; background-color: #4C6A92; !important; border: 1px solid #4C6A92; !important;"><i class="fas fa-thumbtack pin"></i></button>
+                        </div>
+
+                        <table>
+                            <tr>
+                                <td style="background-color: #2a2a2b;"><img src="./img/content/grom(2).jpg" width="300" class="interactiveIMG" style="float: left;" alt="Obrazek GROM"/></td>
+                                <td class="text-justify" style="padding-left: 10px; padding-top: 7px; padding-right: 10px; font-family: 'Amiko', sans-serif; background-color: #4B4A4D; text-justify: inter-word; color: white; margin-top: 5%;">
+                                    <p>Jednostka Wojskowa GROM im. Cichociemnych Spadochroniarzy Armii Krajowej(Jednostka Wojskowa 2305) sformowana w odpowiedzi na postrzelenie przez terrorystów 30 marca 1990
+                                    w Bejrucie dwóch Polaków, w odwecie za pomoc polskiego rządu w emigracji Żydów z ZSRR do Izraela</p> <p>JW GROM przygotowana jest do prowadzenia szerokiej gamy operacji
+                                    specjalnych: działań ratunkowych, akcji bezpośrednich, działań antyterrorystycznych (ang. CT). Zamysłem naczelnym, deklarowanym także obecnie była szeroka gama operacji
+                                    ratunkowych (np. NCE, CSAR, HR), szczególnie na terytoriach wrogich państw, oraz innych objętych wojną, kryzysem itd. Jej tworzenie rozpoczęto w 1990 r., dzięki pomocy
+                                    Amerykanów, wykorzystując najlepsze doświadczenia zagraniczne, zwłaszcza Stanów Zjednoczonych Ameryki, Wielkiej Brytanii oraz Niemiec (GSG 9). (Źródło informacji: Wikipedia)</p>
+
+                                    <p><strong>Sprawdź ranking sił specjalnych</strong> <a href="#specialForces" target="_blank">TUTAJ</a><br/>(przeniesie Cię do sekcji z tabelami)</p>
+                                </td>
+                            </tr>
+                        </table>
+
+
+                        <!-- GIGN -->
+                        <div style="font-size: 40px; margin-top: 50px;">
+                            <i class="fas fa-sticky-note"></i> GIGN
+                        </div>
+
+                        <div>
+                            <img src="./img/content/gign(1).jpg" class=interactiveIMG width="500" alt="Obrazek GIGN"/>
+                        </div>
+
+                        <div style="margin-top: 25px; margin-bottom: 25px;">
+                            <p style="font-size: 20px;">Krótkie informacje o jednostce znajdziesz w przypinkach poniżej</p>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom" title="Data sformowania" data-toggle="popover" data-placement="right" data-content="rok 1973" style="background-color: #F7786B; !important; border: 1px solid #F7786B; !important;"><i class="fas fa-thumbtack pin"></i></button>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom" title="Pełna nazwa(spolszczona)" data-toggle="popover" data-placement="right" data-content="Grupa Interwencyjna Żandarmerii Narodowej" style="margin-left: 5px; background-color: #BE9EC9; !important; border: 1px solid #BE9EC9; !important;"><i class="fas fa-thumbtack pin"></i></button>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom" title="Pierwszy dowódca" data-toggle="popover" data-placement="right" data-content="Christian Prouteau" style="margin-left: 5px; background-color: #92A8D1; !important; border: 1px solid #92A8D1; !important;"><i class="fas fa-thumbtack pin"></i></button>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom" title="Cel" data-toggle="popover" data-placement="right" data-content="zwalczanie różnego typu ataków z jak najmniejszymi stratami wśród ludności, zakładników i samych komandosów" style="margin-left: 5px; background-color: #C0AB8E; !important; border: 1px solid #C0AB8E; !important;"><i class="fas fa-thumbtack pin"></i></button>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom" title="Wyposażenie" data-toggle="popover" data-placement="right" data-content="Famas, SIG Sauer, H&K, Barett M82, SPAS 12, Glock 17 itd." style="margin-left: 5px; background-color: #91A8D0; !important; border: 1px solid #91A8D0; !important;"><i class="fas fa-thumbtack pin"></i></button>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom" title="Udział" data-toggle="popover" data-placement="right" data-content="Jednostka wzięła udział w ok. 1000 operacjach, ratując 500 zakładników, aresztując 1000 oraz zabijając setki terrorystów. W czasie akcji zginęło 2, a w czasie ćwiczeń 7 komandosów" style="margin-left: 5px; background-color: #4C6A92; !important; border: 1px solid #4C6A92; !important;"><i class="fas fa-thumbtack pin"></i></button></div>
+
+                        <table>
+                            <tr>
+                                <td style="background-color: #2a2a2b;"><img src="./img/content/gign(2).jpg" width="300" class="interactiveIMG" style="float: left;" alt="Obrazek GIGN"/></td>
+                                <td class="text-justify" style="padding-left: 10px; padding-top: 7px; padding-right: 10px; font-family: 'Amiko', sans-serif; background-color: #4B4A4D; text-justify: inter-word; color: white; margin-top: 5%;">
+                                    <p>Podstawowe zadania to walka z terroryzmem lotniczym, tłumienie buntów więziennych, zatrzymania najniebezpieczniejszych przestępców
+                                    oraz wsparcie oddziałów specjalnych Policji (GIPN i RAID)</p><p>Do selekcji mogą zgłosić się ludzie do 32 lat zdolni wykonać 100
+                                    pompek, 300 brzuszków, 25 podciągnięć na drążku i szybkich wejść na linę. Na takich kandydatów czekają testy fizyczne: marsz z obciążeniem
+                                    8 km na czas, pływanie ze związanymi kończynami, skoki do wody, strzelanie z kbk na 200 m, strzelanie pistoletu na 50 m oraz testy psychiki
+                                    i odwagi. Po przejściu tych konkurencji odbywa się rozmowa kwalifikacyjna z dowódcą jednostki. Selekcję przechodzi od 5 do 10% kandydatów. (Źródło: <em>Wikipedia</em>)</p>
+
+                                    <p><strong>Sprawdź ranking sił specjalnych</strong> <a href="#specialForces" target="_blank">TUTAJ</a><br/>(przeniesie Cię do sekcji z tabelami)</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <!-- ******************************************* -->
+                    <!-- KARTA OPERACJE WOJSKOWE -->
+                    <!-- ******************************************* -->
+                    <div class="col-md-12 well">
+                        <div id="anch4" style="font-size: 65px; font-family: 'Bungee', sans-serif;">
+                            Operacje wojskowe
+                        </div>
+
+                        <!-- Operacja Market Garden -->
+                        <div style="font-size: 40px;">
+                            <i class="fas fa-sticky-note"></i> Operacja Market Garden
+                        </div>
+
+                        <div>
+                            <img src="./img/content/market-garden(1).jpg" class="interactiveIMG" width="500" alt="Op. Market Garden obrazek 1"/>
+                        </div>
+
+                        <div style="margin-top: 25px; margin-bottom: 25px;">
+                            <p style="font-size: 20px;">Krótkie informacje o operacji znajdziesz w przypinkach poniżej</p>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom " title="Czas operacji" data-toggle="popover" data-placement="right" data-content="17-26 września 1944" style="background-color: #955251; !important; border: 1px solid #955251; !important;"><i class="fas fa-thumbtack pin"></i></button>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom" title="Miejsce akcji" data-toggle="popover" data-placement="right" data-content="Holandia" style="margin-left: 5px; background-color: #DD4124; !important; border: 1px solid #DD4124; !important;"><i class="fas fa-thumbtack pin"></i></button>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom" title="Terytorium" data-toggle="popover" data-placement="right" data-content="Europa" style="margin-left: 5px; background-color: #BC243C; !important; border: 1px solid #BC243C; !important;"><i class="fas fa-thumbtack pin"></i></button>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom" title="Wynik" data-toggle="popover" data-placement="right" data-content="Zwycięstwo Niemców(III Rzesza)" style="margin-left: 5px; background-color: #C0AB8E; !important; border: 1px solid #C0AB8E; !important;"><i class="fas fa-thumbtack pin"></i></button>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom" title="Największa operacja" data-toggle="popover" data-placement="right" data-content="z udziałem wojsk powietrznodesantowych" style="margin-left: 5px; background-color: #838487; !important; border: 1px solid #838487; !important;"><i class="fas fa-thumbtack pin"></i></button>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom" title="Operacja zaplanowana przez" data-toggle="popover" data-placement="right" data-content="Bernard L. Montgomery" style="margin-left: 5px; background-color: #4C6A92; !important; border: 1px solid #4C6A92; !important;"><i class="fas fa-thumbtack pin"></i></button>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom" title="Operacja okazała się" data-toggle="popover" data-placement="right" data-content="porażką z powodu niezdobycia ostatniego mostu w Arnhem" style="margin-left: 5px; background-color: #5B5EA6; !important; border: 1px solid #5B5EA6; !important;"><i class="fas fa-thumbtack pin"></i></button>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom" title="Cel operacji" data-toggle="popover" data-placement="right" data-content="Obejście niemieckiej linii Zygfryda" style="margin-left: 5px; background-color: #55B4B0; !important; border: 1px solid #55B4B0; !important;"><i class="fas fa-thumbtack pin"></i></button>
+                        </div>
+
+                        <table>
+                            <tr>
+                                <td style="background-color: #2a2a2b;"><img src="./img/content/market-garden(2).jpg" class="interactiveIMG" width="300" style="float: left;" alt="Op. Market Garden obrazek 2"/></td>
+                                <td class="text-justify" style="padding-left: 10px; padding-top: 10px; padding-right: 10px; font-family: 'Amiko', sans-serif; background-color: #4B4A4D; text-justify: inter-word; color: white; margin-top: 5%;">
+                                    <p>Operacja Market Garden - największa operacja z udziałem wojsk powietrznodesantowych, przeprowadzona przez aliantów we wrześniu 1944 roku na terytorium okupowanej Holandii.
+                                    Operacja ta miała na celu rozdzielenie wojsk niemieckich i obejście od północy niemieckich umocnień obronnych zwanych linią Zygfryda, co miało umożliwić wejście do Zagłębia
+                                    Ruhry i tym samym przyspieszyć koniec wojny. Kluczowym zagadnieniem było uchwycenie mostów na Renie i innych rzekach zanim Niemcy zdążą je zniszczyć. </p><p>Aliantom udało się przejąć
+                                    kontrolę nad pierwszymi mostami, ale ostatecznym rezultatem operacji była całkowita porażka, ponieważ nie zdobyto ostatniego mostu w Arnhem. Niemiecka kontrofensywa unicestwiła
+                                    brytyjską I Dywizję Powietrznodesantową i spowodowała większe straty od tych, które alianci ponieśli podczas lądowania w Normandii. Ich klęska uważana jest za ostatnie zwycięstwo
+                                    taktyczne Trzeciej Rzeszy.</p><p>Odwrót Anglików z Oosterbeek, polegający na ponownej przeprawie przez Ren, osłaniali żołnierze polscy, którzy jedynie w niewielkiej liczbie mogli się ewakuować
+                                    (nie było dla nich miejsca w łodziach przeprawowych) i w większości dostali się do niemieckiej niewoli.</p>(Źródło informacji: Wikipedia)<br/>
+
+                                    <p><strong>Więcej danych o operacji Market Garden znajdziesz</strong> <a href="#marketGarden" target="_blank">TUTAJ</a>(przeniesie Cię do tabeli)</p>
+                                </td>
+                            </tr>
+                        </table>
+
+
+                        <!-- Operacja Barbarossa -->
+                        <div style="font-size: 40px; margin-top: 50px;">
+                            <i class="fas fa-sticky-note"></i> Operacja Barbarossa
+                        </div>
+
+                        <div>
+                            <img src="./img/content/barbarossa(1).jpg" class="interactiveIMG" width="500" alt="Op. Barbarossa obrazek 1"/>
+                        </div>
+
+                        <div style="margin-top: 25px; margin-bottom: 25px;">
+                            <p style="font-size: 20px;">Krótkie informacje o operacji znajdziesz w przypinkach poniżej</p>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom " title="Czas operacji" data-toggle="popover" data-placement="right" data-content="22 czerwca - 5 grudnia 1941" style="background-color: #B76BA3; !important; border: 1px solid #B76BA3; !important;"><i class="fas fa-thumbtack pin"></i></button>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom" title="Miejsce akcji" data-toggle="popover" data-placement="right" data-content="Polska, Białoruś, Ukraina, Litwa, Łotwa, Estonia, Rosja" style="margin-left: 5px; background-color: #BE9EC9; !important; border: 1px solid #BE9EC9; !important;"><i class="fas fa-thumbtack pin"></i></button>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom" title="Terytorium" data-toggle="popover" data-placement="right" data-content="Europa Środkowa i Wschodnia" style="margin-left: 5px; background-color: #A9754F; !important; border: 1px solid #A9754F; !important;"><i class="fas fa-thumbtack pin"></i></button>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom" title="Wynik" data-toggle="popover" data-placement="right" data-content="Państwa Osi nie zdołały pokonać ZSRR taktyką Blitzkriegu" style="margin-left: 5px; background-color: #C0AB8E; !important; border: 1px solid #C0AB8E; !important;"><i class="fas fa-thumbtack pin"></i></button>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom" title="Największa i najważniejsza" data-toggle="popover" data-placement="right" data-content="operacja niemiecka, która zadecydowała o klęsce Niemiec w całej wojnie" style="margin-left: 5px; background-color: #838487; !important; border: 1px solid #838487; !important;"><i class="fas fa-thumbtack pin"></i></button>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom" title="Nazwa planu" data-toggle="popover" data-placement="right" data-content="Barbarossa wywodzi się od przydomku cesarza Fryderyka I Barbarossy" style="margin-left: 5px; background-color: #4C6A92; !important; border: 1px solid #4C6A92; !important;"><i class="fas fa-thumbtack pin"></i></button>
+                            <button type="button" class="btn btn-primary btn-circle btn-xl btn-space zoom" title="Cel operacji" data-toggle="popover" data-placement="right" data-content="pokonanie ZSRR, zdobycie Moskwy" style="margin-left: 5px; background-color: #F2552C; !important; border: 1px solid #F2552C; !important;"><i class="fas fa-thumbtack pin"></i></button></div>
+
+                        <table>
+                            <tr>
+                                <td style="background-color: #2a2a2b;"><img src="./img/content/barbarossa(2).jpg" class="interactiveIMG" width="300" style="float: left;" alt="Op. Barbarossa obrazek 2"/></td>
+                                <td class="text-justify" style="padding-left: 10px; padding-top: 10px; padding-right: 10px; font-family: 'Amiko', sans-serif; background-color: #4B4A4D; text-justify: inter-word; color: white; margin-top: 5%;">
+                                    <p>Operacja Barbarossa - agresja III Rzeszy na Związek Socjalistycznych Republik Radzieckich(ZSRR) w trakcie II wojny światowej.
+                                        Plan operacji był przygotowany i podpisany przez Adolfa Hitlera już 18 grudnia 1940 (dyrektywa nr 21). Pierwotnie przewidywano atak
+                                        15 maja 1941, ale z powodu obalenia proniemieckiego rządu księcia Pawła Niemcy musiały interweniować na Bałkanach, w Jugosławii,
+                                        a także w Grecji, przełożono go więc na 22 czerwca 1941. Była to największa i najważniejsza operacja niemiecka w czasie wojny,
+                                        której klęska zdecydowała ostatecznie o niemieckiej przegranej w całej wojnie. Walki na froncie wschodnim, gdzie realizowano operację
+                                        „Barbarossa”, okazały się być jednymi z najbrutalniejszych i najbardziej wyniszczających bitew II wojny światowej.
+                                        Nazwa planu „Barbarossa” wywodzi się od przydomku cesarza Fryderyka I Barbarossy.</p> <p>Teza: Hitler planował wcześniejsze zdobycie Moskwy,
+                                    opóźnienie powstało już na początku akcji ze względu na wstrzymanie wymarszu wywołane planami interwencji Hitlera w Jugosławii oraz pomocy Mussoliniemu
+                                    z brytyjską ofensywą w Grecji. (Źródło: <em>Wikipedia</em>)</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <!-- ******************************************* -->
+                    <!-- KARTA TABELE -->
+                    <!-- ******************************************* -->
+                    <div class="col-md-12 well">
+                        <div id="anch5" style="font-size: 65px; font-family: 'Bungee', sans-serif;">
+                            Tabele
+                        </div>
+
+                        <!-- Ranking Sił Specjalnych -->
+                        <div>
+                            <div>
+                                <div id="specialForces" style="font-size: 25px;">
+                                    Ranking sił specjalnych 2018
+                                </div>
+                                <table>
+
+                                    <tr>
+                                        <td class="ArrTable"><i class="fas fa-signature"></i> Nazwa</td>
+                                        <td class="ArrTable" style="text-align: center; !important;"><strong>JW GROM</strong></td>
+                                        <td class="ArrTable" style="text-align: center; !important;">SSG</td>
+                                        <td class="ArrTable" style="text-align: center; !important;">GIGN</td>
+                                        <td class="ArrTable" style="text-align: center; !important;">GSG 9</td>
+                                        <td class="ArrTable" style="text-align: center; !important;">GIS Italy</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ArrTable"><i class="fas fa-sort-numeric-up"></i> Miejsce</td>
+                                        <td class="ArrBody">10</td>
+                                        <td class="ArrBody">9</td>
+                                        <td class="ArrBody">8</td>
+                                        <td class="ArrBody">7</td>
+                                        <td class="ArrBody">6</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ArrTable"><i class="fas fa-clock"></i> Rok założenia</td>
+                                        <td class="ArrBody">1990</td>
+                                        <td class="ArrBody">1956</td>
+                                        <td class="ArrBody">1974</td>
+                                        <td class="ArrBody">1973</td>
+                                        <td class="ArrBody">1977</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ArrTable"><i class="fas fa-comments"></i> Przydomek</td>
+                                        <td class="ArrBody">Cisi i skuteczni<br/>(The Unseen and the Silent)</td>
+                                        <td class="ArrBody">Morowe Berety</td>
+                                        <td class="ArrBody">GIGN</td>
+                                        <td class="ArrBody">GSG</td>
+                                        <td class="ArrBody">Leatherheads</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ArrTable"><i class="fas fa-location-arrow"></i> Siedziba</td>
+                                        <td class="ArrBody">Warszawa, Polska</td>
+                                        <td class="ArrBody">Tarbela, Pakistan</td>
+                                        <td class="ArrBody">Satory, Yvelines, Francja</td>
+                                        <td class="ArrBody">Sankt Augustin-Hangelar,<br/> Bonn</td>
+                                        <td class="ArrBody">Carabinieri</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ArrTable"><i class="fas fa-font"></i> Motto</td>
+                                        <td class="ArrBody">Strength and Honor for You, Fatherland</td>
+                                        <td class="ArrBody">I am Vailant(Man Janbazam)</td>
+                                        <td class="ArrBody">To enlist for life. (S’engager pour la vie)</td>
+                                        <td class="ArrBody">-</td>
+                                        <td class="ArrBody">-</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ArrTable"><i class="fas fa-square-full"></i> Pełna nazwa</td>
+                                        <td class="ArrBody">Jednostka Wojskowa<br/> Grupa Reagowania<br/> Operacyjno-Manewrowego</td>
+                                        <td class="ArrBody">Special Services Group</td>
+                                        <td class="ArrBody">Groupe d’intervention<br/> de la Gendarmerie</td>
+                                        <td class="ArrBody">Grenzschutzgruppe 9</td>
+                                        <td class="ArrBody">Gruppo di intervento<br/> speciale</td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div style="margin-top: 30px;">
+                                <table>
+                                    <tr>
+                                        <td class="ArrTable"><i class="fas fa-signature"></i> Nazwa</td>
+                                        <td class="ArrTable" style="text-align: center; !important;">EKO Cobra</td>
+                                        <td class="ArrTable" style="text-align: center; !important;">Marcos</td>
+                                        <td class="ArrTable" style="text-align: center; !important;">Spetsnaz</td>
+                                        <td class="ArrTable" style="text-align: center; !important;">SEAL Team Six</td>
+                                        <td class="ArrTable" style="text-align: center; !important;">SAS</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ArrTable"><i class="fas fa-sort-numeric-up"></i> Miejsce</td>
+                                        <td class="ArrBody">5</td>
+                                        <td class="ArrBody">4</td>
+                                        <td class="ArrBody">3</td>
+                                        <td class="ArrBody">2</td>
+                                        <td class="ArrBody">1</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ArrTable"><i class="fas fa-clock"></i> Rok założenia</td>
+                                        <td class="ArrBody">1978</td>
+                                        <td class="ArrBody">1987</td>
+                                        <td class="ArrBody">1949</td>
+                                        <td class="ArrBody">1980</td>
+                                        <td class="ArrBody">1941</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ArrTable"><i class="fas fa-comments"></i> Przydomek</td>
+                                        <td class="ArrBody">AS Gendarmerieeinsatzkommando GEK<br/> and As Eiansatzkommando Cobra</td>
+                                        <td class="ArrBody">Magarmach (Crocodiles)</td>
+                                        <td class="ArrBody">Spetsnaz</td>
+                                        <td class="ArrBody">DEVGRU</td>
+                                        <td class="ArrBody">The regiment</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ArrTable"><i class="fas fa-location-arrow"></i> Siedziba</td>
+                                        <td class="ArrBody">Wiener Neustadt , Austria</td>
+                                        <td class="ArrBody">Mumbai, Goa, Kochi Visakhapatnam i Port Blair</td>
+                                        <td class="ArrBody">Khodinka, Moskwa</td>
+                                        <td class="ArrBody">Dam Neck Annex, NAS Oceana, Virginia Beach, United States</td>
+                                        <td class="ArrBody">London, Credenhill, Birmingham</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ArrTable"><i class="fas fa-font"></i> Motto</td>
+                                        <td class="ArrBody">-</td>
+                                        <td class="ArrBody">The few the fearless</td>
+                                        <td class="ArrBody">-</td>
+                                        <td class="ArrBody">-</td>
+                                        <td class="ArrBody">Who dares win</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ArrTable"><i class="fas fa-square-full"></i> Pełna nazwa</td>
+                                        <td class="ArrBody">(nie dotyczy)</td>
+                                        <td class="ArrBody">The Marine Commando Force</td>
+                                        <td class="ArrBody">(nie dotyczy)</td>
+                                        <td class="ArrBody">The Unite States Naval Special Warfare Development group</td>
+                                        <td class="ArrBody">The Special Air Services</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- Tabela operacji Market Garden -->
+                        <div style="margin-top: 50px;" id="marketGarden">
+
+                            <div style="font-size: 25px;">
+                                Operacja Market Garden
+                            </div>
+
+                            <div class="tabela">
+                                <table>
+                                    <tr>
+                                        <th colspan="2" class="ArrTable"><i class="fab fa-slideshare"></i> Strony konfliktu</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="ArrBody">Wielka Brytania<br />Stany Zjednoczone<br />Polska<br />Kanada<br />Holenderski Ruch Oporu</td>
+                                        <td class="ArrBody">III Rzesza</td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="2" class="ArrTable"><i class="fas fa-star-half-alt"></i> Dowódcy</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="ArrBody">Dwight Eisenhower<br />Bernard L. Montgomery<br />Lewis H.Brereton<br />Robert Urquhart<br />James Gavin<br />Stanisław Sosabowski<br />Frederick Browning</td>
+                                        <td class="ArrBody">Gerd von Rundstedt<br />Wilhelm Bittrich<br />Walther Model</td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="2" class="ArrTable"><i class="fas fa-bolt"></i> Siły</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="ArrBody">Market: 34,6 tys. ludzi<br />Garden: 50 tys. ludzi<br /><strong>Razem:</strong> 84,6 tys. ludzi<br />Pomocnicze ataki VIII i XII Korpusu, wsparcie lotnicze</td>
+                                        <td class="ArrBody"><em>nieznane</em></td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="2" class="ArrTable"><i class="fas fa-skull-crossbones"></i> Straty</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="ArrBody">15 130 - 17 200 żołnierzy</td>
+                                        <td class="ArrBody">3,3 tys. do 8tys. żołnierzy<br />30 czołgów<br />159 samolotów</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ******************************************* -->
+                    <!-- KARTA MEDIA -->
+                    <!-- ******************************************* -->
+                    <div class="col-md-12 well">
+                        <div id="anch6" style="font-size: 65px; font-family: 'Bungee', sans-serif;">
+                            Media
+                        </div>
+
+                        <!-- wiersz 1 -->
+                        <div class="container">
+                            <div class="col-xs-6 col-sm-3">
+                                <a href="#" class="thumbnail" data-toggle="modal" data-target="#lightbox">
+                                    <img src="./img/content/3.jpg" alt="Obrazek">
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-sm-3">
+                                <a href="#" class="thumbnail" data-toggle="modal" data-target="#lightbox">
+                                    <img src="./img/content/4.jpg" alt="Obrazek">
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-sm-3">
+                                <a href="#" class="thumbnail" data-toggle="modal" data-target="#lightbox">
+                                    <img src="./img/content/barbarossa(1).jpg" alt="Obrazek">
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-sm-3">
+                                <a href="#" class="thumbnail" data-toggle="modal" data-target="#lightbox">
+                                    <img src="./img/content/sosabowski-browning.jpg" alt="Obrazek">
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- wiersz 2 -->
+                        <div class="container">
+                            <div class="col-xs-6 col-sm-3">
+                                <a href="#" class="thumbnail" data-toggle="modal" data-target="#lightbox">
+                                    <img src="./img/content/chinook(1).jpg" alt="Obrazek">
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-sm-3">
+                                <a href="#" class="thumbnail" data-toggle="modal" data-target="#lightbox">
+                                    <img src="./img/content/chinook(2).jpg" alt="Obrazek">
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-sm-3">
+                                <a href="#" class="thumbnail" data-toggle="modal" data-target="#lightbox">
+                                    <img src="./img/content/chinook(3).jpg" alt="Obrazek">
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-sm-3">
+                                <a href="#" class="thumbnail" data-toggle="modal" data-target="#lightbox">
+                                    <img src="./img/content/gign(1).jpg" alt="Obrazek">
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- wiersz 3 -->
+                        <div class="container">
+                            <div class="col-xs-6 col-sm-3">
+                                <a href="#" class="thumbnail" data-toggle="modal" data-target="#lightbox">
+                                    <img src="./img/content/gign(2).jpg" alt="Obrazek">
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-sm-3">
+                                <a href="#" class="thumbnail" data-toggle="modal" data-target="#lightbox">
+                                    <img src="./img/content/grom(1).JPEG" alt="Obrazek">
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-sm-3">
+                                <a href="#" class="thumbnail" data-toggle="modal" data-target="#lightbox">
+                                    <img src="./img/content/grom(2).jpg" alt="Obrazek">
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-sm-3">
+                                <a href="#" class="thumbnail" data-toggle="modal" data-target="#lightbox">
+                                    <img src="./img/content/m1a1_abrams(1).jpg" alt="Obrazek">
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- wiersz 4 -->
+                        <div class="container">
+                            <div class="col-xs-6 col-sm-3">
+                                <a href="#" class="thumbnail" data-toggle="modal" data-target="#lightbox">
+                                    <img src="./img/content/m1a1_abrams(2).jpg" alt="Obrazek">
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-sm-3">
+                                <a href="#" class="thumbnail" data-toggle="modal" data-target="#lightbox">
+                                    <img src="./img/content/grom(1).JPEG" alt="Obrazek">
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-sm-3">
+                                <a href="#" class="thumbnail" data-toggle="modal" data-target="#lightbox">
+                                    <img src="./img/content/maczek(1).jpg" alt="Obrazek">
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-sm-3">
+                                <a href="#" class="thumbnail" data-toggle="modal" data-target="#lightbox">
+                                    <img src="./img/content/maczek-eisenhower.jpg" alt="Obrazek">
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- wiersz 5 -->
+                        <div class="container">
+                            <div class="col-xs-6 col-sm-3">
+                                <a href="#" class="thumbnail" data-toggle="modal" data-target="#lightbox">
+                                    <img src="./img/content/market-garden(1).jpg" alt="Obrazek">
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-sm-3">
+                                <a href="#" class="thumbnail" data-toggle="modal" data-target="#lightbox">
+                                    <img src="./img/content/market-garden(2).jpg" alt="Obrazek">
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-sm-3">
+                                <a href="#" class="thumbnail" data-toggle="modal" data-target="#lightbox">
+                                    <img src="./img/content/pilsudski-rydz_smigly.jpg" alt="Obrazek">
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-sm-3">
+                                <a href="#" class="thumbnail" data-toggle="modal" data-target="#lightbox">
+                                    <img src="./img/content/patton-anders.jpg" alt="Obrazek">
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- wiersz 6 -->
+                        <div class="container">
+                            <div class="col-xs-6 col-sm-3">
+                                <a href="#" class="thumbnail" data-toggle="modal" data-target="#lightbox">
+                                    <img src="./img/content/pilsudski(1).jpg" alt="Obrazek">
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-sm-3">
+                                <a href="#" class="thumbnail" data-toggle="modal" data-target="#lightbox">
+                                    <img src="./img/content/patton(1).jpg" alt="Obrazek">
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-sm-3">
+                                <a href="#" class="thumbnail" data-toggle="modal" data-target="#lightbox">
+                                    <img src="./img/content/barbarossa(2).jpg" alt="Obrazek">
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-sm-3">
+                                <a href="#" class="thumbnail" data-toggle="modal" data-target="#lightbox">
+                                    <img src="./img/content/robo_mule(1).jpg" alt="Obrazek">
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- wiersz 7 -->
+                        <div class="container">
+                            <video src="./vid/chinook_pokaz.mp4" width="500" controls>
+                                Twoja przeglądarka nie wspiera tagu 'video' lub wystąpił inny nieznany błąd :(
+                            </video>
+                        </div>
+
+                        <!-- blok lightboxa -->
+                        <div id="lightbox" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <button type="button" class="close hidden" data-dismiss="modal" aria-hidden="true">×</button>
+                                <div class="modal-content">
+                                    <div class="modal-body">
+                                        <img src="#t" alt="obrazek lightbox" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Skrypt lightbox -->
+                    <script>
+                        $(document).ready(function() {
+                            var $lightbox = $('#lightbox');
+
+                            $('[data-target="#lightbox"]').on('click', function(event) {
+                                var $img = $(this).find('img'),
+                                    src = $img.attr('src'),
+                                    alt = $img.attr('alt'),
+                                    css = {
+                                        'maxWidth': $(window).width() - 100,
+                                        'maxHeight': $(window).height() - 100
+                                    };
+
+                                $lightbox.find('.close').addClass('hidden');
+                                $lightbox.find('img').attr('src', src);
+                                $lightbox.find('img').attr('alt', alt);
+                                $lightbox.find('img').css(css);
+                            });
+
+                            $lightbox.on('shown.bs.modal', function (e) {
+                                var $img = $lightbox.find('img');
+
+                                $lightbox.find('.modal-dialog').css({'width': $img.width()});
+                                $lightbox.find('.close').removeClass('hidden');
+                            });
+                        });
+                    </script>
+
+                    <!-- ******************************************* -->
+                    <!-- KARTA KONTAKT -->
+                    <!-- ******************************************* -->
+                    <div class="col-md-12 well">
+                        <div id="anch7" style="margin-bottom: 0px; font-size: 65px; font-family: 'Bungee', sans-serif;">
+                            Kontakt
+                        </div>
+
+                        <form data-toggle="validator" style="margin:0; padding: 0;">
+                            <div class="form-group">
+                                <label for="inputName" class="control-label" style="font-family: 'Russo One', sans-serif;">Imie i nazwisko</label>
+                                <div class="input-group" style="width: 50%;">
+                                    <span class="input-group-addon"><i class="fas fa-user"></i></span>
+                                    <input type="text" class="form-control" id="inputName" placeholder="Twoje imie i nazwisko" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail" class="control-label" style="font-family: 'Russo One', sans-serif;">Email</label>
+                                <div class="input-group" style="width: 50%;">
+                                    <span class="input-group-addon">@</span>
+                                    <input type="email" class="form-control" id="inputEmail" placeholder="Email" data-error="Bruh, that email address is invalid" required>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" style="font-family: 'Russo One', sans-serif;">Treść wiadomości</label><p>Pozostała liczba znaków: <strong id="charNum">468</strong></p>
+                                <p><textarea id="tresc" maxlength="500" onkeyup="countChar(this)">Tu wpisz treść swojej wiadomości</textarea></p>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" style="font-family: 'Russo One', sans-serif;">Proszę zaznaczyć jedno z pól</label>
+                                <div class="radio">
+                                    <label style="font-size: 15px;">
+                                        <input type="radio" name="kontakt_rodzaj" required>
+                                        Kontakt - firma
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label style="font-size: 15px;">
+                                        <input type="radio" name="kontakt_rodzaj" required>
+                                        Kontakt - osoba prywatna
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" style="font-family: 'Russo One', sans-serif;">Zaakceptuj zasady</label>
+                                <div class="checkbox">
+                                    <label style="font-size: 15px;">
+                                        <input type="checkbox" id="terms" data-error="Before you wreck yourself" required>
+                                        Akceptuje zasady o przetwarzaniu danych osobowych
+                                    </label>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-lg btn-primary" style="background-color: #5c4d85; !important; border: 1px solid #5c4d85; !important;"><span class="glyphicon glyphicon-send"></span> Wyślij wiadomość</button>
+                            </div>
+                        </form>
+                        <!-- Skrypt zliczajacy znaki -->
+                        <script>
+                            function countChar(val) {
+                                var len = val.value.length;
+                                if (len >= 500) {
+                                    val.value = val.value.substring(0, 500);
+                                } else {
+                                    $('#charNum').text(500 - len);
+                                }
+                            };
+                        </script>
+                    </div>
+
+                    <!-- ******************************************* -->
+                    <!-- KARTA ŹRÓDŁA -->
+                    <!-- ******************************************* -->
+                    <div class="col-md-12 well">
+                        <div id="anch8" style="font-size: 65px; font-family: 'Bungee', sans-serif;">
+                            Źródła
+                        </div>
+                        <p style="font-size: 25px;">Źródła do stron autorów z których wykorzystałem zdjęcia znajdziesz poniżej</p>
+                        <p></p>
+                        <div style="font-size: 20px;">
+
+                            <table class="hrefEdit" style="margin-left:auto; margin-right:auto;">
+                                <tr>
+                                    <td style="position:relative;"><img src="./img/bg1.png" width="200" style="float: left; position:relative;" alt="obrazek"/>
+                                        <p style="position: absolute;"><a href="https://www.goodfreephotos.com/historical-battles/gulf-war/british-army-challenger-1-main-battle-tank-during-desert-storm.jpg.php" target="_blank"><i class="fas fa-paperclip fa-2x"></i></a></p>
+                                    </td>
+                                    <td style="position:relative;"><img src="./img/bg2.png" width="200" style="float: left;" alt="obrazek"/>
+                                        <p style="position: absolute;"><a href="https://pl.wikipedia.org/wiki/Plik:Pi%C5%82sudski_on_Poniatowski%27s_Bridge.jpg" target="_blank"><i class="fas fa-paperclip fa-2x"></i></a></p>
+                                    </td>
+                                    <td style="position:relative;"><img src="./img/bg3.png" width="200" style="float: left; position:relative;" alt="obrazek"/>
+                                        <p style="position: absolute;"><a href="https://www.cannon.af.mil/News/Photos/igphoto/2000087699/" target="_blank"><i class="fas fa-paperclip fa-2x"></i></a></p>
+                                    </td>
+                                    <td style="position:relative;"><img src="./img/bg4.png" width="200" style="float: left; position:relative;" alt="obrazek"/>
+                                        <p style="position: absolute;"><a href="https://commons.wikimedia.org/wiki/File:Planning_tank_operations,_Siege_of_Tobruk_cph.3b18203.jpg" target="_blank"><i class="fas fa-paperclip fa-2x"></i></a></p>
+                                    </td>
+                                    <td style="position:relative;"><img src="./img/content/3.jpg" width="200" style="float: left; position:relative;" alt="obrazek"/>
+                                        <p style="position: absolute;"><a href="https://finna.fi/Record/sa-kuva.sa-kuva-110943" target="_blank"><i class="fas fa-paperclip fa-2x"></i></a></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="position:relative;"><img src="./img/content/4.jpg" width="200" style="float: left; position:relative;" alt="obrazek"/>
+                                        <p style="position: absolute;"><a href="https://commons.wikimedia.org/wiki/File:Fsb_alpha_group.jpg" target="_blank"><i class="fas fa-paperclip fa-2x"></i></a></p>
+                                    </td>
+                                    <td style="position:relative;"><img src="./img/content/barbarossa(1).jpg" width="200" style="float: left; position:relative;" alt="obrazek"/>
+                                        <p style="position: absolute;"><a href="https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_101III-Merz-023-22,_Russland,_nach_%27Unternehmen_Zitadelle%27.jpg" target="_blank"><i class="fas fa-paperclip fa-2x"></i></a></p>
+                                    </td>
+                                    <td style="position:relative;"><img src="./img/content/barbarossa(2).jpg" width="200" style="float: left; position:relative;" alt="obrazek"/>
+                                        <p style="position: absolute;"><a href="https://commons.wikimedia.org/wiki/File:Operation_Barbarossa_Infobox.jpg" target="_blank"><i class="fas fa-paperclip fa-2x"></i></a></p>
+                                    </td>
+                                    <td style="position:relative;"><img src="./img/content/chinook(1).jpg" width="200" style="float: left; position:relative;" alt="obrazek"/>
+                                        <p style="position: absolute;"><a href="https://commons.wikimedia.org/wiki/File:ROCA_CH-47SD_Side_View_20110813.jpg" target="_blank"><i class="fas fa-paperclip fa-2x"></i></a></p>
+                                    </td>
+                                    <td style="position:relative;"><img src="./img/content/chinook(2).jpg" width="200" style="float: left; position:relative;" alt="obrazek"/>
+                                        <p style="position: absolute;"><a href="https://www.dvidshub.net/image/1219093/us-army-ch-47-chinook-helicopter-flyby#.V0jiN_9f2M8" target="_blank"><i class="fas fa-paperclip fa-2x"></i></a></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="position:relative;"><img src="./img/content/chinook(3).jpg" width="200" style="float: left; position:relative;" alt="obrazek"/>
+                                        <p style="position: absolute;"><a href="https://www.army.mil/e2/-images/2008/11/10/25229/" target="_blank"><i class="fas fa-paperclip fa-2x"></i></a></p>
+                                    </td>
+                                    <td style="position:relative;"><img src="./img/content/gign(1).jpg" width="200" style="float: left; position:relative;" alt="obrazek"/>
+                                        <p style="position: absolute;"><a href="https://pl.wikipedia.org/wiki/Plik:GIGN25_Domenjod_140618.jpg" target="_blank"><i class="fas fa-paperclip fa-2x"></i></a></p>
+                                    </td>
+                                    <td style="position:relative;"><img src="./img/content/gign(2).jpg" width="200" style="float: left; position:relative;" alt="obrazek"/>
+                                        <p style="position: absolute;"><a href="https://fr.m.wikipedia.org/wiki/Fichier:GIGN26_Domenjod_140618.jpg" target="_blank"><i class="fas fa-paperclip fa-2x"></i></a></p>
+                                    </td>
+                                    <td style="position:relative;"><img src="./img/content/grom(1).JPEG" width="200" style="float: left; position:relative;" alt="obrazek"/>
+                                        <p style="position: absolute;"><a href="https://pl.wikipedia.org/wiki/Plik:GROM_DN-SD-04-01612.JPEG" target="_blank"><i class="fas fa-paperclip fa-2x"></i></a></p>
+                                    </td>
+                                    <td style="position:relative;"><img src="./img/content/grom(2).jpg" width="200" style="float: left; position:relative;" alt="obrazek"/>
+                                        <p style="position: absolute;"><a href="https://commons.wikimedia.org/wiki/File:GROM_with_Navy_SEALs_01.jpg" target="_blank"><i class="fas fa-paperclip fa-2x"></i></a></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="position:relative;"><img src="./img/content/m1a1_abrams(1).jpg" width="200" style="float: left; position:relative;" alt="obrazek"/>
+                                        <p style="position: absolute;"><a href="https://commons.wikimedia.org/wiki/File:U.S._Army_M1A1_Abrams.jpg" target="_blank"><i class="fas fa-paperclip fa-2x"></i></a></p>
+                                    </td>
+                                    <td style="position:relative;"><img src="./img/content/m1a1_abrams(2).jpg" width="200" style="float: left; position:relative;" alt="obrazek"/>
+                                        <p style="position: absolute;"><a href="https://pl.wikipedia.org/wiki/Plik:Abrams-transparent.png" target="_blank"><i class="fas fa-paperclip fa-2x"></i></a></p>
+                                    </td>
+                                    <td style="position:relative;"><img src="./img/content/maczek(1).jpg" width="200" style="float: left; position:relative;" alt="obrazek"/>
+                                        <p style="position: absolute;"><a href="https://pl.wikipedia.org/wiki/Plik:Stanislaw_Maczek.jpg" target="_blank"><i class="fas fa-paperclip fa-2x"></i></a></p>
+                                    </td>
+                                    <td style="position:relative;"><img src="./img/content/maczek-eisenhower.jpg" width="200" style="float: left;" alt="obrazek"/>
+                                        <p style="position: absolute;"><a href="https://commons.wikimedia.org/wiki/File:Gen._Eisenhower_i_gen._Maczek.jpg" target="_blank"><i class="fas fa-paperclip fa-2x"></i></a></p>
+                                    </td>
+                                    <td style=" position:relative;"><img src="./img/content/market-garden(1).jpg" width="200" style="float: left;" alt="obrazek"/>
+                                        <p style="position: absolute;"><a href="https://commons.wikimedia.org/wiki/File:Operation_%27market_Garden%27_(the_Battle_For_Arnhem)-_17_-_25_September_1944_HU5416.jpg" target="_blank"><i class="fas fa-paperclip fa-2x"></i></a></p>
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td style="position:relative;"><img src="./img/content/market-garden(2).jpg" width="200" style="float: left; position:relative;" alt="obrazek"/>
+                                        <p style="position: absolute;"><a href="https://commons.wikimedia.org/wiki/File:Operation_%27market_Garden%27_(the_Battle_For_Arnhem)-_17_-_25_September_1944_B6543.jpg" target="_blank"><i class="fas fa-paperclip fa-2x"></i></a></p>
+                                    </td>
+                                    <td style="position:relative;"><img src="./img/content/patton(1).jpg" width="200" style="float: left;" alt="obrazek"/>
+                                        <p style="position: absolute;"><a href="https://pixabay.com/pl/genera%C5%82-george-patton-s-jr-wojskowe-402041/" target="_blank"><i class="fas fa-paperclip fa-2x"></i></a></p>
+                                    </td>
+                                    <td style=" position:relative;"><img src="./img/content/patton-anders.jpg" width="200" style="float: left;" alt="obrazek"/>
+                                        <p style="position: absolute;"><a href="https://pl.wikipedia.org/wiki/Plik:Polish_General_Wladyslaw_Anders_and_American_Lieutenant_General_George_Patton.jpg" target="_blank"><i class="fas fa-paperclip fa-2x"></i></a></p>
+                                    </td>
+                                    <td style="position:relative;"><img src="./img/content/pilsudski(1).jpg" width="200" style="float: left; position:relative;" alt="obrazek"/>
+                                        <p style="position: absolute;"><a href="https://commons.wikimedia.org/wiki/File:Josef_Pilsudski_cph.3b35372.jpg" target="_blank"><i class="fas fa-paperclip fa-2x"></i></a></p>
+                                    </td>
+                                    <td style="position:relative;"><img src="./img/content/pilsudski-rydz_smigly.jpg" width="200" style="float: left;" alt="obrazek"/>
+                                        <p style="position: absolute;"><a href="https://commons.wikimedia.org/wiki/File:Pilsudski_and_Rydz-Smigly.jpg" target="_blank"><i class="fas fa-paperclip fa-2x"></i></a></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style=" position:relative;"><img src="./img/content/sosabowski-browning.jpg" width="200" style="float: left;" alt="obrazek"/>
+                                        <p style="position: absolute;"><a href="https://pl.wikipedia.org/wiki/Plik:Sosabowski_Browning.jpg" target="_blank"><i class="fas fa-paperclip fa-2x"></i></a></p>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+
+                        </div>
+                    </div>
+
+                    <!-- ******************************************* -->
+                    <!-- KARTA MAPA -->
+                    <!-- ******************************************* -->
+                    <div class="col-md-12 well">
+                        <div id="anch9" style="font-size: 65px; font-family: 'Bungee', sans-serif;">
+                            Mapa
+                        </div>
+
+                        <p style="font-size: 20px;">Znajdziesz nas tutaj</p>
+
+                        <!-- Mapa openstreet -->
+                        <iframe width="425" height="350" src="https://www.openstreetmap.org/export/embed.html?bbox=20.453930497169498%2C53.742857810357386%2C20.458039641380314%2C53.744513859986895&amp;layer=mapnik&amp;marker=53.74368584333031%2C20.455985069274902" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=53.74369&amp;mlon=20.45599#map=18/53.74369/20.45599&amp;layers=ND">Wyświetl większą mapę</a></small>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- ******************************************* -->
+<!-- SKRYPTY TUTAJ -->
+<!-- ******************************************* -->
+
+<!-- skrypt CDN tinyslide (dla slidera) -->
+<script src="https://www.jqueryscript.net/demo/Fullscreen-Responsive-Image-Slider-with-jQuery-Tinyslide/js/tinyslide.js"></script>
+
+<!-- Skrypt animujacy pineski -->
+<script>
+    $(".pin").hover(function () {
+        $(this).toggleClass("fa-spin");
+    });
+</script>
+
+<!-- Skrypt JQuery dla menu rozwijalnego, plynnego przewijania strony przez linki i scrollspy -->
+<script>
+    var tiny = $('#tiny').tiny().data('api_tiny');
+
+    jQuery(function ($) {
+        /*Menu-toggle*/
+        $(".menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#main-wrapper").toggleClass("active");
+        });
+
+        /*Scroll Spy*/
+        $('body').scrollspy({ target: '#spy', offset: 80 });
+
+        $(window).on("scroll", function () {
+            if ($(this).scrollTop() > 45) {
+                $(".content-header").addClass("scrolled");
+            } else {
+                $(".content-header").removeClass("scrolled");
+            }
+        });
+        $('.page-content.inset').on('click', function(){
+            $("#main-wrapper").removeClass("active");
+        });
+
+        /*Smooth link animation*/
+        $('a[href*=#]:not([href=#])').click(function () {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top - 80
+                    }, 700);
+                    return false;
+                }
+            }
+        });
+
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<!--
+
+/////////////////////////////////
+     Informacje o projekcie
+/////////////////////////////////
+
+Projekt strony na przedmiot: Programowanie Aplikacji WWW
+Autor: Paweł Idzikowski
+Wykorzystany framework: Bootstrap
+
+-->
+
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>o Muuri</title>
+    <!-- Dla highlight.js -->
+    <link rel="stylesheet" href="css/a11y-dark.css">
+    <!-- Plugin highlight -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Format tabeli -->
+    <link rel="stylesheet" href="css/table.css">
+    <link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
+    <!-- Niestandardowe ikony -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="js/skrypty.js"></script>
+    <!-- skrypt AJAX -->
+    <script>
+        $(document).ready(function() {
+            $('a').on('click', function() {
+                var url=$(this).attr('href');
+                $('#info').load(url+'#newsItem', function() {
+
+                    $('pre > code').each(function() {
+                        hljs.highlightBlock(this);
+                    });
+
+                    $('[data-toggle="tooltip"]').tooltip();
+
+                    $("#myInput").on("keyup", function() {
+                        var value = $(this).val().toLowerCase();
+                        $("#myTable tr").filter(function() {
+                            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                        });
+                    });
+
+                    // przesuwa do gory okienko
+                    $(window).scrollTop(130);
+                })
+                return false;
+            });
+        });
+    </script>
+</head>
+<body style="background-color: #6d1e9c;">
+
+<!-- Sekcja MENU -->
+<div class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="top-title">
+                    <h3 class="logo-title animated infinite bounceInDown display-4"><a href="#" data-toggle="tooltip" style="color: white;" data-placement="top" title="Kliknij na ikonę domku aby powrócić na stronę główną !"><i class="fas fa-home" onclick="GoMainPage()" style="cursor: pointer;"></i></a> Muuri.js</h3>
+                    <!-- Inicjalizacja -->
+                    <script>
+                        $(document).ready(function(){
+                            $('[data-toggle="tooltip"]').tooltip();
+                        });
+                    </script>
+                    <h6 class="logo-title animated pulse">~JQUERY PLUGIN</h6>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="menu">
+
+                    <li class="f-item-1"><a href="oMuuri.html">O PLUGINIE</a></li>
+                    <li class="f-item-2"><a href="examples.html">PRZYKŁADY</a></li>
+                    <li class="f-item-3"><a href="howTo.html">JAK UŻYĆ</a></li>
+                    <li class="f-item-4"><a href="api.html">API</a></li>
+                    <li class="f-item-5"><a href="references.html">ODSYŁACZE</a></li>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Sekcja wstrzykiwania zawartości AJAXem -->
+<div id="info" class="container" style="background-color: #d99cff; border: 12px outset #D99CFF; border-radius: 40px 40px 40px 40px;">
+    <img src="./img/hi.png" class="rounded mx-auto d-block" alt="Zdjecie emotikony witajacej" height="300px" style="margin-top: 150px;"/>
+    <h1 class="display-3 text-center">Witaj na stronie o Muuri!</h1>
+    <p></p>
+    <h5 class="rounded mx-auto d-block text-justify" style="width: 60%;">Na niniejszej stronie znajdziesz informacje na temat jednego z ciekawszych pluginów open source - <strong>Muuri</strong>.
+        Dowiesz się między innymi o tym, co kryje się pod tytułową nazwą <strong>Muuri</strong>, co oferuje, jak działa w praktyce, kto go stworzył, jak go użyć na swojej stronie,
+        jakie funkcje za co są odpowiedzialne. Projekt strony wykonany został na przedmiot <strong>Programowanie Aplikacji WWW</strong>. Ostatnią aktualizację strony przeprowadzono 03.01.2019r.
+        <p class="text-right" style="margin-top: 20px;">Autorem projektu jest <strong>Paweł Idzikowski</strong></p>
+    </h5>
+</div>
+
+<!-- Skrypt "przewijak" -->
+<script>
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+        if (scroll >=50) {
+            $(".header").addClass("myheader");
+        } else {
+            $(".header").removeClass("myheader");
+        }
+    });
+</script>
+
+</body>
+</html>
