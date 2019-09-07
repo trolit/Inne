@@ -1,8 +1,0 @@
-programy, które mog¹ siê przydaæ:
-
-=> texnicCenter + miktex(silnik)
-=> matlab
-=> github
-=> STATISTICA
-=> EA(Enterprise Architect)
-=> autodesk
