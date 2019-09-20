@@ -1,0 +1,377 @@
+=====================================
+============ASK NOTKA================
+=====================================
+
+------------SPR01---------------------
+1. last - wyświetla listę zalogowanych
+i wylogowanych użytkowników(od momentu 
+wywołania, tworzy plik wtmp w 
+/var/log/wtmp)
+
+2. who - wyświetla listę aktualnie 
+zalogowanych użytkowników wraz z datą
+i godziną zalogowania na konto. 
+
+3. passwd - polecenie do zmiany hasła
+
+4. script - uruchamia rejestrowanie 
+poleceń wykonywanych podczas sesji i ich
+rezultatów. 
+
+5. cd - przemieszczanie się po katalogach
+
+6. pwd - pokazanie ścieżki w której obecnie
+się znajdujemy
+
+7. echo - wypisanie na terminalu tekstu bądź
+zawartości zmiennej
+
+8. mkdir - tworzy katalog
+
+9. ls - (listing), wyświetla zawartość katalogu
+w któym się znajdujemy.
+
+10. ln - tworzy dowiązanie(może być symboliczne 
+lub twarde). Symboliczny - trzeba dodać opcję -s.
+
+11. touch - jeżeli podamy nazwę pliku
+, który nie istnieje, zostanie stworzony. Jeżeli 
+taki plik istnieje - zmieniony zostanie stempel 
+czasowy pliku.
+
+12. stat - wyświetla właściwości pliku
+np. nazwę, rozmiar, numer i-węzła, prawa dostepu 
+
+13. cp - kopiuje plik
+
+14. mv - do zmiany nazwy pliku bądź do przeniesienia
+pliku
+
+15. rename - do zmiany nazwy pliku
+
+16. find - wyszukuje pliki o zadanych parametrach
+(parametry dostępne są w man find)
+
+17. alias - tworzy polecenie z którego możemy
+potem korzystać wiele razy pod zmienną pod którą
+zdefiniowaliśmy alias
+
+18. chmod - zmiana uprawnień do zadanego pliku
+
+19. cat - wyświetlenie zawartości pliku(nie mamy
+żadnej interakcji)
+
+20. more - wyświetlenie zawartości pliku(możemy
+przewijać w dół)
+
+21. less - wyświetlenie zawartości pliku(możemy
+przewijać w dół i w górę)
+
+22. head - wyświetla pierwsze wiersze z pliku(możemy
+sami ustawić ile ma być wyświetlonych wierszy ale 
+domyślnie jest to 10)
+
+23. tail - wyświetla wiersze z końca pliku(możemy
+sami zdefiniować ile ma być wyświetlonych wierszy ale
+domyślnie jest to 10)
+
+24. potok - pozwala przekazać wynik jednego polecenia
+do drugiego polecenia (symbol |)
+
+25. sort - sortuje wynik(używamy go z potokiem)
+
+26. grep - wyszukiwanie informacji w plikach
+(to nie to samo co find.)
+
+27. wc - wyświetla informacje o pliku(bez żadnego
+parametru pokazuje liczbę wierszy, słów i znaków)
+
+28. tee - rozgałęźia potok - możemy nie tylko przekazać
+wynik jednego polecenia do drugiego ale także do pliku 
+żeby zapisać informacje
+
+29. przekierowania:
+> - tworzy plik od nowa(jeżeli coś było w środku to 
+zostaje usunięte)
+
+>> - dopisuje do pliku(jeżeli coś było w pliku to 
+jest zachowane)
+
+< - zczytuje z pliku
+
+------------SPR02---------------------
+
+30. init - polecenie do aktywowania runlevelu
+(dostępne jest 7 runleveli od 0-6).
+
+31. runlevel - pokazuje jaki obecnie jest poziom
+uruchomienia
+
+32. initctl list - polecenie tylko dla administr
+atora i pozwala na ujawnienie usług uruchamianych
+wraz z systemem w postaci listy.
+
+33. ps - wyswietla jakie procesy są uruchomione w 
+danym momencie.
+
+34. nice - ustawia priorytet dla procesu, tzn ile
+czasu może otrzymać proces od CPU(wartość jest z 
+zakresu -20 do 19 gdzie -20 to największy priorytet)
+
+35. top - dynamiczny podgląd stanu systemu w
+czasie bieżącym. (Znacznie obciąża CPU, info
+jest odświeżane co 2-3 sekundy)
+
+36. htop - dynamiczny podgląd stanu systemu
+w czasie bieżącym z innym interfejsem. Pozwala
+dodatkowo na skrolowanie pionowe i poziome okna.
+
+37. pstree - ukazuje strukturę uruchomionych
+procesów w postaci drzewa 
+
+38. kill - pozwala w sposób manualny zakończyć
+działanie procesu.
+
+39. $? - zmienna systemowa pozwalająca kontrolować
+informacje o tym czy ostatnie polecenie zakończyło
+się sukcesem czy porażką.
+
+40. pgrep - przegląda uruchomione procesy w 
+poszukiwaniu tego, który podal.iśmy i zwraca 
+informacje w postaci identyfikatora PID procesu.
+
+------------SPR03---------------------
+
+41. pierwsza linia w skrypcie to shebang
+czyli #! /bin/bash mówiąca o tym jakim
+programem zinterpretować skrypt
+
+42. ps axu - tworzy listę dostępnych procesów
+użytkowników. 
+
+43. parametry w skryptach:
+$0 - nazwa skryptu
+$# - liczba parametrów
+$1 - parametr pierwszy
+$2 - parametr drugi
+$$ - numer procesu
+
+44. instrukcja warunkowa:
+if [ 1 -gt 2 ] 
+then 
+      cos
+else
+      cos
+fi
+
+45. ins.case - do stworzenia panelu wyboru w zależności
+od numeru, który jest w zmiennej zostanie wykonany dany
+blok instrukcji(jest podobna do switch np. w C#).
+
+------------SPR04---------------------
+
+46. Obliczanie adresów podsieci i danych kompa.
+
+np. 
+Dysponując adresem klasy C 192.168.1.0/24 administrator
+chce uzyskać dwie podsieci o różnej liczbie użytkowników.
+Pierwsza podsieć (A) ma mieć 40 użytkowników, druga 30.
+
+Zaczynamy od największej podsieci czyli A
+ma liczyć 40 użytkowników więc aby zapewnić
+odpowiednią liczbe adresów należy użyć maski
+H=6bitów bo
+
+2^6 - 2 > 40 
+64 - 2 > 40
+62 > 40
+
+zatem nasza maska będzie: /26 
+11111111.11111111.11111111.11000000
+
+Adres sieci oryginalne:
+192.168.1.0/24
+
+Adres podiseci:
+192.168.1.0/26
+
+Podsieć A będzie wyglądała następująco:
+192.168.1.0/26 - adres sieci
+192.168.1.1/26 - pierwszy host
+192.168.1.2/26 - drugi host
+192.168.1.41/26 - 40 host
+od 192.168.1.42/26 - 192.168.1.62/26 - adresy nieobsadzone
+192.168.1.63/26 - adres rozgłoszeniowy(broadcast)
+
+Podsieć B potrzebuje 30 hostów. Kolejny adres wolny to
+192.168.1.64/26. Dla utworzenia adresow potrzebujemy 
+H=5bitów
+
+2^5 - 2 > 30
+32 - 2 > 30
+
+Następny dostepny adres:
+192.168.1.64/26
+
+Adres podiseci B:
+192.168.1.64/27
+
+Podsieć B będzię wyglądała tak:
+192.168.1.64/27 - adres sieci
+192.168.1.65/27 - 1 host
+192.168.1.94/27 - 30 host
+192.168.1.95/27 - adres rozgłoszeniowy
+
+------------SPR05---------------------
+
+47. ifconfig -a - sprawdzenie właściwości interfejsów
+sieciowych(np. karty sieciowej)
+
+48. ifconfig eth0 - wyświetlenie informacji o interfejsie
+sieciowym eth0
+
+49. ifconfig eth0 down hw ether 00:00:00:00:00:02 - zmiana
+adresu MAC interfejsu sieciowego.
+
+50. ifconfig eth0 up/down - włączenie/wyłączenie interfejsu
+sieciowego
+
+51. ifconfig eth0 promisc - włączenie/wyłączenie trybu
+promiscuous na interfejsie sieciowym. 
+
+52. ip link set eth0 down - wyłączenie karty sieciowej
+
+53. ip link set eth0 up - włączenie karty sieciowej
+
+54. ip link list - wyświetlenie konfiguracji interfejsów
+
+55. ip a add 192.168.1.200/24 dev eth0 - przypisanie
+adresu IP do interfejsu sieciowego
+
+56. ip addr show - standardowe informacje o interfejsach
+sieciowych jak adres IP, adres MAC
+
+57. ip rule show - pokazuje listę zasad w kolejności
+priorytetów. 
+
+58. ip neigh show - pokazanie statusu sąsiadów
+
+59. ip n show - to co w 58
+
+60. ip r list - wyświetl azawartość tablicy routingu
+
+61. ip route, ip route show - to co w 60
+
+62. ip route add 192.168.1.0/24 dev eth0 - dodanie trasy
+do tablicy lokalnej
+
+63. netstat - wyświetla aktywne połączenia protokołu TCP
+(netstat -h to pomoc)
+
+64. netstat -i wypisuje na terminalu stany i konfiguracje
+interfejsów
+
+65. netstat -e zwraca statystyki niektórych protokołów. 
+(np. IP, IPv6, ICMP, ICMPv6,TCP,TCPv6,UDP, UDPv6)
+
+66. netstat -r zwraca dane na temat lokalnej tablicy 
+routingu IP.
+
+67. netstat -an wyświetla wszystkie połączenia z serwerem
+(w tym źródłowe i docelowe adresów IP i numery portów)
+Port 22 jest domyślnym portem SSH.
+
+68. netstat -ltn pokazuje wszystkie aktywnie nasłuchujące
+porty TCP i UDP.
+
+69. netstat -natp wyświetla aktywne połączenia internetowe
+
+70. arp -a zwraca informację o wszystkich hostach tzn
+podaje ich adres sieci i odpowiadający im adres MAC
+
+71. tcpdump - sniffer niskiego poziomu
+
+72. tcpdump -h to help
+
+73. tcpdump -c 5 zwraca 5 pierwszych przechwyconych 
+pakietów przez sniffer. 
+
+74. tcpdump -x zwraca informacje o przechwyconych 
+pakietach w postaci szesnastkowej.
+
+75. tcpdump ping wikipedia.org 
+w tym poleceniu testujemy połączenie sieciowe ze 
+stroną wikipedia.org. Sniffer podsłuchuje przesyłane
+pakiety.
+
+76. tcpdump -p arp
+otrzymujemy ruch generowany przez protokół ARP. 
+Dostajemy informacje kto zażądał adresu MAC innej
+maszyny, o jakiej godzinie, rozmiar pakietu, do 
+kogo wysłano odpowiedź(reply)
+
+------------SPR07---------------------
+
+77. httpd.conf - plik, który przechowuje 
+pliki konfiguracyjne serwera Apache. Możemy
+w nim zmieniać opcje. Posiada jakieś komentarze.
+
+78. getenforce - zwraca tryb pracy SELinux
+(modułu bezpieczeństwa jądra Linuxa)
+
+79. service iptables stop - wyłączenie usługi 
+firewalla. 
+
+80. service httpd start - uruchomienie serwera
+httpd 
+
+------------SPR08---------------------
+
+81. plik konfiguracyjny firewalla znajduje się w 
+/etc/rc.d/init.d/iptables
+
+82. iptables -F -t filter 
+czyści tablicę iptables
+
+83. ustawianie konfiguracji firewall - 
+co jest niedozwolone to jest zabronione
+blokujemy łańcuchy
+
+iptables -F INPUT DROP
+iptables -F OUTPUT DROP
+iptables -F FORWARD DROP
+
+84. /sbin/service iptables save - zapisanie konfiguracji
+firewalla
+
+85. udostępnienie wybranych usług w firewall 
+
+np. SSH
+iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+iptables -A INPUT -p tcp --sport 22 -j ACCEPT
+iptables -A OUTPUT -p tcp --sport 22 -j ACCEPT
+iptables -A OUTPUT -p tcp --dport 22 -j ACCEPT
+(inne są w SPR08)
+
+86. iptables -L wyświetla aktualną konfigurację
+zapory sieciowej(firewalla)
+
+87. /sbin/service iptables restart 
+restart usługi iptables
+
+88. forwardowanie pakietów(trzeba uruchomić routing):
+echo "1" > /proc/sys/net/ipv4/ip_forward
+
+i dopiero potem możemy zdefiniować reguły forwardowania
+
+89. 
+iptables -t filter -A FORWARD -s 192.168.1.101/255.255.255.0 -d 0/0 -j ACCEPT
+iptables -t filter -A FORWARD -s 0/0 -d 
+
+90. konfiguracja NAT i maskarady
+iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+
+91. chkconfig -list 
+lista usług i ich stan(czy są włączone czy nie) dla 
+poszczególnych poziomów uruchamiania(tzw. runleveli)
+
