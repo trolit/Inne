@@ -1,13 +1,43 @@
-# o Algorytmie A*
+### A*
+
+ <table>
+  <tbody>
+    <tr>
+      <td>
+        Cel
+      </td>
+      <td class="justify-text font-balooChettan2">Poznanie działania algorytmu A* na podstawie artykułu napisanego przez Johann Fradj i próba implementacji we własnym projekcie z wizualizacją w WinForms.</td>
+    </tr>
+    <tr>
+      <td>
+        Technologie
+      </td>
+      <td>.NET Windows.Forms</td>
+    </tr>
+    <tr>
+      <td class="collapsing">
+        Rola, (rozmiar zespołu)
+      </td>
+      <td>Programista (zespół 1-os.)</td>
+    </tr>
+    <tr>
+      <td>
+        Ramy czasowe
+      </td>
+      <td>14.08.2018 – 30.08.2018</td>
+    </tr>
+  </tbody>
+</table>
 
 Algorytm A* jest jednym z najbardziej popularnych sposobów przeliczania/obliczania najkrótszej trasy pomiędzy
 dwoma zadanymi punktami. Bardzo często wykorzystuje się go w - grach aby np. AI obliczało najkrótszą trasę do 
 podejścia do bohatera przez co inteligencja wroga wydaje nam się bardziej naturalna. 
 
-![Error](https://github.com/trolit/Moje.dokumenty/blob/master/Algorytm%20A_star/images/example1.PNG)
-Powyżej efekt implementacji algorytmu w oparciu o jeden z wymienionych artykułów.
+Efekt implementacji algorytmu w oparciu o jeden z wymienionych artykułów:
 
-Postanowiłem od 0 spróbować zaimplementować ten algorytm w oparciu o WinForms w programie Visual Studio :) 
+![Error](https://github.com/trolit/Moje.dokumenty/blob/master/Algorytm%20A_star/images/example1.PNG)
+
+Postanowiłem od 0 spróbować zaimplementować ten algorytm w oparciu o WinForms:
 
 Widok aplikacji(v0.5):
 ![Error](https://github.com/trolit/Moje.dokumenty/blob/master/Algorytm%20A_star/images/przyklad2_v0.5.PNG)
